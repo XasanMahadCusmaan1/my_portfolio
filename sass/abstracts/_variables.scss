@@ -1,0 +1,36 @@
+@use "sass:math";
+
+//FONT FAMILY
+$font-family: Poppins;
+$font-family-sans: Lora;
+
+//FONT WEIGHTS
+$font-thin: 100;
+$font-thin-Italic: 100;
+
+$font-extra-light: 200;
+$font-extra-light-italic: 200;
+
+$font-light: 300;
+$font-light-italic: 300;
+
+$font-regular: 400;
+$font-regular-italic: 400;
+
+$font-medium: 500;
+$font-medium0-italic: 500;
+
+$font-semi-bold: 600;
+$font-semi-bold-italic: 600;
+
+$font-bold: 700;
+$font-bold-italic: 700;
+
+$font-extra-bold: 800;
+$font-extra-bold-italic: 800;
+
+//infinite scroller variables
+
+$width: rem(150);
+$height: rem(100);
+$total-items: 8;

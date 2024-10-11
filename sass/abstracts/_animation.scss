@@ -1,0 +1,46 @@
+@use "sass:math";
+
+// infinite runing animaion
+@keyframes outRun {
+  from {
+    left: 100%;
+  }
+  to {
+    left: -$width;
+  }
+}
+
+// reverse running animation
+@keyframes reversePlay {
+  from {
+    left: -$width;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.item-1 {
+  animation-delay: 0s - 17.5s;
+}
+.item-2 {
+  animation-delay: 2.5s - 17.5s;
+}
+.item-3 {
+  animation-delay: 5s - 17.5s;
+}
+.item-4 {
+  animation-delay: 7.5s - 17.5s;
+}
+.item-5 {
+  animation-delay: 10s - 17.5s;
+}
+.item-6 {
+  animation-delay: 12.5s - 17.5s;
+}
+.item-7 {
+  animation-delay: 15s - 17.5s;
+}
+.item-8 {
+  animation-delay: 17.5s - 17.5s;
+}

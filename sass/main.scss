@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+// 1. Abstracts (Variables, Mixins, Functions)
+@import "abstracts/functions";
+@import "abstracts/variables";
+@import "abstracts/colors";
+@import "abstracts/mixins";
+@import "abstracts/animation.scss";
+
+// 2. Base Styles
+@import "base/base";
+@import "base/reset";
+@import "base/typography";
+@import "base/normalize";
+
+// 3. Layout Styles
+@import "layout/navbar";
+@import "layout/footer";
+@import "layout/sidebar";
+@import "layout/header";
+
+// 4. Components (UI Elements)
+@import "components/alert";
+@import "components/buttons";
+@import "components/label";
+@import "components/modal";
+@import "components/profile-card";
+@import "components/infinite-scoll";
+
+// 6. Themes (Different Color Themes)
+@import "themes/dark-theme";
+@import "themes/light-theme";
+
+// 7. Vendors (Third-party Libraries)

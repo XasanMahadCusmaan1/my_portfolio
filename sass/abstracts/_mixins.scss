@@ -1,0 +1,36 @@
+//FLEXBOX LAYOUT
+@mixin flexboxLayout {
+  display: flex;
+  align-items: center;
+  gap: rem(20);
+}
+//GRID LAYOUT
+@mixin grid2Clayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: rem(200);
+}
+
+//GENERAL STYLES FOR BUTTONS
+@mixin gsButtons {
+  color: $gray-shades-80;
+  font-size: rem(16);
+  cursor: pointer;
+  font-family: $font-family;
+  background-image: linear-gradient(
+    120deg,
+    $main-tints-80 49.5%,
+    $main-shades 50%
+  );
+  background-size: 260%;
+  letter-spacing: rem(1);
+  font-weight: $font-semi-bold;
+  transition: all 0.9s ease-in-out;
+  outline: 1px solid $main-shades;
+
+  &:hover {
+    background-position: 100%;
+    color: $main-tints-full;
+    outline: 1px solid $main-shades;
+  }
+}

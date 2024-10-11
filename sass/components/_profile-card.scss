@@ -1,0 +1,17 @@
+.profile__card {
+  @include flexboxLayout;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px $gray-tints-90;
+  padding: rem(7) rem(15);
+  background-color: $main-tints-80;
+
+  .profile__card--image {
+    width: rem(40);
+    height: rem(40);
+    border-radius: 50%;
+    background-image: url(/assets/images/pexels-cottonbro-5138195.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
