@@ -4,11 +4,11 @@
   "description": "potfolio website for my self",
   "main": "index.html",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "sass sass/main.scss css/style.css -w"
   },
   "author": "Hassan Mahad Cusmaan",
   "license": "ISC",
-  "dependencies": {
-    "node-sass": "^9.0.0"
+  "devDependencies": {
+    "sass": "^1.79.5"
   }
 }
