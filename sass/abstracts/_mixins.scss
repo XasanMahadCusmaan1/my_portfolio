@@ -34,3 +34,10 @@
     outline: 1px solid $main-shades;
   }
 }
+
+//GENERAL SYLES FOR PARAGRAPHS
+@mixin GSParagraphs {
+  color: $gray-shades-10;
+  margin-bottom: rem(32);
+  line-height: 1.6;
+}

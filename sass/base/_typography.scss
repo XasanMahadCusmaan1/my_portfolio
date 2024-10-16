@@ -10,7 +10,7 @@ nav ul li a {
   position: relative;
   display: inline-block;
 
-  &:hover{
+  &:hover {
     color: $main-shades-50;
   }
   &::after {
@@ -31,9 +31,6 @@ nav ul li a {
   }
 }
 
-// nav ul li a:hover::after {
-//   width: 100%;
-// }
 .main__heading {
   font-size: rem(48);
   font-family: inherit;
@@ -44,12 +41,9 @@ nav ul li a {
   color: inherit;
 }
 
-.main__header--p {
-  font-family: $font-family;
-  font-size: rem(14);
-  color: $gray-shades-10;
-  margin-bottom: rem(32);
-  max-width: rem(700);
+.main__heading + p {
+  @include GSParagraphs;
+  max-width: 100%;
 }
 
 .profile__card--text {
@@ -58,15 +52,29 @@ nav ul li a {
   p {
     margin: 0;
     padding: 0;
-    font-family: $font-family;
   }
 
   p {
-    font-weight: $font-extra-light;
+    font-weight: $font-light;
+    color: $gray-shades-10;
   }
   span {
     font-family: $font-family;
     font-weight: $font-semi-bold;
     // letter-spacing: rem(1);
+  }
+}
+
+//TECHNOLOGIES SECTION
+
+#slider__section {
+  h2 {
+    margin-bottom: rem(10);
+    letter-spacing: rem(2.5);
+    font-weight: $font-bold;
+  }
+
+  p {
+    @include GSParagraphs;
   }
 }

@@ -10,15 +10,15 @@
   }
 }
 
-// reverse running animation
-@keyframes reversePlay {
-  from {
-    left: -$width;
-  }
-  to {
-    left: 100%;
-  }
-}
+// // reverse running animation
+// @keyframes reversePlay {
+//   from {
+//     left: -$width;
+//   }
+//   to {
+//     left: 100%;
+//   }
+// }
 
 .item-1 {
   animation-delay: 0s - 17.5s;

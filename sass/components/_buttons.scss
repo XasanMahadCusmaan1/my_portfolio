@@ -8,7 +8,7 @@
 }
 
 //CV CONTAINER STYLES
-.cv__text--button {
+.cv__container {
   @include flexboxLayout;
   width: 100%;
   padding: rem(10) rem(0);
@@ -17,6 +17,4 @@
 .cv__button {
   padding: rem(15) rem(15);
   @include gsButtons;
-
-  
 }

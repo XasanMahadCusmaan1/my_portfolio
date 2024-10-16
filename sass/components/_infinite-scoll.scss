@@ -1,14 +1,13 @@
 @use "sass:math";
 
-#slider__section{
+#slider__section {
   overflow: hidden;
   width: 90%;
   max-width: 1100px;
-  margin: rem(0) auto;
+  margin: rem(100) auto;
 }
 .slider {
   width: 100%;
-  // overflow: hidden;
   height: $height;
   mask-image: linear-gradient(
     to right,
@@ -17,20 +16,19 @@
     rgba(0, 0, 0, 1) 80%,
     rgba(0, 0, 0, 0)
   );
-  // transform: rotate(-45deg);
 
   // hover stop feuture
   &:hover .slider__list--items {
     animation-play-state: paused;
   }
 
-  // reverse runner feuture
-  &:has(.unique) .slider__list--items {
-    animation-name: reversePlay;
-    animation-duration: 20s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
+  // // reverse runner feuture
+  // &:has(.unique) .slider__list--items {
+  //   animation-name: reversePlay;
+  //   animation-duration: 20s;
+  //   animation-timing-function: linear;
+  //   animation-iteration-count: infinite;
+  // }
 
   .slider__list {
     display: flex;
