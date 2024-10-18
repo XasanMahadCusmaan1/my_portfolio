@@ -4,12 +4,6 @@
   align-items: center;
   gap: rem(20);
 }
-//GRID LAYOUT
-@mixin grid2Clayout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: rem(200);
-}
 
 //GENERAL STYLES FOR BUTTONS
 @mixin gsButtons {
@@ -40,4 +34,11 @@
   color: $gray-shades-10;
   margin-bottom: rem(32);
   line-height: 1.6;
+}
+
+//GENERAL SYLES FOR SECTIONS
+@mixin GSsections {
+  width: 90%;
+  max-width: 1100px;
+  margin: rem(130) auto rem(100) auto;
 }

@@ -31,3 +31,9 @@ strong {
 section {
   max-height: 100vh;
 }
+
+h2 {
+  margin-bottom: rem(20);
+  letter-spacing: rem(2.5);
+  font-weight: $font-bold;
+}

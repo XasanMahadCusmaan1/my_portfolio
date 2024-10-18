@@ -1,0 +1,8 @@
+//GRID LAYOUT
+@mixin grid2Clayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: rem(32);
+}
+

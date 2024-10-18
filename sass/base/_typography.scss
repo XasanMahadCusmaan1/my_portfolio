@@ -68,12 +68,6 @@ nav ul li a {
 //TECHNOLOGIES SECTION
 
 #slider__section {
-  h2 {
-    margin-bottom: rem(10);
-    letter-spacing: rem(2.5);
-    font-weight: $font-bold;
-  }
-
   p {
     @include GSParagraphs;
   }

@@ -16,18 +16,19 @@
 @import "base/normalize";
 
 // 3. Layout Styles
+@import "layout/grid-system";
 @import "layout/navbar";
 @import "layout/footer";
 @import "layout/sidebar";
 @import "layout/header";
 
 // 4. Components (UI Elements)
-@import "components/alert";
 @import "components/buttons";
-@import "components/label";
-@import "components/modal";
 @import "components/profile-card";
 @import "components/infinite-scoll";
+
+// 6. Pages
+@import "pages/about";
 
 // 6. Themes (Different Color Themes)
 @import "themes/dark-theme";
