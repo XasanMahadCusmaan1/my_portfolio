@@ -1,12 +1,7 @@
-.header__buttons {
-  @include flexboxLayout;
-}
-
-.header__button-messages {
+.header__button--messages {
   padding: rem(10) rem(15);
-  @include gsButtons;
+  @include btn;
 }
-
 //CV CONTAINER STYLES
 .cv__container {
   @include flexboxLayout;
@@ -16,5 +11,5 @@
 
 .cv__button {
   padding: rem(15) rem(15);
-  @include gsButtons;
+  @include btn;
 }

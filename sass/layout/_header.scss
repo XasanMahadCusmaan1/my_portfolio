@@ -1,4 +1,5 @@
-header {
+//HEADER LAYOUT AND BASE STYLES
+.header {
   width: 100%;
   padding: 0 rem(20);
   position: fixed;
@@ -14,24 +15,27 @@ header {
     background-color: rgba($main-tints-80, 0.5);
     backdrop-filter: blur(10px);
   }
-}
 
-.header__container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-block: rem(10);
-  position: relative;
-  z-index: inherit;
+  &__container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: rem(10);
+    position: relative;
+    z-index: inherit;
+  }
+
+  &__actions {
+    @include flexboxLayout;
+  }
 }
-//header section
+//HEADER MAIN SECTION
 main {
   @include grid2Clayout;
   @include GSsections;
-  // gap: rem(32);
 
   //main text side
 
