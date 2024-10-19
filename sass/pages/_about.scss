@@ -8,9 +8,9 @@
     grid-template-rows: rem(200) rem(200) rem(150);
     gap: rem(15);
 
-    & > div {
+    & > div:not(:nth-child(1)) {
       border: rem(2) solid $main-shades-10;
-      // border-radius: rem(10);
+      border-radius: rem(5);
       padding: rem(15);
       box-shadow: rem(0) rem(0) rem(10) $main-tints-90;
     }
@@ -35,6 +35,97 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+    }
+
+    //ABOUT BACKGROUND STYLES
+    .about__background {
+      //ABOUT TITLE
+      &--title {
+        @include flexboxLayout;
+        align-items: flex-end;
+        gap: rem(10);
+
+        img {
+          width: rem(40);
+          height: rem(40);
+        }
+      }
+
+      //ABOUT PARAGRAPH
+      p {
+        margin-block-start: rem(10);
+      }
+    }
+
+    //SERVICES STYLES
+    .about__services {
+      position: relative;
+
+      //SERVICES TITLE STYLES
+      &--title {
+        @include flexboxLayout;
+        gap: rem(10);
+        img {
+          width: rem(40);
+          height: rem(40);
+        }
+      }
+      //SERVICES CONTENT STYLES
+      &--content {
+        margin-block-start: rem(10);
+        @include flexboxLayout;
+        gap: rem(40);
+
+        span {
+          font-size: rem(17);
+          letter-spacing: rem(2);
+          font-weight: $font-regular;
+          font-style: italic;
+        }
+      }
+
+      //LINE BETWEEN SERVICE
+      &::after {
+        content: "";
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+        width: rem(150);
+        height: rem(2);
+        background-color: $main-shades;
+      }
+    }
+
+    .about__contact {
+      &--title {
+        @include flexboxLayout;
+        gap: rem(10);
+
+        img {
+          width: rem(40);
+          height: rem(40);
+        }
+      }
+
+      &--devider {
+        @include flexboxLayout;
+        justify-content: space-between;
+      }
+      &--content {
+        p{
+          width: 60ch;
+        }
+      }
+
+      &--icons {
+        @include flexboxLayout;
+        img {
+          width: rem(40);
+          height: rem(40);
+          border: 2px solid $main-shades;
+        }
+      }
     }
   }
 }

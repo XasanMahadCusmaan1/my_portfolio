@@ -32,8 +32,8 @@
 //GENERAL SYLES FOR PARAGRAPHS
 @mixin GSParagraphs {
   color: $gray-shades-10;
-  margin-bottom: rem(32);
-  line-height: rem(25.6);
+  margin-block: rem(15);
+  line-height: rem(23.6);
   font-size: rem(16);
 }
 

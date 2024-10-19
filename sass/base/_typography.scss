@@ -1,4 +1,4 @@
-.header__logo--heading{
+.header__logo--heading {
   font-family: $font-family;
   font-weight: $font-semi-bold;
   font-size: rem(20);
@@ -34,8 +34,8 @@ nav ul li a {
 
 .main__heading {
   font-size: rem(48);
-  font-weight: $font-semi-bold;
-  line-height: rem(52);
+  font-weight: $font-medium;
+  line-height: rem(48);
   margin-bottom: rem(32);
   width: 16ch;
   color: inherit;
@@ -47,7 +47,7 @@ nav ul li a {
 }
 
 .profile__card--text {
-  line-height: rem(21.3);
+  line-height: rem(18.9);
   span,
   p {
     margin: 0;
@@ -67,8 +67,25 @@ nav ul li a {
 
 //TECHNOLOGIES SECTION
 
-#slider__section {
+//ABOUT SECTION
+
+.design__content {
   p {
-    @include GSParagraphs;
+    margin-block: rem(5);
+  }
+}
+
+.dev__content {
+  p {
+    margin-block: rem(5);
+  }
+}
+
+.about__services--content {
+  span {
+    font-size: rem(17);
+    letter-spacing: rem(2);
+    font-weight: $font-regular;
+    font-style: italic;
   }
 }
