@@ -20,12 +20,12 @@
   letter-spacing: rem(1);
   font-weight: $font-semi-bold;
   transition: all 0.9s ease-in-out;
-  outline: 1px solid $main-shades;
+  outline: rem(1) solid $main-shades;
 
   &:hover {
     background-position: 100%;
     color: $main-tints-full;
-    outline: 1px solid $main-shades;
+    outline: rem(1) solid $main-shades;
   }
 }
 
@@ -33,7 +33,8 @@
 @mixin GSParagraphs {
   color: $gray-shades-10;
   margin-bottom: rem(32);
-  line-height: 1.6;
+  line-height: rem(25.6);
+  font-size: rem(16);
 }
 
 //GENERAL SYLES FOR SECTIONS

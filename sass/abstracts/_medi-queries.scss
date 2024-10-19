@@ -1,0 +1,22 @@
+//DESKTOP TO LABTOPS
+@media screen and (max-width : 1024px){
+    html{
+        font-size: 90%;
+    }
+    .main__heading{
+        font-size: rem(42);
+    }
+}
+
+//LABTOPS TO TABLETS
+@media screen and (max-width : 868px){
+    html{
+        font-size: 80%;
+    }
+    .main__heading{
+        font-size: rem(38);
+        line-height: rem(48);
+    }
+}
+
+//TABLETS TO MOBILES

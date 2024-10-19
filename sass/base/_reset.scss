@@ -1,9 +1,9 @@
 *,
 ::before,
 ::after{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+    padding: rem(0);
+    margin: rem(0);
+    box-sizing: inherit;
     text-decoration: none;
     list-style-type: none;
 }

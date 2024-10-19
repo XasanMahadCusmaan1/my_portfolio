@@ -1,8 +1,9 @@
 .profile__card {
   @include flexboxLayout;
+  gap: rem(5);
   cursor: pointer;
-  box-shadow: 0px 0px 10px $gray-tints-90;
-  padding: rem(7) rem(15);
+  box-shadow: rem(0) rem(0) rem(10) $gray-tints-90;
+  padding: rem(7) rem(10);
   background-color: $main-tints-80;
 
   .profile__card--image {

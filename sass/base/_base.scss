@@ -1,8 +1,11 @@
 body {
   color: $gray-shades-80;
+  box-sizing: border-box;
   font-family: $font-family, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
+html{
+  font-size: 100%;
+}
 img {
   width: 100%;
   height: 100%;

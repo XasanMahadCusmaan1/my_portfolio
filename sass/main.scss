@@ -7,13 +7,14 @@
 @import "abstracts/variables";
 @import "abstracts/colors";
 @import "abstracts/mixins";
-@import "abstracts/animation.scss";
+@import "abstracts/animation";
+
+
 
 // 2. Base Styles
 @import "base/base";
 @import "base/reset";
 @import "base/typography";
-@import "base/normalize";
 
 // 3. Layout Styles
 @import "layout/grid-system";
@@ -35,3 +36,6 @@
 @import "themes/light-theme";
 
 // 7. Vendors (Third-party Libraries)
+
+//MEDIA QUERY PROBLEM SOLVED FOR SPECIFICITY BY USING ORDER
+@import "abstracts/medi-queries";
