@@ -5,7 +5,7 @@
     padding-block: rem(10);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: rem(200) rem(200) rem(150);
+    grid-template-rows: repeat(3,1fr);
     gap: rem(15);
 
     & > div:not(:nth-child(1)) {
@@ -93,37 +93,6 @@
         width: rem(150);
         height: rem(2);
         background-color: blue-pallete(500);
-      }
-    }
-
-    .about__contact {
-      &--title {
-        @include flexboxLayout;
-        gap: rem(5);
-
-        img {
-          width: rem(40);
-          height: rem(40);
-        }
-      }
-
-      &--devider {
-        @include flexboxLayout;
-        justify-content: space-between;
-      }
-      &--content {
-        p{
-          width: 60ch;
-          margin-block: space(3)
-        }
-      }
-
-      &--icons {
-        @include flexboxLayout;
-        img {
-          width: rem(45);
-          height: rem(45);
-        }
       }
     }
   }

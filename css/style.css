@@ -382,7 +382,7 @@ main .main__images--image {
   padding-block: 0.625rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 12.5rem 12.5rem 9.375rem;
+  grid-template-rows: repeat(3, 1fr);
   gap: 0.9375rem;
 }
 #about .about__container > div:not(:nth-child(1)) {
@@ -459,35 +459,6 @@ main .main__images--image {
   width: 9.375rem;
   height: 0.125rem;
   background-color: #3b82f6;
-}
-#about .about__container .about__contact--title {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  gap: 0.3125rem;
-}
-#about .about__container .about__contact--title img {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-#about .about__container .about__contact--devider {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  justify-content: space-between;
-}
-#about .about__container .about__contact--content p {
-  width: 60ch;
-  margin-block: 0.75rem;
-}
-#about .about__container .about__contact--icons {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
-#about .about__container .about__contact--icons img {
-  width: 2.8125rem;
-  height: 2.8125rem;
 }
 
 @media screen and (max-width: 1024px) {
