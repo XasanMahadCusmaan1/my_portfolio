@@ -1,5 +1,5 @@
 body {
-  color: $gray-shades-80;
+  color: gray-pallete(900);
   box-sizing: border-box;
   font-family: $font-family, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -13,7 +13,7 @@ img {
 }
 
 svg {
-  fill: $main-shades-full;
+  fill: gray-pallete(900);
   cursor: pointer;
   width: 100%;
 }
@@ -29,7 +29,7 @@ button {
 }
 
 strong {
-  color: $gray-shades-80;
+  color: gray-pallete(900);
 }
 
 section {
@@ -41,8 +41,9 @@ p {
 }
 
 h2 {
-  margin-bottom: rem(20);
+  margin-block-end: space(5);
   letter-spacing: rem(2.5);
+  font-size: rem(35);
   font-weight: $font-semi-bold;
 }
 

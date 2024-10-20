@@ -5,11 +5,9 @@
 // 1. Abstracts (Variables, Mixins, Functions)
 @import "abstracts/functions";
 @import "abstracts/variables";
-@import "abstracts/colors";
+@import "abstracts/maps";
 @import "abstracts/mixins";
 @import "abstracts/animation";
-
-
 
 // 2. Base Styles
 @import "base/base";

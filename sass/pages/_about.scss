@@ -9,10 +9,10 @@
     gap: rem(15);
 
     & > div:not(:nth-child(1)) {
-      border: rem(2) solid $main-shades-10;
+      border: rem(2) solid blue-pallete(500);
       border-radius: rem(5);
       padding: rem(15);
-      box-shadow: rem(0) rem(0) rem(10) $main-tints-90;
+      box-shadow: rem(0) rem(0) rem(10) blue-pallete(100);
     }
 
     div:nth-child(1) {
@@ -42,8 +42,7 @@
       //ABOUT TITLE
       &--title {
         @include flexboxLayout;
-        align-items: flex-end;
-        gap: rem(10);
+        gap: rem(5);
 
         img {
           width: rem(40);
@@ -64,7 +63,7 @@
       //SERVICES TITLE STYLES
       &--title {
         @include flexboxLayout;
-        gap: rem(10);
+        gap: rem(5);
         img {
           width: rem(40);
           height: rem(40);
@@ -74,7 +73,7 @@
       &--content {
         margin-block-start: rem(10);
         @include flexboxLayout;
-        gap: rem(40);
+        gap: rem(30);
 
         span {
           font-size: rem(17);
@@ -89,18 +88,18 @@
         content: "";
         position: absolute;
         top: 55%;
-        left: 50%;
+        left: 47%;
         transform: translate(-50%, -50%) rotate(90deg);
         width: rem(150);
         height: rem(2);
-        background-color: $main-shades;
+        background-color: blue-pallete(500);
       }
     }
 
     .about__contact {
       &--title {
         @include flexboxLayout;
-        gap: rem(10);
+        gap: rem(5);
 
         img {
           width: rem(40);
@@ -115,15 +114,15 @@
       &--content {
         p{
           width: 60ch;
+          margin-block: space(3)
         }
       }
 
       &--icons {
         @include flexboxLayout;
         img {
-          width: rem(40);
-          height: rem(40);
-          border: 2px solid $main-shades;
+          width: rem(45);
+          height: rem(45);
         }
       }
     }
