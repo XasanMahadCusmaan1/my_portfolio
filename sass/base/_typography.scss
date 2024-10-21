@@ -51,7 +51,6 @@ nav ul li a {
 
 //PROFILE CARD TYPOGRAPHY
 .profile__card--text {
-  line-height: rem(18.9);
   span,
   p {
     margin: 0;
@@ -61,6 +60,7 @@ nav ul li a {
   p {
     font-weight: $font-light;
     font-size: rem(13);
+    line-height: line-height(0);
   }
   span {
     font-family: $font-family;

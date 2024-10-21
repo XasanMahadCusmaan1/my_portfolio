@@ -1,0 +1,45 @@
+.testimonial__items {
+  @include grid3Clayout;
+  margin-top: space(1);
+  padding: rem(10);
+
+  .item {
+    padding: rem(30);
+    border-radius: rem(5);
+    box-shadow: rem(0) rem(0) rem(10) gray-pallete(50);
+    background-color: blue-pallete(100);
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    p{
+        margin-block-start: space(4);
+        margin-block-end: space(1)
+    }
+  }
+
+  .devider {
+    @include flexboxLayout;
+    gap: space(3);
+
+    .item__title {
+      span {
+        display: block;
+      }
+      span:nth-child(1) {
+        font-weight: $font-regular;
+        font-size: rem(17);
+        font-style: italic;
+        line-height: line-height(1);
+      }
+
+      span:nth-child(2) {
+        font-size: rem(14);
+        color: gray-pallete(500);
+      }
+    }
+  }
+}

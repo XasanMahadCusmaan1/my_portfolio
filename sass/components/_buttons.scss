@@ -5,7 +5,7 @@
 //CV CONTAINER STYLES
 .cv__container {
   @include flexboxLayout;
-  gap: rem(10);
+  gap: rem(15);
   width: 100%;
   padding: rem(10) rem(0);
 }

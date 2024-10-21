@@ -12,7 +12,7 @@
     inset: rem(0);
     width: 100%;
     height: 100%;
-    background-color: rgba(blue-pallete(200), 0.5);
+    background-color: rgba(blue-pallete(300), 0.5);
     backdrop-filter: blur(rem(10));
   }
 
@@ -57,7 +57,7 @@ main {
         padding: rem(100);
         width: 100%;
         height: 100%;
-        border: rem(2) solid blue-pallete(500);
+        border: rem(2) solid blue-pallete(700);
         max-width: rem(400);
         max-height: rem(400);
         z-index: -1;

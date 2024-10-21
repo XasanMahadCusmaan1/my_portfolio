@@ -6,3 +6,11 @@
   gap: rem(30);
 }
 
+@mixin grid3Clayout{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  // grid-template-rows: 1fr 1fr 1fr;
+  align-items: stretch;
+  gap: space(5);
+}
+
