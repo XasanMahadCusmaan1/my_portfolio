@@ -1,4 +1,10 @@
 //GRID LAYOUT
+@mixin grid1Clayout{
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
 @mixin grid2Clayout {
   display: grid;
   grid-template-columns: 1fr 1fr;

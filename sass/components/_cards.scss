@@ -1,11 +1,16 @@
 //TESTIMONIAL CARDS
 .testimonial__items {
-  @include grid3Clayout;
+  @include flexboxLayout;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-top: space(1);
-  padding: rem(10);
+  padding: rem(5);
 
   //TESTIMONIAL ITEMS LIST
   .items {
+    width: rem(300);
+    flex-grow: 1;
     padding: rem(30);
     border-radius: rem(5);
     box-shadow: rem(0) rem(0) rem(10) gray-pallete(50);
