@@ -1,13 +1,50 @@
+//TESTIMONIAL CARDS
 .testimonial__items {
   @include grid3Clayout;
   margin-top: space(1);
   padding: rem(10);
 
-  .item {
+  //TESTIMONIAL ITEMS LIST
+  .items {
     padding: rem(30);
     border-radius: rem(5);
     box-shadow: rem(0) rem(0) rem(10) gray-pallete(50);
     background-color: blue-pallete(100);
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    gap: space(0);
+    position: relative;
+
+    p {
+      margin-block-start: space(5);
+      margin-block-end: space(1);
+    }
+
+    //QUOTES STYLES
+    &::after {
+      content: url(/assets/icons/icons8-quotes-100.svg);
+      position: absolute;
+      top: rem(0);
+      right: rem(10);
+      opacity: 0.2;
+      transform: rotate(180deg);
+    }
+
+    &::before {
+      content: url(/assets/icons/icons8-quotes-100.svg);
+      position: absolute;
+      bottom: rem(0);
+      left: rem(10);
+      opacity: 0.2;
+      transform: rotate(360deg);
+    }
+  }
+
+  //DEVIDING IMAGES AND TITLES FOR THE CARD STYLES
+  .devider {
+    @include flexboxLayout;
+    gap: space(3);
 
     img {
       width: 40px;
@@ -15,24 +52,14 @@
       border-radius: 50%;
     }
 
-    p{
-        margin-block-start: space(4);
-        margin-block-end: space(1)
-    }
-  }
-
-  .devider {
-    @include flexboxLayout;
-    gap: space(3);
-
-    .item__title {
+    //CARD NAMES AND HIS WORK
+    .items__title {
       span {
         display: block;
       }
       span:nth-child(1) {
         font-weight: $font-regular;
         font-size: rem(17);
-        font-style: italic;
         line-height: line-height(1);
       }
 

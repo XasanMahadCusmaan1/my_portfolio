@@ -44,5 +44,7 @@
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     border: rem(2) solid blue-pallete(700);
+    background-color: blue-pallete(50);
+    box-shadow: rem(0) rem(0) rem(10) gray-pallete(200);
   }
 }
