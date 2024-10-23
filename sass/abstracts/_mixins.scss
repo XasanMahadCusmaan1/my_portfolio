@@ -9,8 +9,8 @@
 @mixin btn {
   color: gray-pallete(100);
   font-size: rem(16);
-  cursor: pointer;
   font-family: $font-family;
+  cursor: pointer;
   background-image: linear-gradient(
     120deg,
     blue-pallete(700) 49.5%,

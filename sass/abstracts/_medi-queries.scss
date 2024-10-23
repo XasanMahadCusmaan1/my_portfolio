@@ -21,12 +21,48 @@
 
 //TABLETS TO MOBILES
 @media all and (max-width: 768px) {
+  .header {
+
+    &::after {
+      background-color: rgba(blue-pallete(300), 0.7);
+    }
+  }
   .header__container {
     position: relative;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
+
+    .header__logo {
+      position: absolute;
+      top: rem(20);
+    }
     nav {
       position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      ul {
+        li {
+          display: block;
+          margin-block: space(4);
+          text-align: center;
+
+          a {
+            font-size: rem(30);
+          }
+        }
+      }
+    }
+    .header__actions {
+      position: absolute;
+      top: rem(20);
+      right: rem(20);
+
+      .header__button--messages {
+        font-size: rem(20);
+        display: none;
+      }
     }
   }
 
@@ -42,6 +78,40 @@
       .main__heading {
         margin-block-start: space(5);
         width: 100%;
+      }
+    }
+
+    .profile__card {
+      background: none;
+      box-shadow: none;
+
+      &--image {
+        display: none;
+      }
+      &--text {
+        span,
+        p {
+          display: none;
+        }
+      }
+
+      .header__button--messages {
+        display: block;
+        @include btn;
+        font-size: rem(16);
+        padding: rem(15) rem(25);
+        background-image: linear-gradient(
+          120deg,
+          blue-pallete(50) 49.5%,
+          blue-pallete(700) 50%
+        );
+        color: blue-pallete(950);
+
+        &:hover {
+          background-position: 100%;
+          color: blue-pallete(50);
+          outline: rem(3) solid blue-pallete(700);
+        }
       }
     }
   }

@@ -43,7 +43,7 @@
 body {
   color: #111827;
   box-sizing: border-box;
-  font-family: Poppins, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Poppins, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html {
@@ -109,7 +109,7 @@ h3 {
 }
 
 .header__logo--heading {
-  font-family: Poppins;
+  font-family: Poppins, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
   cursor: pointer;
@@ -170,7 +170,7 @@ nav ul li a:hover:after {
   line-height: 0.7rem;
 }
 .profile__card--text span {
-  font-family: Poppins;
+  font-family: Poppins, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 600;
   font-size: 0.875rem;
 }
@@ -275,8 +275,8 @@ main .main__images--image {
   padding: 0.625rem 1.25rem;
   color: #f3f4f6;
   font-size: 1rem;
+  font-family: Poppins, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   cursor: pointer;
-  font-family: Poppins;
   background-image: linear-gradient(120deg, #1d4ed8 49.5%, #eff6ff 50%);
   background-size: 260%;
   letter-spacing: 0.0625rem;
@@ -303,8 +303,8 @@ main .main__images--image {
   padding: 0.9375rem 0.9375rem;
   color: #f3f4f6;
   font-size: 1rem;
+  font-family: Poppins, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   cursor: pointer;
-  font-family: Poppins;
   background-image: linear-gradient(120deg, #1d4ed8 49.5%, #eff6ff 50%);
   background-size: 260%;
   letter-spacing: 0.0625rem;
@@ -557,13 +557,40 @@ main .main__images--image {
   }
 }
 @media all and (max-width: 768px) {
+  .header::after {
+    background-color: rgba(147, 197, 253, 0.7);
+  }
   .header__container {
     position: relative;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
+  }
+  .header__container .header__logo {
+    position: absolute;
+    top: 1.25rem;
   }
   .header__container nav {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .header__container nav ul li {
+    display: block;
+    margin-block: 1rem;
+    text-align: center;
+  }
+  .header__container nav ul li a {
+    font-size: 1.875rem;
+  }
+  .header__container .header__actions {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+  }
+  .header__container .header__actions .header__button--messages {
+    font-size: 1.25rem;
+    display: none;
   }
   main {
     display: grid;
@@ -576,6 +603,44 @@ main .main__images--image {
   main .main__text .main__heading {
     margin-block-start: 1.25rem;
     width: 100%;
+  }
+  main .profile__card {
+    background: none;
+    box-shadow: none;
+  }
+  main .profile__card--image {
+    display: none;
+  }
+  main .profile__card--text span,
+  main .profile__card--text p {
+    display: none;
+  }
+  main .profile__card .header__button--messages {
+    display: block;
+    color: #f3f4f6;
+    font-size: 1rem;
+    font-family: Poppins, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    background-image: linear-gradient(120deg, #1d4ed8 49.5%, #eff6ff 50%);
+    background-size: 260%;
+    letter-spacing: 0.0625rem;
+    font-weight: 600;
+    transition: all 0.9s ease-in-out;
+    outline: 0.1875rem solid #1d4ed8;
+    font-size: 1rem;
+    padding: 0.9375rem 1.5625rem;
+    background-image: linear-gradient(120deg, #eff6ff 49.5%, #1d4ed8 50%);
+    color: #172554;
+  }
+  main .profile__card .header__button--messages:hover {
+    background-position: 100%;
+    color: #030712;
+    outline: 0.1875rem solid #3b82f6;
+  }
+  main .profile__card .header__button--messages:hover {
+    background-position: 100%;
+    color: #eff6ff;
+    outline: 0.1875rem solid #1d4ed8;
   }
   .about__container .about__image {
     display: none;
