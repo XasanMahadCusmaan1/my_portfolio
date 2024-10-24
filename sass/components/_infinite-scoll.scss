@@ -2,9 +2,7 @@
 
 #slider__section {
   overflow: hidden;
-  width: 90%;
-  max-width: 1100px;
-  margin: rem(100) auto;
+  @include GSsections;
 }
 .slider {
   width: 100%;
@@ -45,6 +43,8 @@
     animation-duration: 20s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    border: 2px solid $main-shades-10;
+    border: rem(2) solid blue-pallete(700);
+    background-color: blue-pallete(50);
+    box-shadow: rem(0) rem(0) rem(10) gray-pallete(200);
   }
 }

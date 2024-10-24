@@ -1,9 +1,11 @@
 .profile__card {
   @include flexboxLayout;
+  align-items: normal;
+  gap: rem(7);
   cursor: pointer;
-  box-shadow: 0px 0px 10px $gray-tints-90;
-  padding: rem(7) rem(15);
-  background-color: $main-tints-80;
+  box-shadow: rem(0) rem(0) rem(10) gray-pallete(50);
+  padding: rem(10) rem(10);
+  background-color: blue-pallete(200);
 
   .profile__card--image {
     width: rem(40);

@@ -1,0 +1,21 @@
+//GRID LAYOUT
+@mixin grid1Clayout{
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+@mixin grid2Clayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: rem(30);
+}
+
+@mixin grid3Clayout{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px ,1fr));
+  align-items: stretch;
+  gap: space(5);
+}
+

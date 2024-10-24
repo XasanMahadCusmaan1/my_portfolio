@@ -1,17 +1,21 @@
-.logo__heading {
+.header__logo--heading {
   font-family: $font-family;
   font-weight: $font-semi-bold;
   font-size: rem(20);
   cursor: pointer;
 }
+
+//NAV BAR TYPOGRAPHY STYLES
 nav ul li a {
   color: inherit;
   font-family: inherit;
+  font-size: rem(18);
   position: relative;
   display: inline-block;
+  margin-inline: rem(3);
 
   &:hover {
-    color: $main-shades-50;
+    color: blue-pallete(600);
   }
   &::after {
     content: "";
@@ -20,10 +24,10 @@ nav ul li a {
     left: 50%;
     transform: translate(-50%, -50%);
     display: inline-block;
-    border-radius: 10px;
+    border-radius: rem(20);
     width: 0%;
-    height: 2px;
-    background-color: $main-shades;
+    height: rem(2);
+    background-color: blue-pallete(600);
     transition: width 0.5s ease-in-out;
   }
   &:hover:after {
@@ -33,21 +37,20 @@ nav ul li a {
 
 .main__heading {
   font-size: rem(48);
-  font-family: inherit;
-  font-weight: $font-semi-bold;
-  line-height: 1.1;
-  margin-bottom: rem(32);
+  font-weight: $font-medium;
+  line-height: line-height(9);
   width: 16ch;
   color: inherit;
 }
 
 .main__heading + p {
   @include GSParagraphs;
+  margin-block: space(12);
   max-width: 100%;
 }
 
+//PROFILE CARD TYPOGRAPHY
 .profile__card--text {
-  line-height: 1.3;
   span,
   p {
     margin: 0;
@@ -56,25 +59,42 @@ nav ul li a {
 
   p {
     font-weight: $font-light;
-    color: $gray-shades-10;
+    font-size: rem(13);
+    line-height: line-height(0);
   }
   span {
     font-family: $font-family;
     font-weight: $font-semi-bold;
-    // letter-spacing: rem(1);
+    font-size: rem(14);
   }
 }
 
 //TECHNOLOGIES SECTION
 
-#slider__section {
-  h2 {
-    margin-bottom: rem(10);
-    letter-spacing: rem(2.5);
-    font-weight: $font-bold;
+#slider__section{
+  p{
+    margin-block-end: space(5);
   }
+}
+//ABOUT SECTION
 
+.design__content {
   p {
-    @include GSParagraphs;
+    margin-block: rem(5);
+  }
+}
+
+.dev__content {
+  p {
+    margin-block: rem(5);
+  }
+}
+
+.about__services--content {
+  span {
+    font-size: rem(17);
+    letter-spacing: rem(2);
+    font-weight: $font-regular;
+    font-style: italic;
   }
 }

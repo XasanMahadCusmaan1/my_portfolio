@@ -1,11 +1,27 @@
 @use "sass:math";
 
-//px to rem changer
+//PX TO REM CHANGER
 @function rem($px) {
   @return math.div($px, 16) * 1rem;
 }
 
-//px to em changer
-@function em($px, $base-font-size: 16px) {
-  @return math.div($px ,$base-font-size) * 1em;
+//BLUE PICKER FUNCTION
+@function blue-pallete($shades) {
+  @return map-get($blue, $shades);
+}
+
+//GRAY PICKER FUNCTION
+@function gray-pallete($shades) {
+  @return map-get($gray, $shades);
+}
+
+// Function to Access Spacing Scale
+@function space($size) {
+  @return map-get($spacing, $size) ;
+}
+
+
+// Function to Access Line Height Scale
+@function line-height($size) {
+  @return map-get($line-height-scale, $size);
 }

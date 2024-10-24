@@ -5,32 +5,36 @@
 // 1. Abstracts (Variables, Mixins, Functions)
 @import "abstracts/functions";
 @import "abstracts/variables";
-@import "abstracts/colors";
+@import "abstracts/maps";
 @import "abstracts/mixins";
-@import "abstracts/animation.scss";
+@import "abstracts/animation";
 
 // 2. Base Styles
 @import "base/base";
 @import "base/reset";
 @import "base/typography";
-@import "base/normalize";
 
 // 3. Layout Styles
+@import "layout/grid-system";
 @import "layout/navbar";
 @import "layout/footer";
 @import "layout/sidebar";
 @import "layout/header";
 
 // 4. Components (UI Elements)
-@import "components/alert";
 @import "components/buttons";
-@import "components/label";
-@import "components/modal";
 @import "components/profile-card";
 @import "components/infinite-scoll";
+@import "components/cards";
+
+// 6. Pages
+@import "pages/about";
 
 // 6. Themes (Different Color Themes)
 @import "themes/dark-theme";
 @import "themes/light-theme";
 
 // 7. Vendors (Third-party Libraries)
+
+//MEDIA QUERY PROBLEM SOLVED FOR SPECIFICITY BY USING ORDER
+@import "abstracts/medi-queries";

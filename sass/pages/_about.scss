@@ -1,0 +1,112 @@
+#about {
+  @include GSsections;
+}
+
+.about__container {
+  padding-block: rem(10);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  gap: rem(15);
+
+  & > .about__childs:not(:nth-child(1)) {
+    border: rem(2) solid blue-pallete(700);
+    border-radius: rem(5);
+    padding: rem(20);
+    box-shadow: rem(0) rem(0) rem(10) blue-pallete(100);
+  }
+
+  .about__childs:nth-child(1) {
+    grid-row: 1/3;
+    padding: rem(30);
+  }
+  .about__childs:nth-child(2) {
+    grid-column: 2 / 5;
+  }
+  .about__childs:nth-child(3) {
+    grid-column: 2/5;
+  }
+  .about__childs:nth-child(4) {
+    grid-column: 1 / 5;
+  }
+
+  .about__image {
+    background-image: url(/assets/images/pexels-cottonbro-5138195.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  //ABOUT BACKGROUND STYLES
+  .about__background {
+    //BACKGROUND TITLE
+    &--title {
+      @include flexboxLayout;
+      gap: rem(5);
+
+      img {
+        width: rem(40);
+        height: rem(40);
+      }
+    }
+
+    //BACKGROUND PARAGRAPH
+    p {
+      margin-block-start: rem(10);
+    }
+  }
+
+  //SERVICES STYLES
+  .about__services {
+    position: relative;
+
+    //SERVICES TITLE STYLES
+    &--title {
+      @include flexboxLayout;
+      gap: rem(5);
+      img {
+        width: rem(40);
+        height: rem(40);
+      }
+    }
+    //SERVICES CONTENT STYLES
+    &--content {
+      margin-block-start: rem(10);
+      @include flexboxLayout;
+      gap: rem(30);
+
+      span {
+        font-size: rem(17);
+        letter-spacing: rem(2);
+        font-weight: $font-regular;
+        font-style: italic;
+      }
+    }
+
+    //LINE BETWEEN SERVICE
+    &::after {
+      content: "";
+      position: absolute;
+      top: 55%;
+      left: 47%;
+      transform: translate(-50%, -50%) rotate(90deg);
+      width: rem(150);
+      height: rem(2);
+      background-color: blue-pallete(700);
+    }
+  }
+
+  //TESTIMONIAL STYLES
+  .about__testimonial {
+    //TESTIMONIAL TITLE
+    &--title {
+      @include flexboxLayout;
+      gap: rem(5);
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
