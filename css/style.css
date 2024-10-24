@@ -62,6 +62,10 @@ svg {
   width: 100%;
 }
 
+input {
+  display: none;
+}
+
 .none {
   display: none;
 }
@@ -557,17 +561,32 @@ main .main__images--image {
   }
 }
 @media all and (max-width: 768px) {
+  .header input {
+    display: none;
+  }
   .header::after {
-    background-color: rgba(147, 197, 253, 0.7);
+    background-color: rgba(147, 197, 253, 0.8);
+  }
+  .header #menu__input:checked + .header__container .header__actions--menu span {
+    background-color: transparent;
+  }
+  .header #menu__input:checked + .header__container .header__actions--menu span::after {
+    transform: rotate(135deg);
+    top: 0rem;
+  }
+  .header #menu__input:checked + .header__container .header__actions--menu span::before {
+    transform: rotate(-135deg);
+    bottom: 0rem;
   }
   .header__container {
     position: relative;
     width: 100%;
     min-height: 100vh;
   }
-  .header__container .header__logo {
+  .header__container .header__logo span {
     position: absolute;
     top: 1.25rem;
+    font-size: 1.5625rem;
   }
   .header__container nav {
     position: absolute;
@@ -587,6 +606,45 @@ main .main__images--image {
     position: absolute;
     top: 1.25rem;
     right: 1.25rem;
+  }
+  .header__container .header__actions svg {
+    width: 2.1875rem;
+    height: 2.1875rem;
+  }
+  .header__container .header__actions svg:hover {
+    fill: #1d4ed8;
+  }
+  .header__container .header__actions--menu {
+    display: block;
+  }
+  .header__container .header__actions--menu span {
+    display: block;
+    width: 3.125rem;
+    height: 0.1875rem;
+    border-radius: 0.625rem;
+    background-color: #030712;
+    position: relative;
+    cursor: pointer;
+  }
+  .header__container .header__actions--menu span::after {
+    content: "";
+    position: absolute;
+    top: -0.6875rem;
+    width: 3.125rem;
+    height: 0.1875rem;
+    border-radius: 0.625rem;
+    background-color: #030712;
+    transition: all 0.5s;
+  }
+  .header__container .header__actions--menu span::before {
+    content: "";
+    position: absolute;
+    bottom: -0.6875rem;
+    width: 3.125rem;
+    height: 0.1875rem;
+    border-radius: 0.625rem;
+    background-color: #030712;
+    transition: all 0.5s;
   }
   .header__container .header__actions .header__button--messages {
     font-size: 1.25rem;

@@ -22,19 +22,52 @@
 //TABLETS TO MOBILES
 @media all and (max-width: 768px) {
   .header {
-
+    input {
+      display: none;
+    }
     &::after {
-      background-color: rgba(blue-pallete(300), 0.7);
+      background-color: rgba(blue-pallete(300), 0.8);
+    }
+    //DESAPEARING THE MIDDLE LINE FOR THE MENU
+    #menu__input:checked + .header__container {
+      .header__actions {
+        &--menu {
+          span {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+
+    #menu__input:checked + .header__container {
+      .header__actions {
+        &--menu {
+          span {
+            &::after {
+              transform: rotate(135deg);
+              top: rem(0);
+            }
+            &::before {
+              transform: rotate(-135deg);
+              bottom: rem(0);
+            }
+          }
+        }
+      }
     }
   }
   .header__container {
     position: relative;
+    // right: -110%;
     width: 100%;
     min-height: 100vh;
 
     .header__logo {
-      position: absolute;
-      top: rem(20);
+      span {
+        position: absolute;
+        top: rem(20);
+        font-size: rem(25);
+      }
     }
     nav {
       position: absolute;
@@ -59,6 +92,50 @@
       top: rem(20);
       right: rem(20);
 
+      svg {
+        width: rem(35);
+        height: rem(35);
+
+        &:hover {
+          fill: blue-pallete(700);
+        }
+      }
+
+      &--menu {
+        display: block;
+
+        span {
+          display: block;
+          width: rem(50);
+          height: rem(3);
+          border-radius: rem(10);
+          background-color: gray-pallete(950);
+          position: relative;
+          cursor: pointer;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: rem(-11);
+            width: rem(50);
+            height: rem(3);
+            border-radius: rem(10);
+            background-color: gray-pallete(950);
+            transition: all .5s;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: rem(-11);
+            width: rem(50);
+            height: rem(3);
+            border-radius: rem(10);
+            background-color: gray-pallete(950);
+            transition: all .5s;
+
+          }
+        }
+      }
       .header__button--messages {
         font-size: rem(20);
         display: none;
