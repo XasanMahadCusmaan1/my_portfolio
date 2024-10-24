@@ -291,7 +291,7 @@ main .main__images--image {
 .header__button--messages:hover {
   background-position: 100%;
   color: #030712;
-  outline: 0.1875rem solid #3b82f6;
+  outline: 0.1875rem solid #1d4ed8;
 }
 
 .cv__container {
@@ -319,7 +319,7 @@ main .main__images--image {
 .cv__button:hover {
   background-position: 100%;
   color: #030712;
-  outline: 0.1875rem solid #3b82f6;
+  outline: 0.1875rem solid #1d4ed8;
 }
 
 .profile__card {
@@ -553,7 +553,7 @@ main .main__images--image {
 }
 @media all and (max-width: 868px) {
   html {
-    font-size: 80%;
+    font-size: 85%;
   }
   .main__heading {
     font-size: 2.375rem;
@@ -561,11 +561,15 @@ main .main__images--image {
   }
 }
 @media all and (max-width: 768px) {
+  .header {
+    width: 100%;
+    padding: 0;
+  }
   .header input {
     display: none;
   }
   .header::after {
-    background-color: rgba(147, 197, 253, 0.8);
+    background: none;
   }
   .header #menu__input:checked + .header__container .header__actions--menu span {
     background-color: transparent;
@@ -573,22 +577,55 @@ main .main__images--image {
   .header #menu__input:checked + .header__container .header__actions--menu span::after {
     transform: rotate(135deg);
     top: 0rem;
+    background-color: #1d4ed8;
   }
   .header #menu__input:checked + .header__container .header__actions--menu span::before {
     transform: rotate(-135deg);
     bottom: 0rem;
+    background-color: #1d4ed8;
+  }
+  .header #menu__input:checked + .header__container nav {
+    opacity: 1;
+    visibility: visible;
+    left: 0;
   }
   .header__container {
     position: relative;
+    min-width: 100%;
+    height: 4.375rem;
+    z-index: 100;
+  }
+  .header__container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
+    background-color: rgba(147, 197, 253, 0.6);
+    padding: 1.25rem;
   }
   .header__container .header__logo span {
     position: absolute;
-    top: 1.25rem;
+    top: 24%;
+    left: 1.25rem;
+    z-index: 100;
     font-size: 1.5625rem;
   }
   .header__container nav {
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    top: 0;
+    right: 0%;
+    bottom: 0;
+    left: -100%;
+    background-color: rgba(147, 197, 253, 0.8);
+    backdrop-filter: blur(0.9375rem);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+  }
+  .header__container nav ul {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -604,7 +641,7 @@ main .main__images--image {
   }
   .header__container .header__actions {
     position: absolute;
-    top: 1.25rem;
+    top: 24%;
     right: 1.25rem;
   }
   .header__container .header__actions svg {
@@ -620,8 +657,7 @@ main .main__images--image {
   .header__container .header__actions--menu span {
     display: block;
     width: 3.125rem;
-    height: 0.1875rem;
-    border-radius: 0.625rem;
+    height: 0.25rem;
     background-color: #030712;
     position: relative;
     cursor: pointer;
@@ -629,34 +665,29 @@ main .main__images--image {
   .header__container .header__actions--menu span::after {
     content: "";
     position: absolute;
-    top: -0.6875rem;
+    top: -0.625rem;
     width: 3.125rem;
-    height: 0.1875rem;
-    border-radius: 0.625rem;
+    height: 0.25rem;
     background-color: #030712;
     transition: all 0.5s;
   }
   .header__container .header__actions--menu span::before {
     content: "";
     position: absolute;
-    bottom: -0.6875rem;
+    bottom: -0.625rem;
     width: 3.125rem;
-    height: 0.1875rem;
-    border-radius: 0.625rem;
+    height: 0.25rem;
     background-color: #030712;
     transition: all 0.5s;
   }
   .header__container .header__actions .header__button--messages {
-    font-size: 1.25rem;
     display: none;
   }
   main {
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
-  }
-  main .main__images {
-    order: -1;
+    gap: 5rem;
   }
   main .main__text .main__heading {
     margin-block-start: 1.25rem;
@@ -693,7 +724,7 @@ main .main__images--image {
   main .profile__card .header__button--messages:hover {
     background-position: 100%;
     color: #030712;
-    outline: 0.1875rem solid #3b82f6;
+    outline: 0.1875rem solid #1d4ed8;
   }
   main .profile__card .header__button--messages:hover {
     background-position: 100%;
@@ -717,6 +748,9 @@ main .main__images--image {
   .about__container .about__services--content {
     flex-direction: column;
     align-items: flex-start;
+  }
+  .about__container .about__services--content .dev__content span, .about__container .about__services--content .design__content span {
+    font-weight: 500;
   }
 }
 

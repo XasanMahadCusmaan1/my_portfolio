@@ -11,7 +11,7 @@
 //LABTOPS TO TABLETS
 @media all and (max-width: 868px) {
   html {
-    font-size: 80%;
+    font-size: 85%;
   }
   .main__heading {
     font-size: rem(38);
@@ -22,11 +22,14 @@
 //TABLETS TO MOBILES
 @media all and (max-width: 768px) {
   .header {
+    width: 100%;
+    padding: 0;
+
     input {
       display: none;
     }
     &::after {
-      background-color: rgba(blue-pallete(300), 0.8);
+      background: none;
     }
     //DESAPEARING THE MIDDLE LINE FOR THE MENU
     #menu__input:checked + .header__container {
@@ -39,6 +42,7 @@
       }
     }
 
+    //ROTATING AFTER AND BEFORE PSUDO ELEMENTS
     #menu__input:checked + .header__container {
       .header__actions {
         &--menu {
@@ -46,36 +50,73 @@
             &::after {
               transform: rotate(135deg);
               top: rem(0);
+              background-color: blue-pallete(700);
             }
             &::before {
               transform: rotate(-135deg);
               bottom: rem(0);
+              background-color: blue-pallete(700);
+
             }
           }
         }
       }
     }
+
+    //SHOWING AND HIDIDNG NAV BAR
+    #menu__input:checked + .header__container nav{
+      opacity: 1;
+      visibility: visible;
+      left: 0;
+    }
   }
   .header__container {
     position: relative;
-    // right: -110%;
-    width: 100%;
-    min-height: 100vh;
+    min-width: 100%;
+    height: rem(70);
+    z-index: 100;
+
+    &::before{
+      content: '';
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(blue-pallete(300), 0.6);
+      padding: rem(20);
+    }
+    
 
     .header__logo {
       span {
         position: absolute;
-        top: rem(20);
+        top: 24%;
+        left: rem(20);
+        z-index: 100;
         font-size: rem(25);
       }
     }
+    //NAV SYTLES FOR MOBILE AND TABLET
     nav {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      width:100%;
+      min-height: 100vh;
+      top: 0;
+      right: 0%;
+      bottom: 0;
+      left: -100%;
+      background-color: rgba(blue-pallete(300), 0.8);
+      backdrop-filter: blur(rem(15));
+      opacity: 0;
+      visibility: hidden;
+      transition: all .5s;
 
       ul {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
         li {
           display: block;
           margin-block: space(4);
@@ -89,8 +130,8 @@
     }
     .header__actions {
       position: absolute;
-      top: rem(20);
-      right: rem(20);
+      top: 24%;
+        right: rem(20);
 
       svg {
         width: rem(35);
@@ -101,14 +142,14 @@
         }
       }
 
+      //MENU ICON STYLES
       &--menu {
         display: block;
 
         span {
           display: block;
           width: rem(50);
-          height: rem(3);
-          border-radius: rem(10);
+          height: rem(4);
           background-color: gray-pallete(950);
           position: relative;
           cursor: pointer;
@@ -116,28 +157,24 @@
           &::after {
             content: "";
             position: absolute;
-            top: rem(-11);
+            top: rem(-10);
             width: rem(50);
-            height: rem(3);
-            border-radius: rem(10);
+            height: rem(4);
             background-color: gray-pallete(950);
-            transition: all .5s;
+            transition: all 0.5s;
           }
           &::before {
             content: "";
             position: absolute;
-            bottom: rem(-11);
+            bottom: rem(-10);
             width: rem(50);
-            height: rem(3);
-            border-radius: rem(10);
+            height: rem(4);
             background-color: gray-pallete(950);
-            transition: all .5s;
-
+            transition: all 0.5s;
           }
         }
       }
       .header__button--messages {
-        font-size: rem(20);
         display: none;
       }
     }
@@ -146,10 +183,7 @@
   //MAIN SECTION
   main {
     @include grid1Clayout;
-
-    .main__images {
-      order: -1;
-    }
+    gap: space(20);
 
     .main__text {
       .main__heading {
@@ -158,6 +192,7 @@
       }
     }
 
+    //REMOVING PROFILE CARD AND CHANGING MESSAGE BUTTON
     .profile__card {
       background: none;
       box-shadow: none;
@@ -172,6 +207,7 @@
         }
       }
 
+      //THE MOBILE MESSAGE BUTTON FOT THE MAIN SECTION
       .header__button--messages {
         display: block;
         @include btn;
@@ -199,11 +235,13 @@
       display: none;
     }
 
+    //ABOUT BACKGROUND AND SERVICES STYLES
     & > .about__childs:nth-child(2),
     .about__childs:nth-child(3) {
       grid-column: 1 / 5;
     }
 
+    //ABOUT SERVICES STYLES
     .about__services {
       &::after {
         position: absolute;
@@ -212,9 +250,16 @@
         transform: translate(-50%, -50%) rotate(0deg);
         width: 90%;
       }
+      //ABOUT SERVICES CONTENT STYLES
       &--content {
         flex-direction: column;
         align-items: flex-start;
+
+        .dev__content,.design__content{
+          span{
+            font-weight: $font-medium;
+          }
+        }
       }
     }
   }
