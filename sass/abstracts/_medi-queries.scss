@@ -20,7 +20,7 @@
 }
 
 //TABLETS TO MOBILES
-@media all and (max-width: 768px) {
+@media all and (max-width: 778px) {
   .header {
     width: 100%;
     padding: 0;
@@ -183,7 +183,6 @@
   //MAIN SECTION
   main {
     @include grid1Clayout;
-    gap: space(20);
 
     .main__text {
       .main__heading {
