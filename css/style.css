@@ -155,7 +155,7 @@ nav ul li a:hover:after {
 .main__heading {
   font-size: 3rem;
   font-weight: 500;
-  line-height: 2.75rem;
+  line-height: 3rem;
   width: 16ch;
   color: inherit;
 }
@@ -698,6 +698,7 @@ main .main__images--image {
   }
   main .main__text .main__heading {
     margin-block-start: 1.25rem;
+    line-height: 2.5rem;
     width: 100%;
   }
   main .profile__card {
