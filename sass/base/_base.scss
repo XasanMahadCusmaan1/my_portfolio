@@ -16,9 +16,13 @@ svg {
   fill: gray-pallete(900);
   cursor: pointer;
   width: 100%;
+
+  &:hover {
+    fill: blue-pallete(700);
+  }
 }
 
-input{
+input {
   display: none;
 }
 .none {
