@@ -3,9 +3,8 @@
   align-items: normal;
   gap: rem(7);
   cursor: pointer;
-  box-shadow: rem(0) rem(0) rem(10) gray-pallete(50);
+  box-shadow: inset rem(0) rem(0) rem(10) blue-pallete(400);
   padding: rem(10) rem(10);
-  background-color: blue-pallete(300);
 
   .profile__card--image {
     width: rem(40);

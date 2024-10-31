@@ -180,6 +180,8 @@
   //MAIN SECTION
   main {
     @include grid1Clayout;
+    align-items: center;
+    text-align: center;
 
     .main__text {
       .main__heading {
@@ -190,6 +192,9 @@
     }
 
     //REMOVING PROFILE CARD AND CHANGING MESSAGE BUTTON
+    .cv__container{
+      justify-content: center;
+    }
     .profile__card {
       background: none;
       box-shadow: none;

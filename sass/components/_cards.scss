@@ -14,7 +14,7 @@
     padding: rem(30);
     border-radius: rem(5);
     box-shadow: rem(0) rem(0) rem(10) gray-pallete(50);
-    background-color: blue-pallete(100);
+    background-color: rgba(blue-pallete(300), 0.8);
     display: grid;
     grid-template-rows: subgrid;
     grid-row: span 3;
@@ -24,6 +24,7 @@
     p {
       margin-block-start: space(5);
       margin-block-end: space(1);
+      color: gray-pallete(700);
     }
 
     //QUOTES STYLES

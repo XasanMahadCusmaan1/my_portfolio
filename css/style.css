@@ -88,7 +88,7 @@ section {
 }
 
 p {
-  color: #4b5563;
+  color: #6b7280;
   line-height: 1.5rem;
   margin-block-end: 2.5rem;
 }
@@ -164,7 +164,7 @@ nav ul li a:hover:after {
 }
 
 .main__heading + p {
-  color: #4b5563;
+  color: #6b7280;
   line-height: 1.5rem;
   margin-block-end: 2.5rem;
   margin-block: 3rem;
@@ -337,9 +337,8 @@ main .main__images--image {
   align-items: normal;
   gap: 0.4375rem;
   cursor: pointer;
-  box-shadow: 0rem 0rem 0.625rem #f9fafb;
+  box-shadow: inset 0rem 0rem 0.625rem #60a5fa;
   padding: 0.625rem 0.625rem;
-  background-color: #93c5fd;
 }
 .profile__card .profile__card--image {
   width: 2.5rem;
@@ -402,7 +401,7 @@ main .main__images--image {
   padding: 1.875rem;
   border-radius: 0.3125rem;
   box-shadow: 0rem 0rem 0.625rem #f9fafb;
-  background-color: #dbeafe;
+  background-color: rgba(147, 197, 253, 0.8);
   display: grid;
   grid-template-rows: subgrid;
   grid-row: span 3;
@@ -412,6 +411,7 @@ main .main__images--image {
 .testimonial__items .items p {
   margin-block-start: 1.25rem;
   margin-block-end: 0.25rem;
+  color: #374151;
 }
 .testimonial__items .items::after {
   content: url(/assets/icons/icons8-quotes-100.svg);
@@ -527,7 +527,7 @@ main .main__images--image {
 .about__container .about__services--content span {
   font-size: 1.0625rem;
   letter-spacing: 0.125rem;
-  font-weight: 400;
+  font-weight: 500;
   font-style: italic;
 }
 .about__container .about__services::after {
@@ -695,11 +695,16 @@ main .main__images--image {
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
+    align-items: center;
+    text-align: center;
   }
   main .main__text .main__heading {
     margin-block-start: 1.25rem;
     line-height: 2.5rem;
     width: 100%;
+  }
+  main .cv__container {
+    justify-content: center;
   }
   main .profile__card {
     background: none;
