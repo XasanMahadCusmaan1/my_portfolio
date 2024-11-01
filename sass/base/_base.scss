@@ -24,7 +24,11 @@ svg {
 
 input {
   display: none;
+  position: absolute;
+  z-index: 99999;
+  left: -100vh;
 }
+
 .none {
   display: none;
 }

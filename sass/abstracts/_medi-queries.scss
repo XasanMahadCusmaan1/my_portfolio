@@ -25,9 +25,6 @@
     width: 100%;
     padding: 0;
 
-    input {
-      display: none;
-    }
     &::after {
       background: none;
     }
@@ -117,7 +114,7 @@
 
         li {
           display: block;
-          margin-block: space(4);
+          margin-block: space(7);
           text-align: center;
 
           a {
@@ -192,7 +189,7 @@
     }
 
     //REMOVING PROFILE CARD AND CHANGING MESSAGE BUTTON
-    .cv__container{
+    .cv__container {
       justify-content: center;
     }
     .profile__card {

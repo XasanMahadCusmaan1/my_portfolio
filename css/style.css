@@ -67,6 +67,9 @@ svg:hover {
 
 input {
   display: none;
+  position: absolute;
+  z-index: 99999;
+  left: -100vh;
 }
 
 .none {
@@ -337,7 +340,7 @@ main .main__images--image {
   align-items: normal;
   gap: 0.4375rem;
   cursor: pointer;
-  box-shadow: inset 0rem 0rem 0.625rem #60a5fa;
+  box-shadow: 0rem 0rem 0.625rem #e5e7eb;
   padding: 0.625rem 0.625rem;
 }
 .profile__card .profile__card--image {
@@ -573,9 +576,6 @@ main .main__images--image {
     width: 100%;
     padding: 0;
   }
-  .header input {
-    display: none;
-  }
   .header::after {
     background: none;
   }
@@ -641,7 +641,7 @@ main .main__images--image {
   }
   .header__container nav ul li {
     display: block;
-    margin-block: 1rem;
+    margin-block: 1.75rem;
     text-align: center;
   }
   .header__container nav ul li a {
