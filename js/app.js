@@ -7,7 +7,7 @@ const hideScrollBody = function () {
     if (input.checked) {
       body.style.overflow = "hidden";
     } else {
-      body.style.overflow = "auto";
+      body.style.overflow = "scroll";
     }
   });
 };

@@ -40,6 +40,11 @@
   animation-delay: 0s;
 }
 
+:root {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
 body {
   color: #111827;
   box-sizing: border-box;
@@ -77,7 +82,7 @@ input {
 }
 
 button {
-  background-color: none;
+  background: none;
   border: none;
   cursor: pointer;
 }
@@ -340,7 +345,6 @@ main .main__images--image {
   align-items: normal;
   gap: 0.4375rem;
   cursor: pointer;
-  box-shadow: 0rem 0rem 0.625rem #e5e7eb;
   padding: 0.625rem 0.625rem;
 }
 .profile__card .profile__card--image {
@@ -404,7 +408,7 @@ main .main__images--image {
   padding: 1.875rem;
   border-radius: 0.3125rem;
   box-shadow: 0rem 0rem 0.625rem #f9fafb;
-  background-color: rgba(147, 197, 253, 0.8);
+  background-color: #bfdbfe;
   display: grid;
   grid-template-rows: subgrid;
   grid-row: span 3;
@@ -597,6 +601,19 @@ main .main__images--image {
     visibility: visible;
     left: 0;
   }
+  .header #menu__input:checked + .header__container nav ul li {
+    animation: slide_right 1s ease-in-out;
+    transform: translateX(0);
+  }
+  .header #menu__input:checked + .header__container nav ul li:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .header #menu__input:checked + .header__container nav ul li:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  .header #menu__input:checked + .header__container nav ul li:nth-child(4) {
+    animation-delay: 0.6s;
+  }
   .header__container {
     position: relative;
     min-width: 100%;
@@ -703,6 +720,9 @@ main .main__images--image {
     line-height: 2.5rem;
     width: 100%;
   }
+  main .main__text p {
+    text-wrap: balance;
+  }
   main .cv__container {
     justify-content: center;
   }
@@ -731,7 +751,7 @@ main .main__images--image {
     outline: 0.1875rem solid #1d4ed8;
     font-size: 1rem;
     padding: 0.9375rem 1.5625rem;
-    background-image: linear-gradient(120deg, #eff6ff 49.5%, #1d4ed8 50%);
+    background-image: linear-gradient(120deg, #eff6ff 49.9%, #1d4ed8 50%);
     color: #172554;
   }
   main .profile__card .header__button--messages:hover {
@@ -765,6 +785,20 @@ main .main__images--image {
   .about__container .about__services--content .dev__content span,
   .about__container .about__services--content .design__content span {
     font-weight: 500;
+  }
+  @keyframes slide_right {
+    0% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+    50% {
+      transform: translateX(30px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
 }
 
