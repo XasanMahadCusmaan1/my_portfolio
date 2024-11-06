@@ -28,6 +28,7 @@
     &::after {
       background: none;
     }
+    
     //DESAPEARING THE MIDDLE LINE FOR THE MENU
     #menu__input:checked + .header__container {
       .header__actions {
@@ -63,7 +64,7 @@
     #menu__input:checked + .header__container nav {
       opacity: 1;
       visibility: visible;
-      right: 0;
+      top: 0;
 
       ul {
         li {
@@ -89,17 +90,16 @@
     min-width: 100%;
     height: rem(70);
     z-index: 200;
-      background-color: rgba(blue-pallete(300), 0.9);
+    background-color: rgba(blue-pallete(300), 0.9);
 
-
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      padding: rem(20);
-    }
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   inset: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   padding: rem(20);
+    // }
 
     .header__logo {
       span {
@@ -113,31 +113,40 @@
     //NAV SYTLES FOR MOBILE AND TABLET
     nav {
       position: absolute;
-      width: 70%;
-      min-height: 100vh;
-      top: 0;
+      width: 100%;
+      min-height: rem(300);
+      top: -100%;
       right: 0;
       bottom: 0;
-      right: -100%;
+      left: 0;
       background-color: rgba(blue-pallete(300), 0.8);
-      backdrop-filter: blur(rem(15));
+      backdrop-filter: blur(rem(20));
       opacity: 0;
       visibility: hidden;
       transition: all 0.5s;
+      overflow: hidden;
 
       ul {
+        width: 90%;
+        // margin: 0 auto;
         position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: rem(10);
         top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        left: rem(17);
+        // border: 2px solid red;
 
         li {
-          display: block;
-          margin-block: space(7);
+          // margin-block: space(5);
+          margin-inline: rem(0);
           text-align: left;
+          display: block;
+          // position: absolute;
 
           a {
-            font-size: rem(30);
+            font-size: rem(25);
+            display: block;
           }
         }
       }
@@ -204,6 +213,7 @@
         margin-block-start: space(5);
         line-height: line-height(8);
         width: 100%;
+        // text-wrap: balance;
       }
 
       p {
