@@ -3,9 +3,9 @@
   align-items: normal;
   gap: rem(7);
   cursor: pointer;
-  padding: rem(7) rem(7);
-     outline: 2px solid blue-pallete(700);
-     background-color: blue-pallete(100);
+  padding: rem(10) rem(7);
+  // outline: 3px solid blue-pallete(700);
+  background-color: blue-pallete(100);
 
   .profile__card--image {
     width: rem(40);

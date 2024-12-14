@@ -28,7 +28,7 @@
     &::after {
       background: none;
     }
-    
+
     //DESAPEARING THE MIDDLE LINE FOR THE MENU
     #menu__input:checked + .header__container {
       .header__actions {
@@ -62,9 +62,9 @@
 
     //SHOWING AND HIDIDNG NAV BAR
     #menu__input:checked + .header__container nav {
-      opacity: 1;
       visibility: visible;
-      top: 0;
+      overflow: clip;
+      min-height: rem(300);
 
       ul {
         li {
@@ -72,6 +72,9 @@
           animation-fill-mode: both;
           transform: translateX(0);
 
+          a {
+            opacity: 1;
+          }
           &:nth-child(2) {
             animation-delay: 0.2s;
           }
@@ -92,15 +95,6 @@
     z-index: 200;
     background-color: rgba(blue-pallete(300), 0.9);
 
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   inset: 0;
-    //   width: 100%;
-    //   height: 100%;
-    //   padding: rem(20);
-    // }
-
     .header__logo {
       span {
         position: absolute;
@@ -114,39 +108,34 @@
     nav {
       position: absolute;
       width: 100%;
-      min-height: rem(300);
-      top: -100%;
+      min-height: rem(0);
+      top: 0;
       right: 0;
       bottom: 0;
       left: 0;
       background-color: rgba(blue-pallete(300), 0.8);
       backdrop-filter: blur(rem(20));
-      opacity: 0;
       visibility: hidden;
-      transition: all 0.5s;
       overflow: hidden;
+      transition: all 1s ease-in-out;
 
       ul {
-        width: 90%;
-        // margin: 0 auto;
         position: absolute;
-        display: flex;
-        flex-direction: column;
-        gap: rem(10);
         top: 30%;
         left: rem(17);
-        // border: 2px solid red;
+        transition: all 0.5s;
 
         li {
-          // margin-block: space(5);
           margin-inline: rem(0);
           text-align: left;
           display: block;
-          // position: absolute;
 
           a {
             font-size: rem(25);
+            margin-bottom: rem(10);
             display: block;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
           }
         }
       }
@@ -295,22 +284,6 @@
           }
         }
       }
-    }
-  }
-
-  @keyframes slide_right {
-    0% {
-      transform: translateX(-50px);
-      opacity: 0;
-    }
-    50% {
-      transform: translateX(50px);
-      opacity: 1;
-    }
-
-    100% {
-      transform: translateX(0);
-      opacity: 1;
     }
   }
 }

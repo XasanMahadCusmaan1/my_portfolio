@@ -344,8 +344,7 @@ main .main__images--image {
   align-items: normal;
   gap: 0.4375rem;
   cursor: pointer;
-  padding: 0.4375rem 0.4375rem;
-  outline: 2px solid #1d4ed8;
+  padding: 0.625rem 0.4375rem;
   background-color: #dbeafe;
 }
 .profile__card .profile__card--image {
@@ -598,14 +597,17 @@ main .main__images--image {
     background-color: #1d4ed8;
   }
   .header #menu__input:checked + .header__container nav {
-    opacity: 1;
     visibility: visible;
-    top: 0;
+    overflow: clip;
+    min-height: 18.75rem;
   }
   .header #menu__input:checked + .header__container nav ul li {
     animation: slide_right 1s ease-in-out;
     animation-fill-mode: both;
     transform: translateX(0);
+  }
+  .header #menu__input:checked + .header__container nav ul li a {
+    opacity: 1;
   }
   .header #menu__input:checked + .header__container nav ul li:nth-child(2) {
     animation-delay: 0.2s;
@@ -633,26 +635,22 @@ main .main__images--image {
   .header__container nav {
     position: absolute;
     width: 100%;
-    min-height: 18.75rem;
-    top: -100%;
+    min-height: 0rem;
+    top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background-color: rgba(147, 197, 253, 0.8);
     backdrop-filter: blur(1.25rem);
-    opacity: 0;
     visibility: hidden;
-    transition: all 0.5s;
     overflow: hidden;
+    transition: all 1s ease-in-out;
   }
   .header__container nav ul {
-    width: 90%;
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    gap: 0.625rem;
     top: 30%;
     left: 1.0625rem;
+    transition: all 0.5s;
   }
   .header__container nav ul li {
     margin-inline: 0rem;
@@ -661,7 +659,10 @@ main .main__images--image {
   }
   .header__container nav ul li a {
     font-size: 1.5625rem;
+    margin-bottom: 0.625rem;
     display: block;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
   }
   .header__container .header__actions {
     position: absolute;
@@ -785,20 +786,6 @@ main .main__images--image {
   .about__container .about__services--content .dev__content span,
   .about__container .about__services--content .design__content span {
     font-weight: 500;
-  }
-  @keyframes slide_right {
-    0% {
-      transform: translateX(-50px);
-      opacity: 0;
-    }
-    50% {
-      transform: translateX(50px);
-      opacity: 1;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
   }
 }
 
