@@ -12,7 +12,7 @@
 
 <body>
     <!-- HEADER SECTION -->
-    <header class="header">
+    <!-- <header class="header">
         <input type="checkbox" id="menu__input">
         <div class="header__container">
             <div class="header__logo">
@@ -43,23 +43,51 @@
                 <a class="header__button--messages">MESSAGE</a>
             </div>
         </div>
-    </header>
+    </header> -->
+        <input type="checkbox" id="menu__toggle">
+        <header>
+            <div class="header__actions">
+                <div class="header__logo">
+                    <img src="/assets/images/photo_2024-12-09_11-43-09.jpg" alt="my image">
+                    <span><strong>Hassan.<em>dev</em></strong></span>
+                </div>
+                <div class="header__menu">
+                    <label for="menu__toggle">
+                        <div class="menu__container">
+                            <span></span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#"><span>01</span>OVERVIEW</a></li>
+                    <li><a href="#"><span>02</span>ABOUT</a></li>
+                    <li><a href="#"><span>03</span>PROJECTS</a></li>
+                    <li><a href="#"><span>04</span>CONTACT</a></li>
+                </ul>
+            </nav>
+            <!-- buttons for the menu  -->
+            <div class="header__buttons">
+                <a href="#" class="btn btn__background">Message</a>
+                <!-- <a href="#" class="btn btn__border">Join</a> -->
+            </div>
+        </header>
     <!-- HEADER MAIN SECTION -->
     <main>
         <!-- TEXT PART -->
         <div class="main__text">
             <h1 class="main__heading">Building the Future of the Web, One Pixel at a Time</h1>
-            <p>Hi, I’m <strong><em>HASSAN MAHAD CUSMAAN</em></strong>, a frontend developer dedicated to creating sleek,
+            <p>Hi, I’m <em>HASSAN MAHAD CUSMAAN</em>, a frontend developer dedicated to creating sleek,
                 responsive, and user-friendly websites.</p>
             <div class="cv__container">
-                <button class="cv__button">DOWNLOAD MY CV</button>
+                <button class="cv__button">Download Cv</button>
                 <!-- CARD ONLY SHOWES FOR DESKTOP -->
                 <div class="profile__card">
                     <div class="profile__card--image"></div>
                     <div class="profile__card--text">
                         <span>Hassan Mahad</span>
                         <p>Dev & Designer</p>
-                        <a class="header__button--messages none">MESSAGE</a>
                     </div>
                 </div>
             </div>
@@ -67,7 +95,7 @@
         <!-- IMAGE PART -->
         <div class="main__images">
             <div class="main__images--div">
-                <img class="main__images--image" src="/assets/images/pexels-cottonbro-5138195.jpg" alt="profile image">
+                <img class="main__images--image" src="/assets/images/my-image-croped.jpg" alt="profile image">
             </div>
         </div>
     </main>

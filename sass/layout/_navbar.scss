@@ -1,11 +1,13 @@
+
+/* links styles */
 nav {
-  position: relative;
+  ul {
+    margin-block-start: rem(32);
+  }
+
+  li {
+    list-style: none;
+    margin-block-end: rem(30);
+    border-block-end: 1px solid black;
+  }
 }
-
-nav ul li {
-  display: inline-block;
-  margin-inline: rem(10);
-}
-
-
-

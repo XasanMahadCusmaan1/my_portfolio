@@ -1,289 +1,107 @@
-//DESKTOP TO LABTOPS
-@media all and (max-width: 1024px) {
-  html {
-    font-size: 90%;
-  }
-  .main__heading {
-    font-size: rem(42);
-  }
-}
-
-//LABTOPS TO TABLETS
-@media all and (max-width: 868px) {
+// //DESKTOP TO LABTOPS
+//TABLETS TO MOBILES
+@media all and (min-width: 868px) {
   html {
     font-size: 85%;
   }
-  .main__heading {
-    font-size: rem(38);
-    line-height: rem(48);
+  /* media queries for header*/
+  header {
+    display: flex;
+    transition: none;
+    justify-content: space-between;
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  .header__logo {
+    span {
+      font-size: 1.5rem;
+    }
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: rem(20);
+      margin: 0;
+    }
+
+    li {
+      border-block-end: none;
+      margin: 0;
+    }
+
+    a {
+      font-size: rem(23);
+    }
+  }
+
+  .header__buttons {
+    margin: 0;
+    align-items: center;
+
+    .btn {
+      font-size: rem(22);
+      padding: rem(10) rem(10);
+    }
+  }
+
+  //header main section
+
+  //cv button for desktop
+  .cv__button {
+    font-size: rem(20);
+  }
+
+  //header main section
+  main {
+    @include grid2Clayout;
+    margin-block-start: rem(150);
+  }
+
+  .main__text {
+    order: -1;
+    margin: 0;
+
+    .main__heading {
+      text-align: left;
+      font-size: rem(48);
+      line-height: line-height(10);
+    }
+
+    p {
+      text-align: left;
+    }
+  }
+  .cv__container {
+    justify-content: flex-start;
+  }
+  //technologies section for mobile >
+  #slider__section {
+    h2,
+    p {
+      text-align: left;
+    }
   }
 }
 
-//TABLETS TO MOBILES
-@media all and (max-width: 778px) {
-  .header {
-    width: 100%;
-    padding: 0;
-
-    &::after {
-      background: none;
-    }
-
-    //DESAPEARING THE MIDDLE LINE FOR THE MENU
-    #menu__input:checked + .header__container {
-      .header__actions {
-        &--menu {
-          span {
-            background-color: transparent;
-          }
-        }
-      }
-    }
-
-    //ROTATING AFTER AND BEFORE PSUDO ELEMENTS
-    #menu__input:checked + .header__container {
-      .header__actions {
-        &--menu {
-          span {
-            &::after {
-              transform: rotate(135deg);
-              top: rem(0);
-              background-color: blue-pallete(700);
-            }
-            &::before {
-              transform: rotate(-135deg);
-              bottom: rem(0);
-              background-color: blue-pallete(700);
-            }
-          }
-        }
-      }
-    }
-
-    //SHOWING AND HIDIDNG NAV BAR
-    #menu__input:checked + .header__container nav {
-      visibility: visible;
-      overflow: clip;
-      min-height: rem(300);
-
-      ul {
-        li {
-          animation: slide_right 1s ease-in-out;
-          animation-fill-mode: both;
-          transform: translateX(0);
-
-          a {
-            opacity: 1;
-          }
-          &:nth-child(2) {
-            animation-delay: 0.2s;
-          }
-          &:nth-child(3) {
-            animation-delay: 0.4s;
-          }
-          &:nth-child(4) {
-            animation-delay: 0.6s;
-          }
-        }
-      }
-    }
+//media queries for tablet and above
+@media all and (min-width: 968px) {
+  html {
+    font-size: 90%;
   }
-  .header__container {
-    position: relative;
-    min-width: 100%;
-    height: rem(70);
-    z-index: 200;
-    background-color: rgba(blue-pallete(300), 0.9);
+}
 
-    .header__logo {
-      span {
-        position: absolute;
-        top: 24%;
-        left: rem(20);
-        z-index: 100;
-        font-size: rem(25);
-      }
-    }
-    //NAV SYTLES FOR MOBILE AND TABLET
-    nav {
-      position: absolute;
-      width: 100%;
-      min-height: rem(0);
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-color: rgba(blue-pallete(300), 0.8);
-      backdrop-filter: blur(rem(20));
-      visibility: hidden;
-      overflow: hidden;
-      transition: all 1s ease-in-out;
-
-      ul {
-        position: absolute;
-        top: 30%;
-        left: rem(17);
-        transition: all 0.5s;
-
-        li {
-          margin-inline: rem(0);
-          text-align: left;
-          display: block;
-
-          a {
-            font-size: rem(25);
-            margin-bottom: rem(10);
-            display: block;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-          }
-        }
-      }
-    }
-    .header__actions {
-      position: absolute;
-      top: 24%;
-      right: rem(20);
-
-      svg {
-        width: rem(35);
-        height: rem(35);
-      }
-
-      //MENU ICON STYLES
-      &--menu {
-        display: block;
-
-        span {
-          display: block;
-          width: rem(45);
-          height: rem(5);
-          background-color: gray-pallete(950);
-          position: relative;
-          cursor: pointer;
-          border-radius: rem(5);
-
-          &::after {
-            content: "";
-            position: absolute;
-            top: rem(-11);
-            width: rem(45);
-            height: rem(5);
-            border-radius: rem(5);
-            background-color: gray-pallete(950);
-            transition: all 0.5s;
-          }
-          &::before {
-            content: "";
-            position: absolute;
-            bottom: rem(-11);
-            width: rem(45);
-            height: rem(5);
-            border-radius: rem(5);
-            background-color: gray-pallete(950);
-            transition: all 0.5s;
-          }
-        }
-      }
-      .header__button--messages {
-        display: none;
-      }
-    }
-  }
-
-  //MAIN SECTION
-  main {
-    @include grid1Clayout;
-    align-items: center;
-    text-align: center;
-
-    .main__text {
-      .main__heading {
-        margin-block-start: space(5);
-        line-height: line-height(8);
-        width: 100%;
-        // text-wrap: balance;
-      }
-
-      p {
-        text-wrap: balance;
-      }
-    }
-
-    //REMOVING PROFILE CARD AND CHANGING TO MESSAGE BUTTON
-    .cv__container {
-      justify-content: center;
-    }
-    .profile__card {
-      background: none;
-      box-shadow: none;
-      outline: none;
-
-      &--image {
-        display: none;
-      }
-      &--text {
-        span,
-        p {
-          display: none;
-        }
-      }
-
-      //THE MOBILE MESSAGE BUTTON FOT THE MAIN SECTION
-      .header__button--messages {
-        display: block;
-        @include btn;
-        font-size: rem(16);
-        padding: rem(15) rem(25);
-        background-image: linear-gradient(
-          120deg,
-          blue-pallete(50) 49.9%,
-          blue-pallete(700) 50%
-        );
-        color: blue-pallete(950);
-
-        &:hover {
-          background-position: 100%;
-          color: blue-pallete(50);
-          outline: rem(3) solid blue-pallete(700);
-        }
-      }
-    }
-  }
-
-  //ABOUT ME STYLES
-  .about__container {
-    .about__image {
-      display: none;
-    }
-
-    //ABOUT BACKGROUND AND SERVICES STYLES
-    & > .about__childs:nth-child(2),
-    .about__childs:nth-child(3) {
-      grid-column: 1 / 5;
-    }
-
-    //ABOUT SERVICES STYLES
-    .about__services {
-      &::after {
-        position: absolute;
-        left: 50%;
-        top: 55%;
-        transform: translate(-50%, -50%) rotate(0deg);
-        width: 90%;
-      }
-      //ABOUT SERVICES CONTENT STYLES
-      &--content {
-        flex-direction: column;
-        align-items: flex-start;
-
-        .dev__content,
-        .design__content {
-          span {
-            font-weight: $font-medium;
-          }
-        }
-      }
-    }
+//media queries for desktop and above
+@media all and (min-width: 1012px) {
+  html {
+    font-size: 100%;
   }
 }
