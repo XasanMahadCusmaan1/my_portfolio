@@ -39,7 +39,7 @@
     }
 
     a {
-      font-size: rem(23);
+      font-size: rem(20);
     }
   }
 
@@ -48,7 +48,7 @@
     align-items: center;
 
     .btn {
-      font-size: rem(22);
+      font-size: rem(18);
       padding: rem(10) rem(10);
     }
   }
@@ -63,7 +63,8 @@
   //header main section
   main {
     @include grid2Clayout;
-    margin-block-start: rem(150);
+    gap: 0;
+    @include GSsections;
   }
 
   .main__text {
@@ -74,10 +75,13 @@
       text-align: left;
       font-size: rem(48);
       line-height: line-height(10);
+      margin: 0;
     }
 
     p {
       text-align: left;
+      max-width: 100ch;
+      text-wrap: balance;
     }
   }
   .cv__container {
@@ -85,6 +89,8 @@
   }
   //technologies section for mobile >
   #slider__section {
+    @include GSsections;
+    padding: auto rem(30) auto rem(30);
     h2,
     p {
       text-align: left;

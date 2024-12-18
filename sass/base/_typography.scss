@@ -22,7 +22,7 @@
 //NAV BAR TYPOGRAPHY STYLES
 nav {
   a {
-    font-family: $font-family-second;
+    font-family: $font-family;
     font-size: rem(25);
     text-decoration: none;
     color: inherit;
@@ -41,12 +41,13 @@ nav {
 
 //heading for the main section
 .main__heading {
-  font-size: rem(32);
+  font-size: rem(46);
   font-weight: $font-medium;
   text-align: center;
   text-wrap: balance;
   color: inherit;
-  line-height: line-height(8);
+  line-height: line-height(10);
+  margin-block-start:space(16)
 }
 
 .main__heading + p {
@@ -55,6 +56,9 @@ nav {
   max-width: 100%;
   text-align: center;
   text-wrap: balance;
+  font-size: rem(18);
+  max-width: 70ch;
+  margin: space(8) auto;
 
   em {
     font-family: $font-family-second;
@@ -75,13 +79,13 @@ nav {
 
   p {
     font-weight: $font-light;
-    font-size: rem(13);
+    font-size: rem(14);
     line-height: line-height(0);
   }
   span {
     font-family: $font-family;
     font-weight: $font-semi-bold;
-    font-size: rem(14);
+    font-size: rem(16);
   }
 }
 
@@ -90,11 +94,11 @@ nav {
 #slider__section {
   h2 {
     text-align: center;
+
   }
   p {
     text-align: center;
     text-wrap: balance;
-    margin-block-end: space(5);
   }
 }
 //ABOUT SECTION

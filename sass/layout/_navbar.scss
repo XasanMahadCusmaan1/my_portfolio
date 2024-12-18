@@ -2,12 +2,12 @@
 /* links styles */
 nav {
   ul {
-    margin-block-start: rem(32);
+    margin-block-start: rem(40);
   }
 
   li {
     list-style: none;
     margin-block-end: rem(30);
-    border-block-end: 1px solid black;
+    border-block-end: 1px solid gray-pallete(400);
   }
 }

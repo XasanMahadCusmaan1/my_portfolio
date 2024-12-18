@@ -1,9 +1,9 @@
 .profile__card {
   @include flexboxLayout;
-  align-items: normal;
+  align-items: center;
   gap: rem(7);
   cursor: pointer;
-  padding: rem(10) rem(7);
+  padding: rem(10) rem(10);
   // outline: 3px solid blue-pallete(700);
   background-color: blue-pallete(100);
 
@@ -11,7 +11,7 @@
     width: rem(40);
     height: rem(40);
     border-radius: 50%;
-    background-image: url(/assets/images/pexels-cottonbro-5138195.jpg);
+    background-image: url(/assets/images/my-image-croped.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

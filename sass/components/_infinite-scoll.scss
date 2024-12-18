@@ -2,7 +2,9 @@
 
 #slider__section {
   overflow: hidden;
-  @include GSsections;
+  background-image: radial-gradient(blue-pallete(100),blue-pallete(300));
+  // padding-block: rem(120);
+  padding: auto rem(100);
 }
 .slider {
   width: 100%;
