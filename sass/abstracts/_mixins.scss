@@ -37,9 +37,12 @@
 }
 
 //GENERAL SYLES FOR SECTIONS
-@mixin GSsections {
+@mixin GSsectionsMobile {
   width: 100%;
-  // max-width: 90%;
   padding: rem(160) rem(30) rem(100) rem(30);
-  // margin: rem(120) auto rem(0) auto;
+}
+
+@mixin GSsectionDesktop {
+  width: 100%;
+  padding: rem(0) rem(80) rem(100) rem(80);
 }

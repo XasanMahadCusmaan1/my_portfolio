@@ -49,7 +49,7 @@
 
     .btn {
       font-size: rem(18);
-      padding: rem(10) rem(10);
+      padding: rem(15) rem(20);
     }
   }
 
@@ -64,7 +64,8 @@
   main {
     @include grid2Clayout;
     gap: 0;
-    @include GSsections;
+    @include GSsectionDesktop;
+    padding: rem(160) rem(80) rem(100) rem(80);
   }
 
   .main__text {
@@ -89,13 +90,15 @@
   }
   //technologies section for mobile >
   #slider__section {
-    @include GSsections;
-    padding: auto rem(30) auto rem(30);
+    @include GSsectionDesktop;
+
     h2,
     p {
       text-align: left;
     }
   }
+
+  
 }
 
 //media queries for tablet and above

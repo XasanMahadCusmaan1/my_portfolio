@@ -195,6 +195,7 @@ nav a span {
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 0.7rem;
+  text-wrap: balance;
 }
 .profile__card--text span {
   font-family: Lato, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -245,6 +246,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
+  clip-path: polygon(0% 0%, 100% 0%, 99.8% 90.5%, 0% 100%);
 }
 
 /* humburger menu styles */
@@ -324,6 +326,7 @@ main {
   width: 100%;
   padding: 10rem 1.875rem 6.25rem 1.875rem;
   background-image: radial-gradient(#dbeafe, #93c5fd);
+  isolation: isolate;
 }
 main .main__text {
   width: 100%;
@@ -349,7 +352,7 @@ main .main__images--div::after {
   border: 0.1875rem solid #1d4ed8;
   max-width: 25rem;
   max-height: 25rem;
-  z-index: 1;
+  z-index: -1;
 }
 main .main__images--image {
   max-width: 25rem;
@@ -430,7 +433,7 @@ main .main__images--image {
   gap: 0.4375rem;
   cursor: pointer;
   padding: 0.625rem 0.625rem;
-  background-color: #dbeafe;
+  background-color: #eff6ff;
 }
 .profile__card .profile__card--image {
   width: 2.5rem;
@@ -445,7 +448,8 @@ main .main__images--image {
 #slider__section {
   overflow: hidden;
   background-image: radial-gradient(#dbeafe, #93c5fd);
-  padding: auto 6.25rem;
+  padding-block-end: 6.25rem;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 84.5%, 0.2% 100%);
 }
 
 .slider {
@@ -473,7 +477,7 @@ main .main__images--image {
   animation-iteration-count: infinite;
   border: 0.125rem solid #1d4ed8;
   background-color: #eff6ff;
-  box-shadow: 0rem 0rem 0.625rem #e5e7eb;
+  box-shadow: 0rem 0rem 0.625rem #bfdbfe;
 }
 
 .testimonial__items {
@@ -704,7 +708,7 @@ main .main__images--image {
   }
   .header__buttons .btn {
     font-size: 1.125rem;
-    padding: 0.625rem 0.625rem;
+    padding: 0.9375rem 1.25rem;
   }
   .cv__button {
     font-size: 1.25rem;
@@ -716,7 +720,8 @@ main .main__images--image {
     gap: 1.875rem;
     gap: 0;
     width: 100%;
-    padding: 10rem 1.875rem 6.25rem 1.875rem;
+    padding: 0rem 5rem 6.25rem 5rem;
+    padding: 10rem 5rem 6.25rem 5rem;
   }
   .main__text {
     order: -1;
@@ -738,8 +743,7 @@ main .main__images--image {
   }
   #slider__section {
     width: 100%;
-    padding: 10rem 1.875rem 6.25rem 1.875rem;
-    padding: auto 1.875rem auto 1.875rem;
+    padding: 0rem 5rem 6.25rem 5rem;
   }
   #slider__section h2,
   #slider__section p {

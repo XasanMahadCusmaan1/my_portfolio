@@ -3,8 +3,8 @@
 #slider__section {
   overflow: hidden;
   background-image: radial-gradient(blue-pallete(100),blue-pallete(300));
-  // padding-block: rem(120);
-  padding: auto rem(100);
+  padding-block-end: rem(100);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 84.5%, 0.2% 100%);
 }
 .slider {
   width: 100%;
@@ -47,6 +47,6 @@
     animation-iteration-count: infinite;
     border: rem(2) solid blue-pallete(700);
     background-color: blue-pallete(50);
-    box-shadow: rem(0) rem(0) rem(10) gray-pallete(200);
+    box-shadow: rem(0) rem(0) rem(10) blue-pallete(200);
   }
 }
