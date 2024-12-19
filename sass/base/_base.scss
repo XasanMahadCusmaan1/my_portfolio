@@ -1,10 +1,16 @@
+:root{
+  scroll-behavior: smooth;
+  // scrollbar-gutter: stable;
+}
+
 body {
   color: gray-pallete(900);
   box-sizing: border-box;
+  interpolate-size: allow-keywords;
   font-family: $font-family, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 html {
-  font-size: 100%;
+  font-size: 85%;
 }
 img {
   width: 100%;
@@ -16,18 +22,26 @@ svg {
   fill: gray-pallete(900);
   cursor: pointer;
   width: 100%;
+
+  &:hover {
+    fill: blue-pallete(700);
+  }
 }
 
-input{
+input {
   display: none;
+  position: absolute;
+  z-index: 99999;
+  left: -100vh;
 }
+
 .none {
   display: none;
 }
 
 //BUTTON BASE STYLES
 button {
-  background-color: none;
+  background: none;
   border: none;
   cursor: pointer;
 }
@@ -45,7 +59,6 @@ p {
 }
 
 h2 {
-  margin-block-end: space(5);
   letter-spacing: rem(2.5);
   font-size: rem(35);
   font-weight: $font-semi-bold;
@@ -53,5 +66,5 @@ h2 {
 
 h3 {
   font-size: rem(20);
-  font-weight: $font-medium;
+  font-weight: $font-bold;
 }

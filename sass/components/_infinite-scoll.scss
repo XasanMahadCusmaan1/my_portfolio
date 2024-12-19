@@ -2,7 +2,12 @@
 
 #slider__section {
   overflow: hidden;
-  @include GSsections;
+  background-image: radial-gradient(blue-pallete(100),blue-pallete(300));
+  padding-block-end: rem(100);
+  clip-path: polygon(0 0, 100% 0, 100% 89%, 0% 100%);
+  @include GSsectionsMobile;
+  padding: rem(0) rem(30) rem(100) rem(30);
+
 }
 .slider {
   width: 100%;
@@ -45,6 +50,6 @@
     animation-iteration-count: infinite;
     border: rem(2) solid blue-pallete(700);
     background-color: blue-pallete(50);
-    box-shadow: rem(0) rem(0) rem(10) gray-pallete(200);
+    box-shadow: rem(0) rem(0) rem(10) blue-pallete(200);
   }
 }

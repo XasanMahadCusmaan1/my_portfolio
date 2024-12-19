@@ -18,7 +18,7 @@
   );
   background-size: 260%;
   letter-spacing: rem(1);
-  font-weight: $font-semi-bold;
+  font-weight: $font-bold;
   transition: all 0.9s ease-in-out;
   outline: rem(3) solid blue-pallete(700);
 
@@ -31,14 +31,18 @@
 
 //GENERAL SYLES FOR PARAGRAPHS
 @mixin GSParagraphs {
-  color: gray-pallete(600);
-  line-height: line-height(3);
-  margin-block-end: space(10);
+  color: gray-pallete(800);
+  line-height: line-height(4);
+  margin-block: space(10);
 }
 
 //GENERAL SYLES FOR SECTIONS
-@mixin GSsections {
-  width: 90%;
-  max-width: 1100px;
-  margin: rem(160) auto rem(160) auto;
+@mixin GSsectionsMobile {
+  width: 100%;
+  padding: rem(160) rem(30) rem(100) rem(30);
+}
+
+@mixin GSsectionDesktop {
+  width: 100%;
+  padding: rem(0) rem(80) rem(100) rem(80);
 }

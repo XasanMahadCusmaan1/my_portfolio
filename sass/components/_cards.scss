@@ -14,7 +14,7 @@
     padding: rem(30);
     border-radius: rem(5);
     box-shadow: rem(0) rem(0) rem(10) gray-pallete(50);
-    background-color: blue-pallete(100);
+    background-image: radial-gradient(blue-pallete(100), blue-pallete(300));
     display: grid;
     grid-template-rows: subgrid;
     grid-row: span 3;
