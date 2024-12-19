@@ -4,7 +4,7 @@ header {
   height: rem(80);
   overflow: clip;
   transition: height 0.7s ease-in-out;
-  background-color: blue-pallete(200);
+  background-image: radial-gradient(blue-pallete(100),blue-pallete(300));
   position: fixed;
   top: 0;
   width: 100%;
@@ -100,6 +100,7 @@ main {
   @include GSsectionsMobile;
   background-image: radial-gradient(blue-pallete(100), blue-pallete(300));
   isolation: isolate;
+  gap: space(5);
 
   .main__text {
     width: 100%;

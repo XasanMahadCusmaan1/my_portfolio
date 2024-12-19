@@ -4,7 +4,10 @@
   overflow: hidden;
   background-image: radial-gradient(blue-pallete(100),blue-pallete(300));
   padding-block-end: rem(100);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 84.5%, 0.2% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 89%, 0% 100%);
+  @include GSsectionsMobile;
+  padding: rem(0) rem(30) rem(100) rem(30);
+
 }
 .slider {
   width: 100%;
