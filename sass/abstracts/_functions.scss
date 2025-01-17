@@ -1,27 +1,37 @@
 @use "sass:math";
+@use "sass:map";
+@use "../abstracts/maps" as maps;
 
 //PX TO REM CHANGER
-@function rem($px) {
-  @return math.div($px, 16) * 1rem;
+@function toRem($px-value) {
+  $rem-value: math.div($px-value, 16);
+  @return #{$rem-value}rem;
 }
 
 //BLUE PICKER FUNCTION
 @function blue-pallete($shades) {
-  @return map-get($blue, $shades);
+  @return map.get(maps.$blue, $shades);
 }
 
 //GRAY PICKER FUNCTION
 @function gray-pallete($shades) {
-  @return map-get($gray, $shades);
+  @return map.get(maps.$gray, $shades);
 }
 
 // Function to Access Spacing Scale
-@function space($size) {
-  @return map-get($spacing, $size) ;
+@function spacing($key) {
+  @if map.has-key(maps.$spacing-scale, $key) {
+    @return map.get(maps.$spacing-scale, $key);
+  } @else {
+    @error "Invalid spacing key: #{$key}. Available keys are #{map.keys(maps.$spacing-scale)}.";
+  }
 }
 
-
 // Function to Access Line Height Scale
-@function line-height($size) {
-  @return map-get($line-height-scale, $size);
+@function line-height($key) {
+  @if map.has-key(maps.$line-height-scale, $key) {
+    @return map.get(maps.$line-height-scale, $key);
+  } @else {
+    @error "Invalid line-height key: #{$key}. Available keys are #{map.keys(maps.$line-height-scale)}.";
+  }
 }

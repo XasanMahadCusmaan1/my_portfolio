@@ -1,39 +1,60 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+@use "../abstracts/functions" as *;
+
 /* header button styles  */
 .header__buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-block: 2rem;
+  @include mix.flexboxLayout(center, center, spacing(8));
 
   .btn {
     text-decoration: none;
-    @include btn;
-    font-size: rem(20);
-    font-family: $font-family;
-    padding: rem(15) rem(20);
+    @include mix.btn;
+    font-size: toRem(20);
+    font-family: var.$font-family;
+    padding: toRem(15) toRem(20);
+
+    //Tablet Styles
+    @media (min-width: 898px) {
+      font-size: toRem(18);
+      padding: toRem(12) toRem(15);
+    }
   }
 
   .btn__border {
     color: gray-pallete(950);
-    background: $white;
+    background: var.$white;
   }
 
   .btn__background {
     color: white;
   }
+
+  //Tablet Styles for header button
+  @media (min-width: 898px) {
+    margin: 0;
+    align-items: center;
+  }
 }
 
 //CV CONTAINER STYLES
 .cv__container {
-  @include flexboxLayout;
-  gap: space(3);
+  @include mix.flexboxLayout(center, center, spacing(8));
   width: 100%;
-  justify-content: center;
-  padding: rem(10) rem(0);
+  padding: toRem(10) toRem(0);
+
+  //Tablet Styles
+  @media (min-width: 898px) {
+    justify-content: flex-start;
+  }
 }
 
 .cv__button {
-  padding: rem(15) rem(15);
-  @include btn;
-  font-size: rem(19);
+  padding: spacing(8) spacing(8);
+  @include mix.btn;
+  font-size: toRem(19);
+
+  //Tablet Styles
+  @media (min-width: 898px) {
+    font-size: toRem(20);
+  }
 }

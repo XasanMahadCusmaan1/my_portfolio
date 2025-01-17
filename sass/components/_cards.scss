@@ -1,37 +1,38 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "../abstracts//functions" as *;
+
 //TESTIMONIAL CARDS
 .testimonial__items {
-  @include flexboxLayout;
-  align-items: stretch;
-  justify-content: center;
+  @include mix.flexboxLayout(center, stretch, spacing(8));
   flex-wrap: wrap;
-  margin-top: space(1);
-  padding: rem(5);
+  margin-top: spacing(2);
 
   //TESTIMONIAL ITEMS LIST
   .items {
-    width: rem(300);
+    width: toRem(300);
     flex-grow: 1;
-    padding: rem(30);
-    border-radius: rem(5);
-    box-shadow: rem(0) rem(0) rem(10) gray-pallete(50);
+    padding: toRem(30);
+    border-radius: toRem(5);
+    box-shadow: toRem(0) toRem(0) toRem(10) gray-pallete(50);
     background-image: radial-gradient(blue-pallete(100), blue-pallete(300));
     display: grid;
     grid-template-rows: subgrid;
     grid-row: span 3;
-    gap: space(0);
+    gap: spacing(0);
     position: relative;
 
     p {
-      margin-block-start: space(5);
-      margin-block-end: space(1);
+      margin-block-start: spacing(5);
+      margin-block-end: spacing(1);
     }
 
     //QUOTES STYLES
     &::after {
       content: url(/assets/icons/icons8-quotes-100.svg);
       position: absolute;
-      top: rem(0);
-      right: rem(10);
+      top: toRem(0);
+      right: toRem(10);
       opacity: 0.2;
       transform: rotate(180deg);
     }
@@ -39,8 +40,8 @@
     &::before {
       content: url(/assets/icons/icons8-quotes-100.svg);
       position: absolute;
-      bottom: rem(0);
-      left: rem(10);
+      bottom: toRem(0);
+      left: toRem(10);
       opacity: 0.2;
       transform: rotate(360deg);
     }
@@ -48,13 +49,13 @@
 
   //DEVIDING IMAGES AND TITLES FOR THE CARD STYLES
   .devider {
-    @include flexboxLayout;
-    gap: space(3);
+    @include mix.flexboxLayout(flex-start, center, spacing(3));
 
     img {
       width: 40px;
       height: 40px;
       border-radius: 50%;
+      clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
     }
 
     //CARD NAMES AND HIS WORK
@@ -63,13 +64,13 @@
         display: block;
       }
       span:nth-child(1) {
-        font-weight: $font-regular;
-        font-size: rem(17);
+        font-weight: var.$font-regular;
+        font-size: toRem(17);
         line-height: line-height(1);
       }
 
       span:nth-child(2) {
-        font-size: rem(14);
+        font-size: toRem(14);
         color: gray-pallete(500);
       }
     }

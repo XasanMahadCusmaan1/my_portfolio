@@ -1,29 +1,33 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/functions" as *;
+
 /* Logo styles */
 .header__logo {
   display: flex;
   align-items: center;
-  gap: space(2);
+  gap: spacing(5);
   cursor: pointer;
 
   img {
-    width: rem(48);
-    height: rem(48);
+    width: toRem(48);
+    height: toRem(48);
     border-radius: 50%;
     border: 2px solid #1d4ed8;
     object-fit: cover;
   }
 
   span {
-    font-family: $font-family-second;
-    font-size: rem(20);
+    font-family: var.$font-family-second;
+    font-size: toRem(20);
   }
 }
 
 //NAV BAR TYPOGRAPHY STYLES
 nav {
   a {
-    font-family: $font-family;
-    font-size: rem(25);
+    font-family: var.$font-family;
+    font-size: toRem(25);
     text-decoration: none;
     color: inherit;
 
@@ -32,40 +36,54 @@ nav {
     }
 
     span {
-      margin-inline-end: space(2);
+      margin-inline-end: spacing(3);
       color: blue-pallete(700);
-      font-weight: $font-semi-bold;
+      font-weight: var.$font-semi-bold;
     }
   }
 }
 
 //heading for the main section
 .main__heading {
-  font-size: rem(46);
-  font-weight: $font-medium;
+  font-size: toRem(46);
+  font-weight: var.$font-medium;
   text-align: center;
   text-wrap: balance;
   color: inherit;
-  line-height: line-height(10);
-  margin-block-start:space(16)
+  line-height: line-height(2);
+  margin-block-start: spacing(14);
+
+  //Tablet Styles
+  @media (min-width: 898px) {
+    text-align: left;
+    font-size: toRem(48);
+    line-height: line-height(2);
+    margin: 0;
+  }
 }
 
 .main__heading + p {
-  @include GSParagraphs;
-  margin-block: space(8);
-  max-width: 100%;
+  @include mix.GSParagraphs($block-space: spacing(10));
+  width: 100%;
   text-align: center;
   text-wrap: balance;
-  font-size: rem(18);
+  font-size: toRem(18);
   max-width: 70ch;
-  margin: space(8) auto;
+  margin-inline: auto;
 
   em {
-    font-family: $font-family-second;
-    font-weight: $font-bold;
+    font-family: var.$font-family-second;
+    font-weight: var.$font-bold;
     color: gray-pallete(950);
-    font-size: rem(16);
-    font-style: normal;
+    font-size: toRem(16);
+    font-style: italic;
+  }
+
+  //Tablet Styles
+  @media (min-width: 898px) {
+    text-align: left;
+    max-width: 100ch;
+    text-wrap: balance;
   }
 }
 
@@ -78,15 +96,16 @@ nav {
   }
 
   p {
-    font-weight: $font-light;
-    font-size: rem(14);
-    line-height: line-height(0);
+    font-weight: var.$font-regular;
+    font-size: toRem(14);
+    line-height: line-height(1);
     text-wrap: balance;
   }
   span {
-    font-family: $font-family;
-    font-weight: $font-semi-bold;
-    font-size: rem(16);
+    font-family: var.$font-family;
+    font-weight: var.$font-semi-bold;
+    font-size: toRem(16);
+    line-height: line-height(3);
   }
 }
 
@@ -95,9 +114,9 @@ nav {
 #slider__section {
   h2 {
     text-align: center;
-
   }
   p {
+    @include mix.GSParagraphs($block-space: spacing(10));
     text-align: center;
     text-wrap: balance;
   }
@@ -106,21 +125,21 @@ nav {
 
 .design__content {
   p {
-    margin-block: rem(5);
+    margin-block: spacing(2) spacing(8);
   }
 }
 
 .dev__content {
   p {
-    margin-block: rem(5);
+    margin-block: spacing(2) spacing(8);
   }
 }
 
 .about__services--content {
   span {
-    font-size: rem(17);
-    letter-spacing: rem(2);
-    font-weight: $font-regular;
+    font-size: toRem(17);
+    letter-spacing: toRem(2);
+    font-weight: var.$font-regular;
     font-style: italic;
   }
 }

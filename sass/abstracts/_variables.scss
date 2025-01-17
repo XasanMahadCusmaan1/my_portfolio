@@ -1,9 +1,10 @@
 @use "sass:math";
+@use "../abstracts/functions" as *;
 
 //FONT FAMILY
-$font-family: Lato,"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-;
-$font-family-second: monospace,"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$font-family: Lato, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$font-family-second: monospacing, "Segoe UI", Tahoma, Geneva, Verdana,
+  sans-serif;
 
 //FONT WEIGHTS
 $font-thin: 100;
@@ -32,8 +33,8 @@ $font-extra-bold-italic: 800;
 
 //infinite scroller variables
 
-$width: rem(150);
-$height: rem(100);
+$width: 9.375rem;
+$height: 6.25rem;
 $total-items: 8;
-$black : black;
-$white : white;
+$black: black;
+$white: white;

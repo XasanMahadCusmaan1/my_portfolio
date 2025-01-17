@@ -1,9 +1,11 @@
+@use "../abstracts/functions" as *;
+
 *,
 ::before,
-::after{
-    padding: rem(0);
-    margin: rem(0);
-    box-sizing: inherit;
-    text-decoration: none;
-    list-style-type: none;
+::after {
+  padding: toRem(0);
+  margin: toRem(0);
+  box-sizing: inherit;
+  text-decoration: none;
+  list-style-type: none;
 }

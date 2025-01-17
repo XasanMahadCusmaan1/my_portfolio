@@ -9,6 +9,6 @@
   "author": "Hassan Mahad Cusmaan",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.79.5"
+    "sass": "^1.83.1"
   }
 }

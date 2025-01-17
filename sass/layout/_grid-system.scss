@@ -1,21 +1,22 @@
+@use "../abstracts/functions" as *;
+
 //GRID LAYOUT
-@mixin grid1Clayout{
+@mixin grid1Clayout {
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
 }
 
-@mixin grid2Clayout {
+@mixin grid2Clayout($gap, $direction) {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: rem(30);
+  gap: $gap;
 }
 
-@mixin grid3Clayout{
+@mixin grid3Clayout {
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(300px ,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(toRem(300), 1fr));
   align-items: stretch;
-  gap: space(5);
+  gap: spacing(5);
 }
-

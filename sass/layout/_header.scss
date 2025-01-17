@@ -1,15 +1,29 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "../layout/grid-system" as grid;
+@use "../abstracts/functions" as *;
+
 //HEADER LAYOUT AND BASE STYLES
 header {
-  padding: 1rem;
-  height: rem(80);
+  padding: toRem(15) toRem(15);
+  padding-block-end: toRem(50);
+  height: toRem(80);
   overflow: clip;
   transition: height 0.7s ease-in-out;
-  background-image: radial-gradient(blue-pallete(100),blue-pallete(300));
+  // background-image: radial-gradient(blue-pallete(100), blue-pallete(300));
+  background-color: blue-pallete(200);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
   clip-path: polygon(0% 0%, 100% 0%, 99.8% 90.5%, 0% 100%);
+
+  //Tablet Styles
+  @media (min-width: 898px) {
+    transition: none;
+    @include mix.flexboxLayout(space-between, center);
+    padding-block-end: toRem(15);
+  }
 }
 
 /* humburger menu styles */
@@ -24,20 +38,20 @@ header {
 
   span {
     display: block;
-    width: rem(50);
+    width: toRem(50);
     height: 3.5px;
     cursor: pointer;
     background-color: gray-pallete(950);
-    border-radius: rem(10);
+    border-radius: toRem(10);
     position: absolute;
-    top: rem(5);
+    top: toRem(5);
     z-index: 100;
   }
 
   span::after {
     content: "";
     display: block;
-    width: rem(50);
+    width: toRem(50);
     height: 3.5px;
     background-color: black;
     border-radius: 10px;
@@ -49,13 +63,18 @@ header {
   span::before {
     content: "";
     display: block;
-    width: rem(50);
+    width: toRem(50);
     height: 3.5px;
     background-color: black;
-    border-radius: rem(10);
+    border-radius: toRem(10);
     position: absolute;
     top: 8px;
     transition: all 0.5s ease-in-out;
+  }
+
+  //Tablet styles
+  @media (min-width: 898px) {
+    display: none;
   }
 }
 
@@ -96,11 +115,11 @@ header {
 
 //HEADER MAIN SECTION
 main {
-  @include grid1Clayout;
-  @include GSsectionsMobile;
+  @include grid.grid1Clayout;
+  @include mix.GSsectionsMobile;
   background-image: radial-gradient(blue-pallete(100), blue-pallete(300));
   isolation: isolate;
-  gap: space(5);
+  gap: spacing(5);
 
   .main__text {
     width: 100%;
@@ -119,21 +138,28 @@ main {
       &::after {
         content: "";
         position: absolute;
-        top: space(2);
-        right: space(2);
+        top: spacing(2);
+        right: spacing(3);
         display: block;
-        padding: rem(100);
+        padding: toRem(100);
         width: 100%;
         height: 100%;
-        border: rem(3) solid blue-pallete(700);
-        max-width: rem(400);
-        max-height: rem(400);
+        border: toRem(3) solid blue-pallete(700);
+        max-width: toRem(400);
+        max-height: toRem(400);
         z-index: -1;
       }
     }
     &--image {
-      max-width: rem(400);
-      max-height: rem(400);
+      max-width: toRem(400);
+      max-height: toRem(400);
     }
+  }
+
+  //Tablet Syles for the main section
+  @media (min-width: 898px) {
+    @include grid.grid2Clayout(toRem(0), column);
+    @include mix.GSsectionDesktop;
+    padding: toRem(160) toRem(80) toRem(100) toRem(80);
   }
 }

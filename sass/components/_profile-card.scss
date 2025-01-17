@@ -1,14 +1,16 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/functions" as *;
+
 .profile__card {
-  @include flexboxLayout;
-  align-items: center;
-  gap: space(2);
+  @include mix.flexboxLayout($align: center,$gap: spacing(2));
   cursor: pointer;
-  padding: rem(10) rem(10);
+  padding: spacing(5) spacing(5);
   background-color: blue-pallete(50);
 
   .profile__card--image {
-    width: rem(40);
-    height: rem(40);
+    width: toRem(40);
+    height: toRem(40);
     border-radius: 50%;
     background-image: url(/assets/images/my-image-croped.jpg);
     background-repeat: no-repeat;

@@ -1,13 +1,39 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as mix;
 
 /* links styles */
 nav {
   ul {
-    margin-block-start: rem(40);
+    margin-block-start: toRem(40);
+
+    //Tablet Styles
+    @media (min-width: 898px) {
+      @include mix.flexboxLayout(center, center, toRem(20));
+      margin: 0;
+    }
   }
 
   li {
     list-style: none;
-    margin-block-end: rem(30);
+    margin-block-end: toRem(30);
     border-block-end: 1px solid gray-pallete(400);
+
+    //Tablet Styles
+    @media (min-width: 898px) {
+      border-block-end: none;
+      margin: 0;
+    }
+  }
+
+  a {
+    //Tablet Styles
+    @media (min-width: 898px) {
+      font-size: toRem(20);
+    }
+  }
+
+  //Tablet Styles for the nav
+  @media (min-width: 898px) {
+    @include mix.flexboxLayout(center, center, toRem(20));
   }
 }

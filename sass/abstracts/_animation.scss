@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "./variables" as var;
 
 // infinite runing animaion
 @keyframes outRun {
@@ -6,19 +7,9 @@
     left: 100%;
   }
   to {
-    left: -$width;
+    left: -(var.$width);
   }
 }
-
-// // reverse running animation
-// @keyframes reversePlay {
-//   from {
-//     left: -$width;
-//   }
-//   to {
-//     left: 100%;
-//   }
-// }
 
 .item-1 {
   animation-delay: 0s - 17.5s;

@@ -1,17 +1,36 @@
 @use "sass:math";
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/functions" as *;
 
 #slider__section {
   overflow: hidden;
-  background-image: radial-gradient(blue-pallete(100),blue-pallete(300));
-  padding-block-end: rem(100);
-  clip-path: polygon(0 0, 100% 0, 100% 89%, 0% 100%);
-  @include GSsectionsMobile;
-  padding: rem(0) rem(30) rem(100) rem(30);
+  background-image: radial-gradient(blue-pallete(100), blue-pallete(300));
+  padding-block-end: toRem(100);
+  // clip-path: polygon(0 0, 100% 0, 100% 89%, 0% 100%);
+  //Wavy mask 
+  --mask: radial-gradient(
+        42.43px at 50% calc(100% - 60px),
+        #000 99%,
+        #0000 101%
+      )
+      calc(50% - 60px) 0/120px 100%,
+    radial-gradient(42.43px at 50% calc(100% + 30px), #0000 99%, #000 101%) 50%
+      calc(100% - 30px) / 120px 100% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  @include mix.GSsectionsMobile;
+  padding: toRem(0) toRem(30) toRem(100) toRem(30);
+  position: relative;
+  top: toRem(-2);
 
+  @media (min-width: 898px) {
+    @include mix.GSsectionDesktop;
+  }
 }
 .slider {
   width: 100%;
-  height: $height;
+  height: var.$height;
   mask-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0),
@@ -36,20 +55,20 @@
   .slider__list {
     display: flex;
     width: 100%;
-    min-width: $width * $total-items;
+    min-width: var.$width * var.$total-items;
     position: relative;
   }
   .slider__list--items {
-    width: $width;
-    height: $height;
+    width: var.$width;
+    height: var.$height;
     position: absolute;
     left: 100%;
     animation-name: outRun;
     animation-duration: 20s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    border: rem(2) solid blue-pallete(700);
+    border: toRem(2) solid blue-pallete(700);
     background-color: blue-pallete(50);
-    box-shadow: rem(0) rem(0) rem(10) blue-pallete(200);
+    box-shadow: toRem(0) toRem(0) toRem(10) blue-pallete(200);
   }
 }

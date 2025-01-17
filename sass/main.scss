@@ -1,40 +1,26 @@
+//abstracts Styles
+@use "./abstracts/index" as abs;
+
+// 2. Base Styles
+@use "./base/index" as bas;
+
+// 3. Layout Styles
+@use "./layout/index" as lay;
+
+// 4. Components (UI Elements)
+@use "./components/index" as comp;
+
+// 6. Pages
+@use "./pages/index" as pag;
+
+// 6. Themes (Different Color Themes)
+@use "./themes/index" as them;
+
+
+//MEDIA QUERY PROBLEM SOLVED FOR SPECIFICITY BY USING ORDER
+// @use "abstracts/medi-queries";
+
+//font imports poppins and lora 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
-
-// 1. Abstracts (Variables, Mixins, Functions)
-@import "abstracts/functions";
-@import "abstracts/variables";
-@import "abstracts/maps";
-@import "abstracts/mixins";
-@import "abstracts/animation";
-
-// 2. Base Styles
-@import "base/base";
-@import "base/reset";
-@import "base/typography";
-
-// 3. Layout Styles
-@import "layout/grid-system";
-@import "layout/navbar";
-@import "layout/footer";
-@import "layout/sidebar";
-@import "layout/header";
-
-// 4. Components (UI Elements)
-@import "components/buttons";
-@import "components/profile-card";
-@import "components/infinite-scoll";
-@import "components/cards";
-
-// 6. Pages
-@import "pages/about";
-
-// 6. Themes (Different Color Themes)
-@import "themes/dark-theme";
-@import "themes/light-theme";
-
-// 7. Vendors (Third-party Libraries)
-
-//MEDIA QUERY PROBLEM SOLVED FOR SPECIFICITY BY USING ORDER
-@import "abstracts/medi-queries";
