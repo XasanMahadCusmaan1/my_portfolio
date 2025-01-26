@@ -1,7 +1,7 @@
-const input = document.querySelector("#menu__input");
+const input = document.querySelector("#menu__toggle");
 const body = document.querySelector("body");
 
-//HIDING THE SCROLL BODY WHEN THE NAV IS CHECKED
+// HIDING THE SCROLL BODY WHEN THE NAV IS OPPEN
 const hideScrollBody = function () {
   input.addEventListener("change", () => {
     if (input.checked) {
@@ -12,3 +12,7 @@ const hideScrollBody = function () {
   });
 };
 hideScrollBody();
+
+console.log("Screen Width: " + screen.width + "px");
+console.log("Screen Height: " + screen.height + "px");
+

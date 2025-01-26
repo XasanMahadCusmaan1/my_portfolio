@@ -6,9 +6,7 @@
 #slider__section {
   overflow: hidden;
   background-image: radial-gradient(blue-pallete(100), blue-pallete(300));
-  padding-block-end: toRem(100);
-  // clip-path: polygon(0 0, 100% 0, 100% 89%, 0% 100%);
-  //Wavy mask 
+  //Wavy mask
   --mask: radial-gradient(
         42.43px at 50% calc(100% - 60px),
         #000 99%,
@@ -20,12 +18,14 @@
   -webkit-mask: var(--mask);
   mask: var(--mask);
   @include mix.GSsectionsMobile;
-  padding: toRem(0) toRem(30) toRem(100) toRem(30);
   position: relative;
   top: toRem(-2);
 
-  @media (min-width: 898px) {
-    @include mix.GSsectionDesktop;
+  .slider__container {
+    @media (min-width: 898px) {
+      width: 100%;
+      @include mix.GSsectionDesktop;
+    }
   }
 }
 .slider {

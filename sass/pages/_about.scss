@@ -7,6 +7,7 @@
 
   h2 {
     padding-block-end: spacing(8);
+    text-decoration: blue-pallete(800) underline;
 
     //Tablet Styles
     @media (min-width: 898px) {
@@ -147,8 +148,8 @@
         left: 0;
         transform: rotate(180deg);
         width: 100%;
-        height: toRem(2);
-        background-color: blue-pallete(700);
+        height: 1px;
+        background-color: gray-pallete(950);
         border-radius: toRem(20);
       }
     }

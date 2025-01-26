@@ -17,57 +17,59 @@
 </head>
 
 <body>
-    <input type="checkbox" id="menu__toggle">
     <header>
-        <div class="header__actions">
-            <div class="header__logo">
-                <img src="/assets/images/photo_2024-12-09_11-43-09.jpg" alt="my image">
-                <span><strong>Hassan.<em>dev</em></strong></span>
+        <input type="checkbox" id="menu__toggle">
+        <div class="header__container">
+            <div class="header__actions">
+                <div class="header__logo">
+                    <img src="/assets/images/photo_2024-12-09_11-43-09.jpg" alt="my image">
+                    <span><strong>Hassan.<em>dev</em></strong></span>
+                </div>
+                <div class="header__menu">
+                    <label for="menu__toggle">
+                        <div class="menu__container">
+                            <span></span>
+                        </div>
+                    </label>
+                </div>
             </div>
-            <div class="header__menu">
-                <label for="menu__toggle">
-                    <div class="menu__container">
-                        <span></span>
-                    </div>
-                </label>
+            <nav>
+                <ul>
+                    <li><a href="#"><span>01</span>Overview</a></li>
+                    <li><a href="#about"><span>02</span>About</a></li>
+                    <li><a href="#"><span>03</span>Projects</a></li>
+                    <li><a href="#"><span>04</span>Contact</a></li>
+                </ul>
+            </nav>
+            <!-- buttons for the menu  -->
+            <div class="header__buttons">
+                <a href="#" class="btn btn__background">Message</a>
+                <!-- <a href="#" class="btn btn__border">Join</a> -->
             </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#"><span>01</span>Overview</a></li>
-                <li><a href="#about"><span>02</span>About</a></li>
-                <li><a href="#"><span>03</span>Projects</a></li>
-                <li><a href="#"><span>04</span>Contact</a></li>
-            </ul>
-        </nav>
-        <!-- buttons for the menu  -->
-        <div class="header__buttons">
-            <a href="#" class="btn btn__background">Message</a>
-            <!-- <a href="#" class="btn btn__border">Join</a> -->
         </div>
     </header>
     <!-- HEADER MAIN SECTION -->
     <main>
-        <!-- TEXT PART -->
-        <div class="main__text">
-            <h1 class="main__heading">Building the Future of the Web, One Pixel at a Time</h1>
-            <p>Hi, I’m <em>HASSAN OSMAAN</em>, a frontend developer dedicated to creating sleek,
-                responsive, and user-friendly websites.</p>
-            <div class="cv__container">
-                <button class="cv__button">Download Cv</button>
-                <div class="profile__card">
-                    <div class="profile__card--image"></div>
-                    <div class="profile__card--text">
-                        <span>Hassan Mahad</span>
-                        <p>Dev & Designer</p>
+        <div class="main__container">
+            <!-- TEXT PART -->
+            <div class="main__text">
+                <h1 class="main__heading">Building the <span>Future of the Web,</span> One Pixel at a Time</h1>
+                <p>Hi, I’m <em>HASSAN OSMAAN</em>, a frontend developer dedicated to creating sleek,
+                    responsive, and user-friendly websites.</p>
+                <div class="cv__container">
+                    <button class="cv__button">Download Cv</button>
+                    <div class="profile__card">
+                        <div class="profile__card--image"></div>
+                        <div class="profile__card--text">
+                            <span>Hassan Mahad</span>
+                            <p>Dev & Designer</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- IMAGE PART -->
-        <div class="main__images">
-            <div class="main__images--div">
-                <img class="main__images--image" src="/assets/images/my-image-croped.jpg" alt="profile image">
+            <!-- IMAGE PART -->
+            <div class="main__images">
+                <img class="main__images--image" src="/assets/images/photo_2025-01-23_12-16-37.jpg" alt="my image">
             </div>
         </div>
     </main>
@@ -75,35 +77,38 @@
 
     <!-- SLIDER FOR TECHNOLOGIES -->
     <section id="slider__section">
-        <h2>Technologies</h2>
-        <p>I use a range of technologies to bring ideas to life, including GitHub for version control, SASS for styling,
-            and HTML,
-            CSS, and JavaScript for building dynamic, engaging websites that balance function and design.</p>
-        <div class="slider">
-            <div class="slider__list">
-                <div class="slider__list--items item-1">
-                    <img src="/assets/icons/html_logo.svg" alt="html">
-                </div>
-                <div class="slider__list--items item-2">
-                    <img src="/assets/icons/icons8-css-logo.svg" alt="css">
-                </div>
-                <div class="slider__list--items item-3">
-                    <img src="/assets/icons/icons8-javascript.svg" alt="JavaScript">
-                </div>
-                <div class="slider__list--items item-4">
-                    <img src="assets/icons/icons8-react.svg" alt="react">
-                </div>
-                <div class="slider__list--items item-5">
-                    <img src="/assets/icons/icons8-nodejs.svg" alt="node js">
-                </div>
-                <div class="slider__list--items item-6">
-                    <img src="/assets/icons/icons8-git-logo.svg" alt="git">
-                </div>
-                <div class="slider__list--items item-7">
-                    <img src="assets/icons/icons8-github.svg" alt="github">
-                </div>
-                <div class="slider__list--items item-8">
-                    <img src="/assets/icons/icons8-sass.svg" alt="sass">
+        <div class="slider__container">
+            <h2>Technologies</h2>
+            <p>I use a range of technologies to bring ideas to life, including GitHub for version control, SASS for
+                styling,
+                and HTML,
+                CSS, and JavaScript for building dynamic, engaging websites that balance function and design.</p>
+            <div class="slider">
+                <div class="slider__list">
+                    <div class="slider__list--items item-1">
+                        <img src="/assets/icons/html_logo.svg" alt="html">
+                    </div>
+                    <div class="slider__list--items item-2">
+                        <img src="/assets/icons/icons8-css-logo.svg" alt="css">
+                    </div>
+                    <div class="slider__list--items item-3">
+                        <img src="/assets/icons/icons8-javascript.svg" alt="JavaScript">
+                    </div>
+                    <div class="slider__list--items item-4">
+                        <img src="assets/icons/icons8-react.svg" alt="react">
+                    </div>
+                    <div class="slider__list--items item-5">
+                        <img src="/assets/icons/icons8-nodejs.svg" alt="node js">
+                    </div>
+                    <div class="slider__list--items item-6">
+                        <img src="/assets/icons/icons8-git-logo.svg" alt="git">
+                    </div>
+                    <div class="slider__list--items item-7">
+                        <img src="assets/icons/icons8-github.svg" alt="github">
+                    </div>
+                    <div class="slider__list--items item-8">
+                        <img src="/assets/icons/icons8-sass.svg" alt="sass">
+                    </div>
                 </div>
             </div>
         </div>
@@ -112,7 +117,7 @@
 
     <!-- ABOUT SECTION STARTS HERE -->
     <section id="about">
-        <h2>ABOUT ME</h2>
+        <h2>About Me</h2>
         <div class="about__container">
             <div class="about__childs about__background">
                 <div class="about__background--title">

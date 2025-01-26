@@ -34,7 +34,7 @@
 }
 
 //GENERAL SYLES FOR PARAGRAPHS
-@mixin GSParagraphs($block-space : spacing(0), $line-h: line-height(5)) {
+@mixin GSParagraphs($block-space: spacing(0), $line-h: line-height(5)) {
   color: gray-pallete(700);
   line-height: $line-h;
   margin-block: $block-space;
@@ -44,10 +44,12 @@
 //GENERAL SYLES FOR SECTIONS
 @mixin GSsectionsMobile {
   width: 100%;
-  padding: toRem(160) toRem(30) toRem(100) toRem(30);
+  padding: toRem(100) toRem(30) toRem(100) toRem(30);
 }
 
 @mixin GSsectionDesktop {
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: toRem(0) toRem(80) toRem(100) toRem(80);
 }

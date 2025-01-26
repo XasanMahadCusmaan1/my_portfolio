@@ -33,6 +33,7 @@ nav {
 
     &:hover {
       color: blue-pallete(800);
+      opacity: 1;
     }
 
     span {
@@ -53,6 +54,9 @@ nav {
   line-height: line-height(2);
   margin-block-start: spacing(14);
 
+  span {
+    text-decoration: blue-pallete(800) underline;
+  }
   //Tablet Styles
   @media (min-width: 898px) {
     text-align: left;
@@ -114,6 +118,7 @@ nav {
 #slider__section {
   h2 {
     text-align: center;
+    text-decoration: blue-pallete(800) underline;
   }
   p {
     @include mix.GSParagraphs($block-space: spacing(10));
