@@ -16,18 +16,15 @@ header {
     width: 100%;
     height: toRem(80);
     padding: toRem(15) toRem(15);
-    padding-block-end: toRem(60);
     overflow: clip;
     transition: height 0.7s ease-in-out;
     background-image: radial-gradient(blue-pallete(100), blue-pallete(300));
 
     //Tablet Styles
     @media (min-width: 898px) {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
+      @include mix.GSsectionDesktop;
       @include mix.flexboxLayout(space-between, center);
-      padding-block-end: toRem(15);
+      padding-block-end: toRem(10);
       transition: none;
     }
   }
@@ -139,7 +136,7 @@ main {
     @media (min-width: 898px) {
       @include grid.grid2Clayout(toRem(0), column);
       @include mix.GSsectionDesktop;
-      padding: toRem(100) toRem(80) toRem(100) toRem(80);
+      padding: toRem(100) toRem(15) toRem(100) toRem(15);
     }
   }
 

@@ -23,8 +23,8 @@
 
   .slider__container {
     @media (min-width: 898px) {
-      width: 100%;
       @include mix.GSsectionDesktop;
+      padding: 0;
     }
   }
 }

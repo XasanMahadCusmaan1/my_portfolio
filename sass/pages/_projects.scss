@@ -1,0 +1,26 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/functions" as *;
+@use "../abstracts/variables" as var;
+
+#projects {
+  @include mix.GSsectionsMobile;
+}
+
+.projects__container {
+  &--showcase {
+    @include mix.flexboxLayout(space-between, center, spacing(5), column);
+  }
+}
+
+.projects__sidebar {
+  width: 100%;
+  @include mix.GSboxes;
+  padding: spacing(5);
+  background-color: blue-pallete(100);
+}
+.projects__showcase {
+  width: 100%;
+  @include mix.GSboxes;
+  padding: spacing(5);
+
+}

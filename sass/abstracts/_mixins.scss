@@ -2,10 +2,16 @@
 @use "../abstracts/functions" as *;
 
 //FLEXBOX LAYOUT
-@mixin flexboxLayout($justify: flex-start, $align: stretch, $gap: 0) {
+@mixin flexboxLayout(
+  $justify: flex-start,
+  $align: stretch,
+  $gap: 0,
+  $direction: row
+) {
   display: flex;
   align-items: $align;
   justify-content: $justify;
+  flex-direction: $direction;
   gap: $gap;
 }
 
@@ -44,12 +50,19 @@
 //GENERAL SYLES FOR SECTIONS
 @mixin GSsectionsMobile {
   width: 100%;
-  padding: toRem(100) toRem(30) toRem(100) toRem(30);
+  padding: toRem(50) toRem(15) toRem(80) toRem(15);
 }
 
 @mixin GSsectionDesktop {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: toRem(0) toRem(80) toRem(100) toRem(80);
+  padding: toRem(0) toRem(15) toRem(100) toRem(15);
+}
+
+@mixin GSboxes($padding: 10, $radius: toRem(5)) {
+  border: 2px solid blue-pallete(700);
+  padding: spacing(10);
+  border-radius: toRem(5);
+  box-shadow: toRem(0) toRem(0) toRem(10) blue-pallete(100);
 }

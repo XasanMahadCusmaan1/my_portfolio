@@ -5,16 +5,6 @@
 #about {
   @include mix.GSsectionsMobile;
 
-  h2 {
-    padding-block-end: spacing(8);
-    text-decoration: blue-pallete(800) underline;
-
-    //Tablet Styles
-    @media (min-width: 898px) {
-      padding-block-end: spacing(8);
-    }
-  }
-
   //Tablet Styles
   @media (min-width: 898px) {
     @include mix.GSsectionDesktop;
@@ -55,10 +45,7 @@
   gap: toRem(15);
 
   & > .about__childs {
-    border: toRem(2) solid blue-pallete(700);
-    border-radius: toRem(5);
-    padding: spacing(10);
-    box-shadow: toRem(0) toRem(0) toRem(10) blue-pallete(100);
+    @include mix.GSboxes;
   }
 
   .about__childs:nth-child(1) {
@@ -120,15 +107,20 @@
     //SERVICES CONTENT STYLES
     &--content {
       margin-block-start: spacing(8);
-      @include mix.flexboxLayout($align: flex-start, $gap: spacing(5));
+      @include mix.flexboxLayout(
+        $align: flex-start,
+        $gap: spacing(5),
+        $direction: column
+      );
       position: relative;
 
       .dev__content {
         span {
           font-size: toRem(17);
           letter-spacing: toRem(2);
-          font-weight: var.$font-semi-bold;
+          font-weight: var.$font-regular;
           font-style: italic;
+          color: blue-pallete(700);
         }
       }
 
@@ -136,8 +128,9 @@
         span {
           font-size: toRem(17);
           letter-spacing: toRem(2);
-          font-weight: var.$font-semi-bold;
+          font-weight: var.$font-regular;
           font-style: italic;
+          color: blue-pallete(700);
         }
       }
       // LINE BETWEEN SERVICE

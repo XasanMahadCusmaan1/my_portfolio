@@ -47,7 +47,7 @@ nav {
 //heading for the main section
 .main__heading {
   font-size: toRem(46);
-  font-weight: var.$font-medium;
+  font-weight: var.$font-regular;
   text-align: center;
   text-wrap: balance;
   color: inherit;
@@ -118,7 +118,6 @@ nav {
 #slider__section {
   h2 {
     text-align: center;
-    text-decoration: blue-pallete(800) underline;
   }
   p {
     @include mix.GSParagraphs($block-space: spacing(10));
@@ -146,5 +145,51 @@ nav {
     letter-spacing: toRem(2);
     font-weight: var.$font-regular;
     font-style: italic;
+  }
+}
+
+//projects typography
+.projects__sidebar {
+  ul {
+    @include mix.flexboxLayout(flex-start, center, spacing(7));
+
+    li {
+      font-size: toRem(20);
+      font-weight: var.$font-bold;
+      cursor: pointer;
+      letter-spacing: 1px;
+
+      &:hover {
+        color: blue-pallete(700);
+      }
+    }
+
+    .active__tab {
+      background-color: blue-pallete(700);
+      padding: spacing(3);
+      color: var.$white;
+
+      --r: 1rem; /* control the cutout */
+
+      border-block: 0.5rem solid #0000;
+      padding-inline: calc(var(--r) + 0.25rem) 0.5rem;
+      line-height: 1.4;
+      clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 100%,
+        0 100%,
+        var(--r) calc(100% - 0.25rem),
+        0 50%,
+        var(--r) 0.25rem
+      );
+      background: radial-gradient(0.2rem 50% at right, #000a, #0000) border-box,
+        blue-pallete(700) padding-box; /* the color  */
+      width: fit-content;
+
+      &:hover{
+        color: var.$white;
+      }
+    }
   }
 }
