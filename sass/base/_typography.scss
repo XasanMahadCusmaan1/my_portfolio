@@ -2,6 +2,11 @@
 @use "../abstracts/mixins" as mix;
 @use "../abstracts/functions" as *;
 
+html {
+  /* Scales between 14px (375px screen) and 18px (1440px screen) */
+  font-size: calc(14px + (18 - 14) * ((100vw - 375px) / (1440 - 375)));
+}
+
 /* Logo styles */
 .header__logo {
   display: flex;
@@ -18,7 +23,7 @@
   }
 
   span {
-    font-family: var.$font-family-second;
+    font-family: var.$font-family;
     font-size: toRem(20);
   }
 }
@@ -26,7 +31,8 @@
 //NAV BAR TYPOGRAPHY STYLES
 nav {
   a {
-    font-family: var.$font-family;
+    font-family: var.$font-family-second;
+    font-weight: var.$font-medium;
     font-size: toRem(25);
     text-decoration: none;
     color: inherit;
@@ -39,7 +45,7 @@ nav {
     span {
       margin-inline-end: spacing(3);
       color: blue-pallete(700);
-      font-weight: var.$font-semi-bold;
+      font-weight: var.$font-bold;
     }
   }
 }
@@ -48,10 +54,11 @@ nav {
 .main__heading {
   font-size: toRem(46);
   font-weight: var.$font-regular;
+  font-family: var.$font-family;
   text-align: center;
   text-wrap: balance;
   color: inherit;
-  line-height: line-height(2);
+  line-height: line-height(1);
   margin-block-start: spacing(14);
 
   span {
@@ -76,7 +83,7 @@ nav {
   margin-inline: auto;
 
   em {
-    font-family: var.$font-family-second;
+    font-family: var.$font-family;
     font-weight: var.$font-bold;
     color: gray-pallete(950);
     font-size: toRem(16);
@@ -107,7 +114,7 @@ nav {
   }
   span {
     font-family: var.$font-family;
-    font-weight: var.$font-semi-bold;
+    font-weight: var.$font-bold;
     font-size: toRem(16);
     line-height: line-height(3);
   }
@@ -149,12 +156,19 @@ nav {
 }
 
 //projects typography
+.projects__container {
+  h2 {
+    margin-block-end: spacing(12);
+  }
+}
+
+//projects tabs
 .projects__sidebar {
   ul {
-    @include mix.flexboxLayout(flex-start, center, spacing(7));
+    @include mix.flexboxLayout(flex-start, center, spacing(5));
 
     li {
-      font-size: toRem(20);
+      font-size: toRem(18);
       font-weight: var.$font-bold;
       cursor: pointer;
       letter-spacing: 1px;
@@ -171,25 +185,51 @@ nav {
 
       --r: 1rem; /* control the cutout */
 
-      border-block: 0.5rem solid #0000;
+      // border-block: 0.5rem solid #0000;
       padding-inline: calc(var(--r) + 0.25rem) 0.5rem;
       line-height: 1.4;
-      clip-path: polygon(
-        0 0,
-        100% 0,
-        100% 100%,
-        0 100%,
-        var(--r) calc(100% - 0.25rem),
-        0 50%,
-        var(--r) 0.25rem
-      );
+      transform: translateY(-0.3rem);
+      // clip-path: polygon(
+      //   0 0,
+      //   100% 0,
+      //   100% 100%,
+      //   0 100%,
+      //   var(--r) calc(100% - 0.25rem),
+      //   0 50%,
+      //   var(--r) 0.25rem
+      // );
       background: radial-gradient(0.2rem 50% at right, #000a, #0000) border-box,
         blue-pallete(700) padding-box; /* the color  */
       width: fit-content;
 
-      &:hover{
+      &:hover {
         color: var.$white;
       }
+    }
+  }
+}
+
+// project showcase
+// .projects__showcase{
+
+// }
+
+//the instruction content
+.projects__showcase--instructions {
+  h3 {
+    margin-block-end: spacing(5);
+  }
+
+  span {
+    display: block;
+    color: blue-pallete(700);
+    margin-block: spacing(7);
+    font-weight: var.$font-bold;
+  }
+
+  ul{
+    li{
+      margin-block-end: spacing(5);
     }
   }
 }

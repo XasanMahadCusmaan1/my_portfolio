@@ -11,21 +11,7 @@ body {
   min-height: 100dvh;
   box-sizing: border-box;
   interpolate-size: allow-keywords;
-  font-family: var.$font-family, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-html {
-  font-size: 85%;
-
-  //Tablets
-  @media (min-width: 898px) {
-    font-size: 90%;
-  }
-
-  //Desktop
-  @media (min-width: 1012px) {
-    font-size: 100%;
-  }
+  font-family: var.$font-family-second, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 img {
@@ -66,10 +52,6 @@ strong {
   color: gray-pallete(900);
 }
 
-// section {
-//   max-height: 100vh;
-// }
-
 p {
   @include mix.GSParagraphs;
 }
@@ -77,12 +59,13 @@ p {
 h2 {
   letter-spacing: toRem(2.5);
   font-size: toRem(35);
-  font-weight: var.$font-extra-bold;
+  font-weight: var.$font-bold;
+  font-family: var.$font-family;
   text-decoration: blue-pallete(800) underline;
   margin-block-end: spacing(8);
 }
 
 h3 {
   font-size: toRem(20);
-  font-weight: var.$font-bold;
+  font-weight: var.$font-semi-bold;
 }

@@ -11,16 +11,14 @@
     @include mix.flexboxLayout(space-between, center, spacing(5), column);
   }
 }
-
+//side bar
 .projects__sidebar {
   width: 100%;
-  @include mix.GSboxes;
-  padding: spacing(5);
   background-color: blue-pallete(100);
 }
+//showcase
 .projects__showcase {
   width: 100%;
   @include mix.GSboxes;
   padding: spacing(5);
-
 }

@@ -10,7 +10,7 @@
     text-decoration: none;
     @include mix.btn;
     font-size: toRem(20);
-    font-family: var.$font-family;
+    font-family: var.$font-family-second;
     padding: toRem(15) toRem(20);
 
     //Tablet Styles
@@ -49,7 +49,7 @@
 }
 
 .cv__button {
-  padding: spacing(8) spacing(8);
+  padding: spacing(7) spacing(8);
   @include mix.btn;
   font-size: toRem(19);
 

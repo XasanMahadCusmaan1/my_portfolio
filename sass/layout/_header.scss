@@ -24,7 +24,7 @@ header {
     @media (min-width: 898px) {
       @include mix.GSsectionDesktop;
       @include mix.flexboxLayout(space-between, center);
-      padding-block-end: toRem(10);
+      padding-block-end: toRem(0);
       transition: none;
     }
   }
@@ -47,7 +47,7 @@ header {
 
   span {
     display: block;
-    width: toRem(50);
+    width: toRem(45);
     height: 3.5px;
     cursor: pointer;
     background-color: gray-pallete(950);
@@ -60,7 +60,7 @@ header {
   span::after {
     content: "";
     display: block;
-    width: toRem(50);
+    width: toRem(45);
     height: 3.5px;
     background-color: black;
     border-radius: 10px;
@@ -72,7 +72,7 @@ header {
   span::before {
     content: "";
     display: block;
-    width: toRem(50);
+    width: toRem(45);
     height: 3.5px;
     background-color: black;
     border-radius: toRem(10);
@@ -136,7 +136,7 @@ main {
     @media (min-width: 898px) {
       @include grid.grid2Clayout(toRem(0), column);
       @include mix.GSsectionDesktop;
-      padding: toRem(100) toRem(15) toRem(100) toRem(15);
+      padding: toRem(70) toRem(15) toRem(100) toRem(15);
     }
   }
 

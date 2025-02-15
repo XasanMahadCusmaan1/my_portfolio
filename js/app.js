@@ -12,7 +12,3 @@ const hideScrollBody = function () {
   });
 };
 hideScrollBody();
-
-console.log("Screen Width: " + screen.width + "px");
-console.log("Screen Height: " + screen.height + "px");
-
