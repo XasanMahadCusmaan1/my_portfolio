@@ -66,6 +66,8 @@
       span:nth-child(1) {
         font-weight: var.$font-regular;
         font-size: toRem(17);
+        font-family: var.$font-family;
+
         line-height: line-height(1);
       }
 

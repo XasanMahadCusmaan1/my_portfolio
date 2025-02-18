@@ -27,6 +27,14 @@
       padding: 0;
     }
   }
+
+  h2 {
+    text-align: center;
+  }
+  p {
+    @include mix.GSParagraphs($block-space: spacing(10));
+    text-align: center;
+  }
 }
 .slider {
   width: 100%;

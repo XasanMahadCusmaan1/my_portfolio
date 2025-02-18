@@ -27,7 +27,25 @@ nav {
   }
 
   a {
-    //Tablet Styles
+    font-family: var.$font-family;
+    font-weight: var.$font-semi-bold;
+    font-size: toRem(25);
+    text-decoration: none;
+    color: inherit;
+    transition: color .3s ease-in-out;
+
+    &:hover {
+      color: blue-pallete(700);
+      opacity: 1;
+    }
+
+    span {
+      margin-inline-end: spacing(3);
+      color: blue-pallete(700);
+      font-weight: var.$font-bold;
+    }
+
+    //Tablet Styles for the links
     @media (min-width: 898px) {
       font-size: toRem(20);
     }

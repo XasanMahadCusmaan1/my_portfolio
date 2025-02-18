@@ -6,7 +6,7 @@
 //HEADER LAYOUT AND BASE STYLES
 header {
   width: 100%;
-  background-image: radial-gradient(blue-pallete(100), blue-pallete(300));
+  background-color: blue-pallete(300);
   height: toRem(80);
   position: sticky;
   top: 0;
@@ -18,7 +18,7 @@ header {
     padding: toRem(15) toRem(15);
     overflow: clip;
     transition: height 0.7s ease-in-out;
-    background-image: radial-gradient(blue-pallete(100), blue-pallete(300));
+    background-color: blue-pallete(300);
 
     //Tablet Styles
     @media (min-width: 898px) {
@@ -156,14 +156,10 @@ main {
       max-height: toRem(400);
       mask-image: url(../../assets/images/Splatter\ -\ 02.png);
       mask-repeat: no-repeat;
-      mask-size: 120%;
+      mask-size: 250%;
       mask-position: center;
       transition: mask-size 0.5s ease-in-out;
       transition-delay: 0.25s;
-    }
-
-    &--image:hover {
-      mask-size: 200%;
     }
   }
 }

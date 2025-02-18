@@ -3,12 +3,12 @@
 @use "../abstracts/functions" as *;
 
 .profile__card {
-  @include mix.flexboxLayout($align: center,$gap: spacing(2));
+  @include mix.flexboxLayout($align: center, $gap: spacing(3));
   cursor: pointer;
   padding: spacing(5) spacing(5);
   background-color: blue-pallete(50);
 
-  .profile__card--image {
+  &--image {
     width: toRem(40);
     height: toRem(40);
     border-radius: 50%;
@@ -16,5 +16,27 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+  }
+
+  &--text {
+    span,
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    p {
+      font-weight: var.$font-regular;
+      font-size: toRem(14);
+      font-family: var.$font-family;
+      line-height: line-height(4);
+      text-wrap: balance;
+    }
+    span {
+      font-family: var.$font-family;
+      font-weight: var.$font-bold;
+      font-size: toRem(16);
+      line-height: line-height(3);
+    }
   }
 }

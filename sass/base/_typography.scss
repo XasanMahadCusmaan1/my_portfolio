@@ -28,28 +28,6 @@ html {
   }
 }
 
-//NAV BAR TYPOGRAPHY STYLES
-nav {
-  a {
-    font-family: var.$font-family-second;
-    font-weight: var.$font-medium;
-    font-size: toRem(25);
-    text-decoration: none;
-    color: inherit;
-
-    &:hover {
-      color: blue-pallete(800);
-      opacity: 1;
-    }
-
-    span {
-      margin-inline-end: spacing(3);
-      color: blue-pallete(700);
-      font-weight: var.$font-bold;
-    }
-  }
-}
-
 //heading for the main section
 .main__heading {
   font-size: toRem(46);
@@ -97,64 +75,6 @@ nav {
     text-wrap: balance;
   }
 }
-
-//PROFILE CARD TYPOGRAPHY
-.profile__card--text {
-  span,
-  p {
-    margin: 0;
-    padding: 0;
-  }
-
-  p {
-    font-weight: var.$font-regular;
-    font-size: toRem(14);
-    line-height: line-height(1);
-    text-wrap: balance;
-  }
-  span {
-    font-family: var.$font-family;
-    font-weight: var.$font-bold;
-    font-size: toRem(16);
-    line-height: line-height(3);
-  }
-}
-
-//TECHNOLOGIES SECTION
-
-#slider__section {
-  h2 {
-    text-align: center;
-  }
-  p {
-    @include mix.GSParagraphs($block-space: spacing(10));
-    text-align: center;
-    text-wrap: balance;
-  }
-}
-//ABOUT SECTION
-
-.design__content {
-  p {
-    margin-block: spacing(2) spacing(8);
-  }
-}
-
-.dev__content {
-  p {
-    margin-block: spacing(2) spacing(8);
-  }
-}
-
-.about__services--content {
-  span {
-    font-size: toRem(17);
-    letter-spacing: toRem(2);
-    font-weight: var.$font-regular;
-    font-style: italic;
-  }
-}
-
 //projects typography
 .projects__container {
   h2 {
