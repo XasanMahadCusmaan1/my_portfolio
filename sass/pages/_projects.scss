@@ -6,7 +6,15 @@
   @include mix.GSsectionsMobile;
 }
 
+//projects container
 .projects__container {
+  @include mix.GSsectionsMobile;
+  padding: 0;
+
+  h2 {
+    margin-block-end: spacing(12);
+  }
+  //the sidebar and showcase parent
   &--showcase {
     @include mix.flexboxLayout(space-between, center, spacing(5), column);
   }
@@ -15,10 +23,74 @@
 .projects__sidebar {
   width: 100%;
   background-color: blue-pallete(100);
+
+  ul {
+    @include mix.flexboxLayout(flex-start, center, spacing(5));
+    padding-inline: spacing(3);
+
+    li {
+      font-size: toRem(17);
+      font-weight: var.$font-bold;
+      cursor: pointer;
+      letter-spacing: 1px;
+
+      &:hover {
+        color: blue-pallete(700);
+      }
+    }
+
+    .active__tab {
+      color: var.$white;
+
+      --r: 1rem; /* control the cutout */
+
+      // border-block: 0.5rem solid #0000;
+      padding-inline: spacing(5);
+      padding-block: spacing(3);
+      line-height: 1.4;
+      // transform: translateY(-0.3rem);
+      // clip-path: polygon(
+      //   0 0,
+      //   100% 0,
+      //   100% 100%,
+      //   0 100%,
+      //   var(--r) calc(100% - 0.25rem),
+      //   0 50%,
+      //   var(--r) 0.25rem
+      // );
+      background: radial-gradient(0.2rem 50% at right, #000a, #0000) border-box,
+        blue-pallete(600) padding-box; /* the color  */
+      width: fit-content;
+
+      &:hover {
+        color: var.$white;
+      }
+    }
+  }
 }
 //showcase
 .projects__showcase {
   width: 100%;
   @include mix.GSboxes;
   padding: spacing(5);
+
+  //instructions tab styles
+  &--instructions {
+    span {
+      display: block;
+      color: blue-pallete(700);
+      margin-block: spacing(7);
+      font-weight: var.$font-bold;
+    }
+
+    li {
+      margin-block-end: spacing(5);
+    }
+  }
+
+  //Development tab styles
+  &--webdev {
+    isolation: isolate;
+    // border: 2px solid red;
+  }
 }

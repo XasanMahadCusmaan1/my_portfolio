@@ -6,7 +6,7 @@
 //HEADER LAYOUT AND BASE STYLES
 header {
   width: 100%;
-  background-color: blue-pallete(300);
+  background-color: blue-pallete(200);
   height: toRem(80);
   position: sticky;
   top: 0;
@@ -18,7 +18,7 @@ header {
     padding: toRem(15) toRem(15);
     overflow: clip;
     transition: height 0.7s ease-in-out;
-    background-color: blue-pallete(300);
+    background-color: blue-pallete(200);
 
     //Tablet Styles
     @media (min-width: 898px) {

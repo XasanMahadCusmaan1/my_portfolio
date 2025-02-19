@@ -1,0 +1,53 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/functions" as *;
+
+.carousel {
+  overflow: hidden;
+  margin-block-start: spacing(10);
+  position: relative;
+  border: 2px solid blue;
+}
+
+.carousel__list {
+  @include mix.flexboxLayout(flex-start, center);
+
+  &--item {
+    min-width: 100%;
+  }
+}
+
+.prev,
+.next {
+  background-color: blue-pallete(500);
+  width: toRem(45);
+  height: toRem(45);
+  @include mix.flexboxLayout(center, center);
+  font-size: toRem(25);
+  color: var.$white;
+  padding: spacing(5);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 100;
+}
+
+.prev {
+  left: -10px;
+  top: 55%;
+}
+
+.next {
+  right: 0;
+  top: 55%;
+}
+.dots__container {
+  @include mix.flexboxLayout(center, center);
+
+  .dots {
+    background-color: none;
+    border: 2px solid blue-pallete(700);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+}

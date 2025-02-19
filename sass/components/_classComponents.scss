@@ -1,0 +1,9 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/functions" as *;
+
+//class component for all h3 in this section
+.projects__showcase--h3 {
+  margin-block-end: spacing(2);
+  font-family: var.$font-family;
+}
