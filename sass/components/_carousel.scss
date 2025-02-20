@@ -2,52 +2,78 @@
 @use "../abstracts/mixins" as mix;
 @use "../abstracts/functions" as *;
 
-.carousel {
-  overflow: hidden;
-  margin-block-start: spacing(10);
-  position: relative;
-  border: 2px solid blue;
-}
+// wraper
+// .carousel {
 
+// }
+
+//carousel items parent
 .carousel__list {
-  @include mix.flexboxLayout(flex-start, center);
+  @include mix.flexboxLayout(flex-start, center,spacing(10));
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
 
-  &--item {
-    min-width: 100%;
+  @media (min-width: 898px) {
+    // max-width: 900px;
+    margin: 0 auto;
   }
 }
 
+//carousel items
+.carousel__list--item {
+  min-width: 100%;
+  display: subgrid;
+  scroll-snap-align: start;
+
+  img {
+    margin-block-start: spacing(5);
+  }
+
+  span {
+    background-color: blue-pallete(200);
+    padding: spacing(3) spacing(5);
+    display: inline-block;
+    color: var.$black;
+    border-radius: toRem(3);
+  }
+}
+
+//general styles for previous and the next buttons
 .prev,
 .next {
-  background-color: blue-pallete(500);
-  width: toRem(45);
-  height: toRem(45);
+  width: toRem(40);
+  height: toRem(40);
   @include mix.flexboxLayout(center, center);
   font-size: toRem(25);
-  color: var.$white;
+  color: blue-pallete(700);
   padding: spacing(5);
+  border: 2px solid blue-pallete(700);
   border-radius: 50%;
-  position: absolute;
-  z-index: 100;
 }
 
+//previous button
 .prev {
-  left: -10px;
-  top: 55%;
+  left: -1.5rem;
 }
 
+//next button
 .next {
-  right: 0;
-  top: 55%;
+  right: -1.5rem;
 }
-.dots__container {
-  @include mix.flexboxLayout(center, center);
+
+//dots styles
+.dots-container {
+  @include mix.flexboxLayout(center, center, spacing(3));
+  width: 100%;
 
   .dots {
     background-color: none;
-    border: 2px solid blue-pallete(700);
-    width: 40px;
-    height: 40px;
+    border: 1px solid blue-pallete(600);
+    width: toRem(12);
+    height: toRem(12);
     border-radius: 50%;
   }
 }

@@ -7,3 +7,8 @@
   margin-block-end: spacing(2);
   font-family: var.$font-family;
 }
+
+//dots class component
+.dots__active {
+  background-color: blue-pallete(600);
+}

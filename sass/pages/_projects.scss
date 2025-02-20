@@ -18,6 +18,10 @@
   &--showcase {
     @include mix.flexboxLayout(space-between, center, spacing(5), column);
   }
+
+  @media (min-width: 898px){
+    @include mix.GSsectionDesktop;
+  }
 }
 //side bar
 .projects__sidebar {
@@ -72,6 +76,7 @@
 .projects__showcase {
   width: 100%;
   @include mix.GSboxes;
+  // border: none;
   padding: spacing(5);
 
   //instructions tab styles
