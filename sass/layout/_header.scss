@@ -134,7 +134,7 @@ main {
 
     //Tablet Syles for the main section
     @media (min-width: 898px) {
-      @include grid.grid2Clayout(toRem(0), column);
+      @include grid.grid2Clayout(toRem(0));
       @include mix.GSsectionDesktop;
       padding: toRem(70) toRem(15) toRem(100) toRem(15);
     }

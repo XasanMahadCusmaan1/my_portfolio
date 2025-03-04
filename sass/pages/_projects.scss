@@ -16,10 +16,14 @@
   }
   //the sidebar and showcase parent
   &--showcase {
-    @include mix.flexboxLayout(space-between, center, spacing(5), column);
+    @include mix.flexboxLayout(space-between, center, spacing(6), column);
+
+    @media (min-width: 898px) {
+      @include mix.flexboxLayout(space-between, stretch, spacing(6), row);
+    }
   }
 
-  @media (min-width: 898px){
+  @media (min-width: 898px) {
     @include mix.GSsectionDesktop;
   }
 }
@@ -27,13 +31,15 @@
 .projects__sidebar {
   width: 100%;
   background-color: blue-pallete(100);
+  @include mix.GSboxes;
+  padding: 0;
 
   ul {
     @include mix.flexboxLayout(flex-start, center, spacing(5));
     padding-inline: spacing(3);
 
     li {
-      font-size: toRem(17);
+      font-size: toRem(18);
       font-weight: var.$font-bold;
       cursor: pointer;
       letter-spacing: 1px;
@@ -70,14 +76,27 @@
         color: var.$white;
       }
     }
+
+    @media (min-width: 898px) {
+      @include mix.flexboxLayout(center, center, spacing(5), column);
+      padding: 0;
+    }
+  }
+
+  @media (min-width: 898px) {
+    width: fit-content;
+    max-height: 85vh;
+    padding-block-start: spacing(10);
   }
 }
 //showcase
 .projects__showcase {
-  width: 100%;
+  max-width: 100%;
   @include mix.GSboxes;
   // border: none;
-  padding: spacing(5);
+  // overflow: hidden;
+  padding: spacing(10);
+  // background-color: blue-pallete(100);
 
   //instructions tab styles
   &--instructions {
@@ -96,6 +115,8 @@
   //Development tab styles
   &--webdev {
     isolation: isolate;
-    // border: 2px solid red;
+  }
+  @media (min-width: 898px) {
+    max-height: 85vh;
   }
 }

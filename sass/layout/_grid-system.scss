@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-@mixin grid2Clayout($gap, $direction) {
+@mixin grid2Clayout($gap) {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
