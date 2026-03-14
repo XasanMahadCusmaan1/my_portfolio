@@ -6,7 +6,7 @@
   "scripts": {
     "compile:sass": "sass sass/main.scss css/style.css -w"
   },
-  "author": "Hassan Mahad Cusmaan",
+  "author": "Hassan Osman",
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.83.1"
