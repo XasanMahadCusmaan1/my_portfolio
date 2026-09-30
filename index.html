@@ -42,12 +42,12 @@
                     <li><a href="#"><span>01</span>Overview</a></li>
                     <li><a href="#about"><span>02</span>About</a></li>
                     <li><a href="#projects"><span>03</span>Projects</a></li>
-                    <li><a href="#"><span>04</span>Contact</a></li>
+                    <li><a href="#contact"><span>04</span>Contact</a></li>
                 </ul>
             </nav>
             <!-- buttons for the menu  -->
             <div class="header__buttons">
-                <a href="#" class="btn btn__background">Message</a>
+                <a href="#contact" class="btn btn__background">Message</a>
                 <!-- <a href="#" class="btn btn__border">Join</a> -->
             </div>
         </div>
@@ -408,6 +408,58 @@
                         </nav>
                     </section>
                 </div>
+            </div>
+        </div>
+    </section>
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-intro">
+                <span class="contact-eyebrow">CONTACT</span>
+                <h2>Have a project in mind?</h2>
+                <p>Tell me what you're looking to build. Share a little about the idea, the goals, and where you are in
+                    the process.</p>
+                <div class="contact-intro__note">
+                    <span class="contact-intro__mark" aria-hidden="true">&#x2197;</span>
+                    <p>Frontend development<br>Responsive websites<br>Thoughtful interfaces</p>
+                </div>
+            </div>
+            <div class="contact-form-panel">
+                <div class="contact-form-panel__heading">
+                    <h3>Start a conversation</h3>
+                    <p>Fill in the details to prepare a message in Gmail.</p>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="contact-form__row">
+                        <div class="contact-form__field">
+                            <label for="contact-name">Your name</label>
+                            <input id="contact-name" name="name" type="text" autocomplete="name" required>
+                        </div>
+                        <div class="contact-form__field">
+                            <label for="contact-email">Email address</label>
+                            <input id="contact-email" name="email" type="email" autocomplete="email" required>
+                        </div>
+                    </div>
+                    <div class="contact-form__field">
+                        <label for="contact-topic">What would you like to discuss?</label>
+                        <select id="contact-topic" name="topic" required>
+                            <option value="" selected disabled>Select a topic</option>
+                            <option>Website development</option>
+                            <option>UI implementation</option>
+                            <option>Collaboration</option>
+                            <option>Something else</option>
+                        </select>
+                    </div>
+                    <div class="contact-form__field">
+                        <label for="contact-message">A little about your project</label>
+                        <textarea id="contact-message" name="message" rows="5"
+                            placeholder="What are you hoping to make?" required></textarea>
+                    </div>
+                    <button class="contact-form__submit" type="submit">
+                        Prepare email <span aria-hidden="true">&#x2197;</span>
+                    </button>
+                    <p class="contact-form__status" id="contact-status" role="status" aria-live="polite"></p>
+                </form>
             </div>
         </div>
     </section>

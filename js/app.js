@@ -99,3 +99,51 @@ document.querySelectorAll(".project-panel").forEach((panel) => {
   nextButton.addEventListener("click", () => showProject(currentIndex + 1));
   showProject(currentIndex);
 });
+
+const contactForm = document.querySelector("#contact-form");
+const contactStatus = document.querySelector("#contact-status");
+// Add your real inbox here; the form uses it as the recipient for its email draft.
+const contactEmail = "xasanfiidoow23@gmail.com";
+
+contactForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  if (!contactEmail) {
+    contactStatus.textContent =
+      "The form is ready. Add your email address to contactEmail in js/app.js to receive messages.";
+    return;
+  }
+
+  const formData = new FormData(contactForm);
+  const subject = `Portfolio inquiry: ${formData.get("topic")}`;
+  const message = [
+    `Name: ${formData.get("name")}`,
+    `Email: ${formData.get("email")}`,
+    `Topic: ${formData.get("topic")}`,
+    "",
+    formData.get("message"),
+  ].join("\n");
+  const gmailUrl = new URL("https://mail.google.com/mail/");
+  gmailUrl.search = new URLSearchParams({
+    view: "cm",
+    fs: "1",
+    to: contactEmail,
+    su: subject,
+    body: message,
+  }).toString();
+  const draftLink = document.createElement("a");
+  draftLink.href = gmailUrl.toString();
+  draftLink.target = "_blank";
+  draftLink.rel = "noreferrer";
+  draftLink.textContent = "open the Gmail draft";
+
+  // Keep a visible link available if the browser blocks the new tab.
+  contactStatus.replaceChildren(
+    "If Gmail did not open, ",
+    draftLink,
+    ". Sign in to Gmail, review the draft, then press Send.",
+  );
+
+  // Open Gmail's compose page; the visitor still reviews and sends the message.
+  window.open(gmailUrl.toString(), "_blank", "noopener,noreferrer");
+});
