@@ -28,9 +28,9 @@
 //carousel items
 .carousel__list--item {
   width: 100%;
-  display: subgrid;
+  display: block;
   scroll-snap-align: start;
-  min-width: 400px;
+  min-width: min(400px, 85vw);
   @include mix.GSboxes;
   // border: none;
   padding: spacing(7);
@@ -40,6 +40,8 @@
 
   img {
     margin-block-start: spacing(5);
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
   }
 
   span {

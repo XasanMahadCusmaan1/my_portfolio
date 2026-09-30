@@ -7,7 +7,7 @@
     <title>Portfolio | Hassan's Portfolio</title>
     <!-- Linking another files -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="/js/app.js" defer></script>
+    <script src="js/app.js" defer></script>
     <!-- link for the font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -205,94 +205,208 @@
     <!-- PROJECTS SECTION STARTS HERE -->
     <section id="projects">
         <div class="projects__container">
-            <h2>Projects</h2>
-            <div class="projects__container--showcase">
-                <div class="projects__sidebar">
-                    <ul>
-                        <li>Instructions</li>
-                        <li class="active__tab">Development</li>
-                        <li>Design</li>
+            <div class="projects__intro">
+                <h2>Projects</h2>
+                <p>A collection of things I've built, designed, and practiced.</p>
+            </div>
+            <div class="projects__workspace">
+                <nav class="projects__sidebar" aria-label="Project categories">
+                    <ul role="tablist" aria-label="Project categories">
+                        <li><button class="project-tab" id="tab-coding" type="button" role="tab" aria-selected="true"
+                                aria-controls="panel-coding" tabindex="0">
+                                <span aria-hidden="true">&#x1F4BB;</span><span>Coding</span>
+                            </button></li>
+                        <li><button class="project-tab" id="tab-design" type="button" role="tab" aria-selected="false"
+                                aria-controls="panel-design" tabindex="-1">
+                                <span aria-hidden="true">&#x1F3A8;</span><span>Design</span>
+                            </button></li>
+                        <li><button class="project-tab" id="tab-practice" type="button" role="tab" aria-selected="false"
+                                aria-controls="panel-practice" tabindex="-1">
+                                <span aria-hidden="true">&#x1F9EA;</span><span>Practice</span>
+                            </button></li>
                     </ul>
-                </div>
+                </nav>
                 <div class="projects__showcase">
-                    <!-- <div class="projects__showcase--instructions">
-                        <h3 class="projects__showcase--h3">Instructions</h3>
-                        <p>This dashboard showcases various web projects categorized as Developer, and
-                        aslo design projects.</p>
-                        <span>How to navigate ?</span>
-                        <ul>
-                            <li><strong><em>1:</em></strong> Use the menu on the left/top to select category</li>
-                            <li><strong><em>2:</em></strong> Click development to see projects i build as dev</li>
-                            <li><strong><em>3:</em></strong> Click design tab also to view designs that i made</li>
-                        </ul>
-                    </div> -->
-                    <div class="projects__showcase--webdev">
-                        <div class="carousel">
-                            <div class="carousel__list">
-                                <div class="carousel__list--item carousel__item--1">
-                                    <h3 class="projects__showcase--h3">Portfolio Website</h3>
-                                    <p>this website is my portfolio website i desinged and i build it using
-                                        Front-end
-                                        tools</p>
-                                    <h4>Tools</h4>
-                                    <span>Html</span>
-                                    <span>Css</span>
-                                    <span>Sass</span>
-                                    <span>javasCript</span>
-                                    <img src="/assets/images/portfolio.svg" alt="portfolio">
+                    <section class="project-panel" id="panel-coding" role="tabpanel" aria-labelledby="tab-coding">
+                        <header class="project-panel__heading">
+                            <h3>Coding Projects</h3>
+                            <p>Front-end builds and web experiences.</p>
+                        </header>
+                        <div class="project-carousel" aria-live="polite">
+                            <article class="project-slide" data-project-slide>
+                                <img src="assets/images/demo-portfolio.svg" alt="Illustrated portfolio website concept">
+                                <div class="project-slide__content">
+                                    <span class="project-slide__eyebrow">FRONT-END / DEMO</span>
+                                    <h4>Personal Portfolio</h4>
+                                    <p>A responsive portfolio concept for presenting a developer's work and background.
+                                    </p>
+                                    <ul class="project-slide__tags" aria-label="Technologies used">
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>Sass</li>
+                                        <li>JavaScript</li>
+                                    </ul>
+                                    <a class="project-slide__link" href="assets/images/demo-portfolio.svg"
+                                        target="_blank" rel="noreferrer">View mockup <span
+                                            aria-hidden="true">&#x2197;</span></a>
                                 </div>
-                                <div class="carousel__list--item carousel__item--1">
-                                    <h3>Portfolio Website</h3>
-                                    <p>this website is my portfolio website i desinged and i build it using
-                                        Front-end
-                                        tools</p>
-                                    <h4>Tools</h4>
-                                    <span>Html</span>
-                                    <span>Css</span>
-                                    <span>Sass</span>
-                                    <span>javasCript</span>
-                                    <img src="/assets/images/portfolio.svg" alt="portfolio">
+                            </article>
+                            <article class="project-slide" data-project-slide hidden>
+                                <img src="assets/images/demo-dashboard.svg" alt="Illustrated task dashboard concept">
+                                <div class="project-slide__content">
+                                    <span class="project-slide__eyebrow">FRONT-END / DEMO</span>
+                                    <h4>Taskflow Dashboard</h4>
+                                    <p>A focused dashboard concept for organizing tasks, categories, and weekly
+                                        progress.</p>
+                                    <ul class="project-slide__tags" aria-label="Technologies used">
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JavaScript</li>
+                                    </ul>
+                                    <a class="project-slide__link" href="assets/images/demo-dashboard.svg"
+                                        target="_blank" rel="noreferrer">View mockup <span
+                                            aria-hidden="true">&#x2197;</span></a>
                                 </div>
-                                <div class="carousel__list--item carousel__item--1">
-                                    <h3>Portfolio Website</h3>
-                                    <p>this website is my portfolio website i desinged and i build it using
-                                        Front-end
-                                        tools</p>
-                                    <h4>Tools</h4>
-                                    <span>Html</span>
-                                    <span>Css</span>
-                                    <span>Sass</span>
-                                    <span>javasCript</span>
-                                    <img src="/assets/images/portfolio.svg" alt="portfolio">
+                            </article>
+                            <article class="project-slide" data-project-slide hidden>
+                                <img src="assets/images/demo-cafe.svg" alt="Illustrated coffee shop website concept">
+                                <div class="project-slide__content">
+                                    <span class="project-slide__eyebrow">FRONT-END / DEMO</span>
+                                    <h4>Sunday Coffee</h4>
+                                    <p>A warm landing-page concept for a neighborhood coffee shop and its seasonal menu.
+                                    </p>
+                                    <ul class="project-slide__tags" aria-label="Technologies used">
+                                        <li>HTML</li>
+                                        <li>Sass</li>
+                                        <li>JavaScript</li>
+                                    </ul>
+                                    <a class="project-slide__link" href="assets/images/demo-cafe.svg" target="_blank"
+                                        rel="noreferrer">View mockup <span aria-hidden="true">&#x2197;</span></a>
                                 </div>
-                                <div class="carousel__list--item carousel__item--1">
-                                    <h3>Portfolio Website</h3>
-                                    <p>this website is my portfolio website i desinged and i build it using
-                                        Front-end
-                                        tools</p>
-                                    <h4>Tools</h4>
-                                    <span>Html</span>
-                                    <span>Css</span>
-                                    <span>Sass</span>
-                                    <span>javasCript</span>
-                                    <img src="/assets/images/portfolio.svg" alt="portfolio">
-                                </div>
-                            </div>
-
-                            <!-- Navigation Arrows -->
-
-                            <!-- Dots Indicator -->
-                            <div class="dots-container">
-                                <button class="prev">❮</button>
-                                <!-- <div class="dots dots__active"></div>
-                                <div class="dots"></div>
-                                <div class="dots"></div>
-                                <div class="dots"></div> -->
-                                <button class="next">❯</button>
-                            </div>
+                            </article>
                         </div>
-                    </div>
-                    <!-- <div class="projects__showcase--desing"></div> -->
+                        <div class="project-dots" aria-label="Choose a coding project"></div>
+                        <nav class="project-pagination" aria-label="Coding project navigation">
+                            <button class="project-pagination__button" type="button" data-project-previous>
+                                <span aria-hidden="true">&#x2039;</span> Prev
+                            </button>
+                            <p class="project-pagination__count" aria-live="polite"><span data-project-current>1</span>
+                                /
+                                <span data-project-total>3</span>
+                            </p>
+                            <button class="project-pagination__button" type="button" data-project-next>
+                                Next <span aria-hidden="true">&#x203A;</span>
+                            </button>
+                        </nav>
+                    </section>
+                    <section class="project-panel" id="panel-design" role="tabpanel" aria-labelledby="tab-design"
+                        hidden>
+                        <header class="project-panel__heading">
+                            <h3>Design Projects</h3>
+                            <p>Visual systems, layouts, and interface concepts.</p>
+                        </header>
+                        <div class="project-carousel" aria-live="polite">
+                            <article class="project-slide" data-project-slide>
+                                <img src="assets/images/demo-brand.svg" alt="Sample cafe brand identity moodboard">
+                                <div class="project-slide__content">
+                                    <span class="project-slide__eyebrow">VISUAL DESIGN / DEMO</span>
+                                    <h4>Sunday Coffee Identity</h4>
+                                    <p>A friendly visual direction for a modern neighborhood cafe.</p>
+                                    <ul class="project-slide__tags" aria-label="Design focus">
+                                        <li>Branding</li>
+                                        <li>Color</li>
+                                        <li>Typography</li>
+                                    </ul>
+                                    <a class="project-slide__link" href="assets/images/demo-brand.svg" target="_blank"
+                                        rel="noreferrer">View mockup <span aria-hidden="true">&#x2197;</span></a>
+                                </div>
+                            </article>
+                            <article class="project-slide" data-project-slide hidden>
+                                <img src="assets/images/demo-portfolio.svg" alt="Sample portfolio interface design">
+                                <div class="project-slide__content">
+                                    <span class="project-slide__eyebrow">VISUAL DESIGN / DEMO</span>
+                                    <h4>Portfolio Art Direction</h4>
+                                    <p>A clean interface and color study for a personal creative portfolio.</p>
+                                    <ul class="project-slide__tags" aria-label="Design focus">
+                                        <li>Interface</li>
+                                        <li>Layout</li>
+                                        <li>Responsive</li>
+                                    </ul>
+                                    <a class="project-slide__link" href="assets/images/demo-portfolio.svg"
+                                        target="_blank" rel="noreferrer">View mockup <span
+                                            aria-hidden="true">&#x2197;</span></a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="project-dots" aria-label="Choose a design project"></div>
+                        <nav class="project-pagination" aria-label="Design project navigation">
+                            <button class="project-pagination__button" type="button" data-project-previous>
+                                <span aria-hidden="true">&#x2039;</span> Prev
+                            </button>
+                            <p class="project-pagination__count" aria-live="polite"><span data-project-current>1</span>
+                                /
+                                <span data-project-total>2</span>
+                            </p>
+                            <button class="project-pagination__button" type="button" data-project-next>
+                                Next <span aria-hidden="true">&#x203A;</span>
+                            </button>
+                        </nav>
+                    </section>
+                    <section class="project-panel" id="panel-practice" role="tabpanel" aria-labelledby="tab-practice"
+                        hidden>
+                        <header class="project-panel__heading">
+                            <h3>Practice Projects</h3>
+                            <p>Small exercises for learning by building.</p>
+                        </header>
+                        <div class="project-carousel" aria-live="polite">
+                            <article class="project-slide" data-project-slide>
+                                <img src="assets/images/demo-dashboard.svg" alt="Illustrated dashboard layout exercise">
+                                <div class="project-slide__content">
+                                    <span class="project-slide__eyebrow">LAYOUT EXERCISE / DEMO</span>
+                                    <h4>Dashboard Layout Study</h4>
+                                    <p>A practice build exploring grid layout, spacing, and responsive dashboard
+                                        regions.</p>
+                                    <ul class="project-slide__tags" aria-label="Skills practiced">
+                                        <li>CSS Grid</li>
+                                        <li>Responsive</li>
+                                        <li>Layout</li>
+                                    </ul>
+                                    <a class="project-slide__link" href="assets/images/demo-dashboard.svg"
+                                        target="_blank" rel="noreferrer">View mockup <span
+                                            aria-hidden="true">&#x2197;</span></a>
+                                </div>
+                            </article>
+                            <article class="project-slide" data-project-slide hidden>
+                                <img src="assets/images/demo-cafe.svg" alt="Illustrated landing page layout exercise">
+                                <div class="project-slide__content">
+                                    <span class="project-slide__eyebrow">RESPONSIVE EXERCISE / DEMO</span>
+                                    <h4>Landing Page Study</h4>
+                                    <p>A practice exercise in building a clear hero section and adapting it to small
+                                        screens.</p>
+                                    <ul class="project-slide__tags" aria-label="Skills practiced">
+                                        <li>HTML</li>
+                                        <li>Flexbox</li>
+                                        <li>Responsive</li>
+                                    </ul>
+                                    <a class="project-slide__link" href="assets/images/demo-cafe.svg" target="_blank"
+                                        rel="noreferrer">View mockup <span aria-hidden="true">&#x2197;</span></a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="project-dots" aria-label="Choose a practice project"></div>
+                        <nav class="project-pagination" aria-label="Practice project navigation">
+                            <button class="project-pagination__button" type="button" data-project-previous>
+                                <span aria-hidden="true">&#x2039;</span> Prev
+                            </button>
+                            <p class="project-pagination__count" aria-live="polite"><span data-project-current>1</span>
+                                /
+                                <span data-project-total>2</span>
+                            </p>
+                            <button class="project-pagination__button" type="button" data-project-next>
+                                Next <span aria-hidden="true">&#x203A;</span>
+                            </button>
+                        </nav>
+                    </section>
                 </div>
             </div>
         </div>
