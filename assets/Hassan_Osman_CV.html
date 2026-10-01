@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hassan Osman | Front-End Developer CV</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 10mm;
+        }
+
+        :root {
+            color-scheme: light;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #374151;
+            background: #fff;
+            font-size: 9.5pt;
+            line-height: 1.34;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .cv-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 8mm;
+            padding: 10mm 11mm 8mm;
+            background: #172554;
+            color: #fff;
+        }
+
+        .cv-header__name {
+            margin: 0;
+            color: #fff;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 27pt;
+            font-weight: 700;
+            line-height: 1.05;
+        }
+
+        .cv-header__role {
+            margin: 3mm 0 0;
+            color: #bfdbfe;
+            font-size: 10pt;
+            font-weight: 700;
+        }
+
+        .cv-header__contact {
+            flex: 0 0 auto;
+            color: #eff6ff;
+            font-size: 9pt;
+            text-align: right;
+            text-decoration: none;
+        }
+
+        .cv-layout {
+            display: grid;
+            grid-template-columns: 62mm minmax(0, 1fr);
+            gap: 9mm;
+            padding: 8mm 10mm 0;
+        }
+
+        .cv-sidebar {
+            padding: 5mm;
+            background: #eff6ff;
+        }
+
+        section+section {
+            margin-top: 6mm;
+        }
+
+        h2 {
+            margin: 0 0 2.5mm;
+            padding-bottom: 1.5mm;
+            border-bottom: 1px solid #bfdbfe;
+            color: #1d4ed8;
+            font-size: 10pt;
+            font-weight: 700;
+            line-height: 1.15;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .skill-group+.skill-group {
+            margin-top: 2.5mm;
+        }
+
+        .skill-group strong {
+            display: block;
+            margin-bottom: 0.5mm;
+            color: #172554;
+            font-size: 8.5pt;
+        }
+
+        .skill-group p,
+        .sidebar-copy {
+            font-size: 8.5pt;
+        }
+
+        .cv-projects {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .cv-projects li {
+            position: relative;
+            margin: 0 0 3mm;
+            padding-left: 4mm;
+            font-size: 8.8pt;
+        }
+
+        .cv-projects li::before {
+            position: absolute;
+            left: 0;
+            color: #2563eb;
+            content: "\2022";
+        }
+
+        .cv-projects strong {
+            color: #172554;
+        }
+
+        .cv-achievement {
+            padding-left: 3mm;
+            border-left: 2px solid #2563eb;
+            color: #1f2937;
+            font-size: 8.7pt;
+        }
+
+        @media screen {
+            body {
+                width: 210mm;
+                min-height: 297mm;
+                margin: 10mm auto;
+                box-shadow: 0 4px 24px rgb(17 24 39 / 15%);
+            }
+        }
+
+        @media print {
+
+            .cv-header,
+            .cv-sidebar {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="cv-header">
+        <div>
+            <h1 class="cv-header__name">Hassan Osman</h1>
+            <p class="cv-header__role">FRONT-END DEVELOPER | UI-FOCUSED DESIGNER</p>
+        </div>
+        <a class="cv-header__contact" href="mailto:xasanfiidoow23@gmail.com">xasanfiidoow23@gmail.com</a>
+    </header>
+    <main class="cv-layout">
+        <aside class="cv-sidebar">
+            <section>
+                <h2>Technical Skills</h2>
+                <div class="skill-group">
+                    <strong>Front End</strong>
+                    <p>HTML, CSS, JavaScript, Sass, responsive layouts</p>
+                </div>
+                <div class="skill-group">
+                    <strong>Frameworks and Runtime</strong>
+                    <p>React, Node.js</p>
+                </div>
+                <div class="skill-group">
+                    <strong>Tools</strong>
+                    <p>Git, GitHub</p>
+                </div>
+                <div class="skill-group">
+                    <strong>UI</strong>
+                    <p>Interface layout, visual styling, CSS animation</p>
+                </div>
+            </section>
+            <section>
+                <h2>Achievement</h2>
+                <p class="cv-achievement"><strong>40 Days of JavaScript</strong><br>Completed the YouTube playlist and
+                    solved its exercises.</p>
+            </section>
+            <section>
+                <h2>Development</h2>
+                <p class="sidebar-copy">Self-directed web development study since 2022; began learning frontend
+                    development during the final year of high school.</p>
+            </section>
+        </aside>
+        <div class="cv-main">
+            <section>
+                <h2>Profile</h2>
+                <p>Frontend developer and UI-focused designer building responsive, user-friendly web experiences. Works
+                    with HTML, CSS, JavaScript, and Sass, with growing experience in React and Node.js.</p>
+            </section>
+            <section>
+                <h2>Selected Projects</h2>
+                <ul class="cv-projects">
+                    <li><strong>Personal Task Manager.</strong> Create and filter tasks, mark completion, and persist
+                        tasks in local storage.</li>
+                    <li><strong>Quiz App.</strong> Timed multiple-choice quiz with answer feedback, scoring, saved high
+                        score, and restart.</li>
+                    <li><strong>Study Tracker.</strong> Study timer with start, stop, reset, and saved session history.
+                    </li>
+                    <li><strong>Scroll-Driven Animation.</strong> Editorial page with reading progress, sticky imagery,
+                        and CSS scroll reveals.</li>
+                    <li><strong>Image Slider.</strong> Five-slide carousel with autoplay, previous/next controls, and
+                        dot navigation.</li>
+                    <li><strong>Practice Builds.</strong> Calculator interface, React profile cards, and a categorized
+                        project tabs showcase.</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
