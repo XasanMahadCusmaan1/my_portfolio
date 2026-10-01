@@ -146,4 +146,5 @@ contactForm.addEventListener("submit", (event) => {
 
   // Open Gmail's compose page; the visitor still reviews and sends the message.
   window.open(gmailUrl.toString(), "_blank", "noopener,noreferrer");
+  contactForm.reset();
 });
