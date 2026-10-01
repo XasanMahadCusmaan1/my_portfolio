@@ -25,10 +25,10 @@
         <input type="checkbox" id="menu__toggle">
         <div class="header__container">
             <div class="header__actions">
-                <div class="header__logo">
-                    <img src="/assets/images/photo_2024-12-09_11-43-09.jpg" alt="my image">
-                    <span><strong>Hassan.<em>dev</em></strong></span>
-                </div>
+                <a class="header__logo" href="#" aria-label="Hassan dev, back to top">
+                    <span class="header__logo-name">Hassan</span>
+                    <span class="header__logo-accent">.dev</span>
+                </a>
                 <div class="header__menu">
                     <label for="menu__toggle">
                         <div class="menu__container">
@@ -61,7 +61,7 @@
                 <p>Hi, I’m <em>HASSAN OSMAAN</em>, a frontend developer dedicated to creating sleek,
                     responsive, and user-friendly websites.</p>
                 <div class="cv__container">
-                    <button class="cv__button">Download Cv</button>
+                    <a class="cv__button" href="assets/Hassan_Osman_CV.rtf" download>Download CV</a>
                     <div class="profile__card">
                         <div class="profile__card--image"></div>
                         <div class="profile__card--text">
@@ -234,54 +234,57 @@
                         </header>
                         <div class="project-carousel" aria-live="polite">
                             <article class="project-slide" data-project-slide>
-                                <img src="assets/images/demo-portfolio.svg" alt="Illustrated portfolio website concept">
+                                <img src="assets/images/projects/task-manager.svg"
+                                    alt="Illustrative preview of the Personal Task Manager interface">
                                 <div class="project-slide__content">
-                                    <span class="project-slide__eyebrow">FRONT-END / DEMO</span>
-                                    <h4>Personal Portfolio</h4>
-                                    <p>A responsive portfolio concept for presenting a developer's work and background.
-                                    </p>
-                                    <ul class="project-slide__tags" aria-label="Technologies used">
-                                        <li>HTML</li>
-                                        <li>CSS</li>
-                                        <li>Sass</li>
-                                        <li>JavaScript</li>
-                                    </ul>
-                                    <a class="project-slide__link" href="assets/images/demo-portfolio.svg"
-                                        target="_blank" rel="noreferrer">View mockup <span
-                                            aria-hidden="true">&#x2197;</span></a>
-                                </div>
-                            </article>
-                            <article class="project-slide" data-project-slide hidden>
-                                <img src="assets/images/demo-dashboard.svg" alt="Illustrated task dashboard concept">
-                                <div class="project-slide__content">
-                                    <span class="project-slide__eyebrow">FRONT-END / DEMO</span>
-                                    <h4>Taskflow Dashboard</h4>
-                                    <p>A focused dashboard concept for organizing tasks, categories, and weekly
-                                        progress.</p>
+                                    <span class="project-slide__eyebrow">CODING / WEB APP</span>
+                                    <h4>Personal Task Manager</h4>
+                                    <p>Create tasks, mark them complete, filter the list, and keep tasks saved with
+                                        local storage.</p>
                                     <ul class="project-slide__tags" aria-label="Technologies used">
                                         <li>HTML</li>
                                         <li>CSS</li>
                                         <li>JavaScript</li>
+                                        <li>Local storage</li>
                                     </ul>
-                                    <a class="project-slide__link" href="assets/images/demo-dashboard.svg"
-                                        target="_blank" rel="noreferrer">View mockup <span
+                                    <a class="project-slide__link" href="../Projects/Personal-Task-Manager/index.html"
+                                        target="_blank" rel="noreferrer">View project <span
                                             aria-hidden="true">&#x2197;</span></a>
                                 </div>
                             </article>
                             <article class="project-slide" data-project-slide hidden>
-                                <img src="assets/images/demo-cafe.svg" alt="Illustrated coffee shop website concept">
+                                <img src="assets/images/projects/preview_quiz.png" alt="Quiz App project preview">
                                 <div class="project-slide__content">
-                                    <span class="project-slide__eyebrow">FRONT-END / DEMO</span>
-                                    <h4>Sunday Coffee</h4>
-                                    <p>A warm landing-page concept for a neighborhood coffee shop and its seasonal menu.
-                                    </p>
+                                    <span class="project-slide__eyebrow">CODING / WEB APP</span>
+                                    <h4>Quiz App</h4>
+                                    <p>Timed multiple-choice rounds with answer feedback, scoring, saved high scores,
+                                        and a restart flow.</p>
                                     <ul class="project-slide__tags" aria-label="Technologies used">
                                         <li>HTML</li>
-                                        <li>Sass</li>
+                                        <li>CSS</li>
                                         <li>JavaScript</li>
                                     </ul>
-                                    <a class="project-slide__link" href="assets/images/demo-cafe.svg" target="_blank"
-                                        rel="noreferrer">View mockup <span aria-hidden="true">&#x2197;</span></a>
+                                    <a class="project-slide__link" href="../Projects/quiz_app/index.html"
+                                        target="_blank" rel="noreferrer">View project <span
+                                            aria-hidden="true">&#x2197;</span></a>
+                                </div>
+                            </article>
+                            <article class="project-slide" data-project-slide hidden>
+                                <img src="assets/images/projects/preview_study.png" alt="Study Tracker project preview">
+                                <div class="project-slide__content">
+                                    <span class="project-slide__eyebrow">CODING / WEB APP</span>
+                                    <h4>Study Tracker</h4>
+                                    <p>Track study time with start, stop, and reset controls, then review saved session
+                                        history.</p>
+                                    <ul class="project-slide__tags" aria-label="Technologies used">
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JavaScript</li>
+                                        <li>Local storage</li>
+                                    </ul>
+                                    <a class="project-slide__link" href="../Projects/study-tracker/index.html"
+                                        target="_blank" rel="noreferrer">View project <span
+                                            aria-hidden="true">&#x2197;</span></a>
                                 </div>
                             </article>
                         </div>
@@ -307,34 +310,37 @@
                         </header>
                         <div class="project-carousel" aria-live="polite">
                             <article class="project-slide" data-project-slide>
-                                <img src="assets/images/demo-brand.svg" alt="Sample cafe brand identity moodboard">
+                                <img src="assets/images/projects/preview_scroll.png"
+                                    alt="Scroll-Driven Story project preview">
                                 <div class="project-slide__content">
-                                    <span class="project-slide__eyebrow">VISUAL DESIGN / DEMO</span>
-                                    <h4>Sunday Coffee Identity</h4>
-                                    <p>A friendly visual direction for a modern neighborhood cafe.</p>
+                                    <span class="project-slide__eyebrow">DESIGN / CSS ANIMATION</span>
+                                    <h4>Scroll-Driven Animation</h4>
+                                    <p>An editorial article experience with scroll progress, sticky imagery, and
+                                        scroll-triggered reveals.</p>
                                     <ul class="project-slide__tags" aria-label="Design focus">
-                                        <li>Branding</li>
-                                        <li>Color</li>
-                                        <li>Typography</li>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>Scroll timelines</li>
                                     </ul>
-                                    <a class="project-slide__link" href="assets/images/demo-brand.svg" target="_blank"
-                                        rel="noreferrer">View mockup <span aria-hidden="true">&#x2197;</span></a>
+                                    <a class="project-slide__link"
+                                        href="../Projects/Scroll%20Driven%20Animation/index.html" target="_blank"
+                                        rel="noreferrer">View project <span aria-hidden="true">&#x2197;</span></a>
                                 </div>
                             </article>
                             <article class="project-slide" data-project-slide hidden>
-                                <img src="assets/images/demo-portfolio.svg" alt="Sample portfolio interface design">
+                                <img src="assets/images/projects/preview_slider.png" alt="Image Slider project preview">
                                 <div class="project-slide__content">
-                                    <span class="project-slide__eyebrow">VISUAL DESIGN / DEMO</span>
-                                    <h4>Portfolio Art Direction</h4>
-                                    <p>A clean interface and color study for a personal creative portfolio.</p>
+                                    <span class="project-slide__eyebrow">DESIGN / INTERACTION</span>
+                                    <h4>Image Slider</h4>
+                                    <p>A five-slide carousel with autoplay, previous/next controls, and direct dot
+                                        navigation.</p>
                                     <ul class="project-slide__tags" aria-label="Design focus">
-                                        <li>Interface</li>
-                                        <li>Layout</li>
-                                        <li>Responsive</li>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JavaScript</li>
                                     </ul>
-                                    <a class="project-slide__link" href="assets/images/demo-portfolio.svg"
-                                        target="_blank" rel="noreferrer">View mockup <span
-                                            aria-hidden="true">&#x2197;</span></a>
+                                    <a class="project-slide__link" href="../Projects/slider/index.html" target="_blank"
+                                        rel="noreferrer">View project <span aria-hidden="true">&#x2197;</span></a>
                                 </div>
                             </article>
                         </div>
@@ -360,36 +366,145 @@
                         </header>
                         <div class="project-carousel" aria-live="polite">
                             <article class="project-slide" data-project-slide>
-                                <img src="assets/images/demo-dashboard.svg" alt="Illustrated dashboard layout exercise">
+                                <img src="assets/images/projects/preview_calculator.png"
+                                    alt="Calculator practice project preview">
                                 <div class="project-slide__content">
-                                    <span class="project-slide__eyebrow">LAYOUT EXERCISE / DEMO</span>
-                                    <h4>Dashboard Layout Study</h4>
-                                    <p>A practice build exploring grid layout, spacing, and responsive dashboard
-                                        regions.</p>
+                                    <span class="project-slide__eyebrow">PRACTICE / UI EXERCISE</span>
+                                    <h4>Calculator Interface</h4>
+                                    <p>A keypad and display exercise for practicing delegated click handling and DOM
+                                        updates.</p>
                                     <ul class="project-slide__tags" aria-label="Skills practiced">
-                                        <li>CSS Grid</li>
-                                        <li>Responsive</li>
-                                        <li>Layout</li>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JavaScript</li>
                                     </ul>
-                                    <a class="project-slide__link" href="assets/images/demo-dashboard.svg"
-                                        target="_blank" rel="noreferrer">View mockup <span
+                                    <a class="project-slide__link" href="../Projects/calculator_project/index.html"
+                                        target="_blank" rel="noreferrer">View exercise <span
                                             aria-hidden="true">&#x2197;</span></a>
                                 </div>
                             </article>
                             <article class="project-slide" data-project-slide hidden>
-                                <img src="assets/images/demo-cafe.svg" alt="Illustrated landing page layout exercise">
+                                <img src="assets/images/projects/tabs-showcase.svg"
+                                    alt="Illustrative preview of the categorized Tabs Showcase">
                                 <div class="project-slide__content">
-                                    <span class="project-slide__eyebrow">RESPONSIVE EXERCISE / DEMO</span>
-                                    <h4>Landing Page Study</h4>
-                                    <p>A practice exercise in building a clear hero section and adapting it to small
-                                        screens.</p>
+                                    <span class="project-slide__eyebrow">PRACTICE / PORTFOLIO UI</span>
+                                    <h4>Tabs Showcase</h4>
+                                    <p>A categorized gallery prototype for presenting coding, design, and practice
+                                        work.</p>
                                     <ul class="project-slide__tags" aria-label="Skills practiced">
                                         <li>HTML</li>
-                                        <li>Flexbox</li>
-                                        <li>Responsive</li>
+                                        <li>CSS</li>
+                                        <li>JavaScript</li>
                                     </ul>
-                                    <a class="project-slide__link" href="assets/images/demo-cafe.svg" target="_blank"
-                                        rel="noreferrer">View mockup <span aria-hidden="true">&#x2197;</span></a>
+                                    <a class="project-slide__link" href="../Projects/taps/index.html" target="_blank"
+                                        rel="noreferrer">View project <span aria-hidden="true">&#x2197;</span></a>
+                                </div>
+                            </article>
+                            <article class="project-slide" data-project-slide hidden>
+                                <img src="assets/images/projects/react-cards.svg"
+                                    alt="React profile cards rendered from component props">
+                                <div class="project-slide__content">
+                                    <span class="project-slide__eyebrow">PRACTICE / REACT PROPS</span>
+                                    <h4>React Profile Cards</h4>
+                                    <p>A small React exercise that renders reusable profile cards from name and
+                                        description props.</p>
+                                    <ul class="project-slide__tags" aria-label="Skills practiced">
+                                        <li>React</li>
+                                        <li>JavaScript</li>
+                                        <li>Props</li>
+                                    </ul>
+                                    <a class="project-slide__link" href="../react-project/index.html" target="_blank"
+                                        rel="noreferrer">View exercise <span aria-hidden="true">&#x2197;</span></a>
+                                </div>
+                            </article>
+                            <article class="project-slide" data-project-slide hidden>
+                                <img src="assets/images/projects/movie-website.svg"
+                                    alt="Illustrated movie browsing website prototype">
+                                <div class="project-slide__content">
+                                    <span class="project-slide__eyebrow">IN PROGRESS / UI PROTOTYPE</span>
+                                    <h4>Movie Website</h4>
+                                    <p>A movie-browsing layout with navigation and slider controls. The referenced
+                                        JavaScript file is still missing.</p>
+                                    <ul class="project-slide__tags" aria-label="Skills practiced">
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JavaScript</li>
+                                    </ul>
+                                    <a class="project-slide__link" href="../Movie_Website/index.html" target="_blank"
+                                        rel="noreferrer">View prototype <span aria-hidden="true">&#x2197;</span></a>
+                                </div>
+                            </article>
+                            <article class="project-slide" data-project-slide hidden>
+                                <img src="assets/images/projects/recipe-finder.svg"
+                                    alt="Illustrated recipe search and results interface">
+                                <div class="project-slide__content">
+                                    <span class="project-slide__eyebrow">IN PROGRESS / SEARCH EXERCISE</span>
+                                    <h4>Recipe Finder</h4>
+                                    <p>A static recipe search exercise with expandable ingredient details and a saved
+                                        last-search term; filtering still needs refinement.</p>
+                                    <ul class="project-slide__tags" aria-label="Skills practiced">
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JavaScript</li>
+                                        <li>Local storage</li>
+                                    </ul>
+                                    <a class="project-slide__link" href="../Projects/quiz_app/recipe-finder/index.html"
+                                        target="_blank" rel="noreferrer">View exercise <span
+                                            aria-hidden="true">&#x2197;</span></a>
+                                </div>
+                            </article>
+                            <article class="project-slide" data-project-slide hidden>
+                                <img src="assets/images/projects/quran-api.svg"
+                                    alt="Illustrated JavaScript API request and JSON response">
+                                <div class="project-slide__content">
+                                    <span class="project-slide__eyebrow">IN PROGRESS / API EXERCISE</span>
+                                    <h4>Quran API Fetch</h4>
+                                    <p>An async fetch and JSON parsing experiment. The response is currently logged to
+                                        the console; a page interface is still to be built.</p>
+                                    <ul class="project-slide__tags" aria-label="Skills practiced">
+                                        <li>JavaScript</li>
+                                        <li>Fetch API</li>
+                                        <li>JSON</li>
+                                    </ul>
+                                    <a class="project-slide__link" href="../Projects/api/index.html" target="_blank"
+                                        rel="noreferrer">View exercise <span aria-hidden="true">&#x2197;</span></a>
+                                </div>
+                            </article>
+                            <article class="project-slide" data-project-slide hidden>
+                                <img src="assets/images/projects/react-todo.svg"
+                                    alt="Illustrated React to-do list app scaffold">
+                                <div class="project-slide__content">
+                                    <span class="project-slide__eyebrow">IN PROGRESS / REACT APP</span>
+                                    <h4>React To-Do App</h4>
+                                    <p>A React app scaffold with a header; the task form and list components are not
+                                        implemented or connected yet.</p>
+                                    <ul class="project-slide__tags" aria-label="Skills practiced">
+                                        <li>React</li>
+                                        <li>TypeScript</li>
+                                        <li>Vite</li>
+                                    </ul>
+                                    <a class="project-slide__link" href="../Projects/to-do-react/index.html"
+                                        target="_blank" rel="noreferrer">View work in progress <span
+                                            aria-hidden="true">&#x2197;</span></a>
+                                </div>
+                            </article>
+                            <article class="project-slide" data-project-slide hidden>
+                                <img src="assets/images/projects/react-router-playground.svg"
+                                    alt="Illustrated React Router and state playground">
+                                <div class="project-slide__content">
+                                    <span class="project-slide__eyebrow">IN PROGRESS / ROUTING + STATE</span>
+                                    <h4>React Router Playground</h4>
+                                    <p>A React and TypeScript learning app with profile and state examples; the home
+                                        and about routes remain placeholders.</p>
+                                    <ul class="project-slide__tags" aria-label="Skills practiced">
+                                        <li>React</li>
+                                        <li>TypeScript</li>
+                                        <li>TanStack Router</li>
+                                    </ul>
+                                    <a class="project-slide__link"
+                                        href="../FullStack%20Journey/prod-ready-frontend/index.html" target="_blank"
+                                        rel="noreferrer">View work in progress <span
+                                            aria-hidden="true">&#x2197;</span></a>
                                 </div>
                             </article>
                         </div>
@@ -463,6 +578,33 @@
             </div>
         </div>
     </section>
+    <footer class="site-footer">
+        <div class="site-footer__container">
+            <div class="site-footer__brand">
+                <a class="site-footer__logo" href="#" aria-label="Hassan dev, back to top">Hassan.<em>dev</em></a>
+                <p>Frontend developer building thoughtful, responsive web experiences.</p>
+            </div>
+            <nav class="site-footer__nav" aria-label="Footer navigation">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="site-footer__contact">
+                <h3>Have an idea?</h3>
+                <p>Tell me what you’re planning and let’s start a conversation.</p>
+                <a class="site-footer__cta" href="#contact-form">
+                    Get in touch <span aria-hidden="true">&#x2197;</span>
+                </a>
+            </div>
+        </div>
+        <div class="site-footer__bottom">
+            <p>&copy; 2026 Hassan Osman</p>
+            <a href="#">Back to top <span aria-hidden="true">&#x2191;</span></a>
+        </div>
+    </footer>
 </body>
 
 </html>

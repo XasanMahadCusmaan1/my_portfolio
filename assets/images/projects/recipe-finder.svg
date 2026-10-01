@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#f8fafc"/>
+  <rect x="54" y="42" width="852" height="456" rx="10" fill="#ffffff" stroke="#bfdbfe" stroke-width="2"/>
+  <text x="90" y="104" fill="#172554" font-family="Arial,sans-serif" font-size="31" font-weight="700">Recipe Finder</text>
+  <text x="90" y="136" fill="#6b7280" font-family="Arial,sans-serif" font-size="15">Find an idea for your next meal</text>
+  <rect x="90" y="166" width="620" height="48" rx="5" fill="#ffffff" stroke="#9ca3af" stroke-width="2"/><text x="112" y="197" fill="#9ca3af" font-family="Arial,sans-serif" font-size="15">Search recipes...</text>
+  <rect x="726" y="166" width="132" height="48" rx="4" fill="#2563eb"/><text x="758" y="196" fill="#ffffff" font-family="Arial,sans-serif" font-size="15" font-weight="700">Clear</text>
+  <rect x="90" y="244" width="768" height="65" rx="5" fill="#eff6ff" stroke="#bfdbfe"/><text x="116" y="284" fill="#1e40af" font-family="Arial,sans-serif" font-size="19" font-weight="700">Spaghetti Carbonara</text>
+  <rect x="90" y="322" width="768" height="65" rx="5" fill="#ffffff" stroke="#bfdbfe"/><text x="116" y="362" fill="#1e40af" font-family="Arial,sans-serif" font-size="19" font-weight="700">Chicken Curry</text>
+  <rect x="90" y="400" width="768" height="65" rx="5" fill="#ffffff" stroke="#bfdbfe"/><text x="116" y="440" fill="#1e40af" font-family="Arial,sans-serif" font-size="19" font-weight="700">Veggie Stir Fry</text>
+  <text x="90" y="484" fill="#b45309" font-family="Arial,sans-serif" font-size="13">In progress - recipe search needs refinement</text>
+</svg>

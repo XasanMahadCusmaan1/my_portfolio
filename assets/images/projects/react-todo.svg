@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#eff6ff"/>
+  <rect x="58" y="42" width="844" height="456" rx="9" fill="#ffffff" stroke="#bfdbfe" stroke-width="2"/>
+  <rect x="58" y="42" width="844" height="72" rx="9" fill="#172554"/>
+  <circle cx="104" cy="78" r="18" fill="#60a5fa"/><path d="m96 78 6 6 12-14" fill="none" stroke="#fff" stroke-width="3"/>
+  <text x="140" y="87" fill="#ffffff" font-family="Arial,sans-serif" font-size="25" font-weight="700">To Do List App</text>
+  <rect x="94" y="150" width="590" height="52" rx="5" fill="#fff" stroke="#9ca3af" stroke-width="2"/><text x="116" y="183" fill="#9ca3af" font-family="Arial,sans-serif" font-size="16">Add a task</text>
+  <rect x="700" y="150" width="150" height="52" rx="4" fill="#2563eb"/><text x="746" y="183" fill="#fff" font-family="Arial,sans-serif" font-size="16" font-weight="700">Add</text>
+  <rect x="94" y="232" width="756" height="64" rx="5" fill="#f8fafc" stroke="#bfdbfe"/><circle cx="130" cy="264" r="11" fill="#fff" stroke="#60a5fa" stroke-width="2"/><text x="162" y="270" fill="#374151" font-family="Arial,sans-serif" font-size="17">Plan task list interactions</text>
+  <rect x="94" y="312" width="756" height="64" rx="5" fill="#f8fafc" stroke="#bfdbfe"/><circle cx="130" cy="344" r="11" fill="#fff" stroke="#60a5fa" stroke-width="2"/><text x="162" y="350" fill="#374151" font-family="Arial,sans-serif" font-size="17">Connect task form and list</text>
+  <text x="94" y="428" fill="#b45309" font-family="Arial,sans-serif" font-size="14">IN PROGRESS - task components are not connected yet</text>
+</svg>

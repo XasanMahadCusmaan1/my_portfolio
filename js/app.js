@@ -62,6 +62,7 @@ document.querySelectorAll(".project-panel").forEach((panel) => {
   const slides = Array.from(panel.querySelectorAll("[data-project-slide]"));
   const dotsContainer = panel.querySelector(".project-dots");
   const currentCount = panel.querySelector("[data-project-current]");
+  const totalCount = panel.querySelector("[data-project-total]");
   const previousButton = panel.querySelector("[data-project-previous]");
   const nextButton = panel.querySelector("[data-project-next]");
   let currentIndex = 0;
@@ -92,6 +93,7 @@ document.querySelectorAll(".project-panel").forEach((panel) => {
     });
 
     currentCount.textContent = String(currentIndex + 1);
+    totalCount.textContent = String(slides.length);
   };
 
   // Both buttons reuse showProject, so wrapping and UI updates stay consistent.

@@ -11,20 +11,24 @@ html {
 .header__logo {
   display: flex;
   align-items: center;
-  gap: spacing(5);
+  gap: 0;
   cursor: pointer;
+  color: gray-pallete(950);
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
 
-  img {
-    width: toRem(48);
-    height: toRem(48);
-    border-radius: 50%;
-    border: 2px solid #1d4ed8;
-    object-fit: cover;
+  &-name {
+    font-family: var.$font-family;
+    font-size: toRem(24);
+    font-weight: var.$font-bold;
   }
 
-  span {
-    font-family: var.$font-family;
+  &-accent {
+    color: blue-pallete(700);
+    font-family: var.$font-family-second;
     font-size: toRem(20);
+    font-weight: var.$font-bold;
   }
 }
 

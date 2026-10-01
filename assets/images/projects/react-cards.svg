@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#eff6ff"/>
+  <text x="64" y="82" fill="#172554" font-family="Arial,sans-serif" font-size="30" font-weight="700">React component cards</text>
+  <text x="64" y="116" fill="#4b5563" font-family="Arial,sans-serif" font-size="16">Practice passing profile data through props</text>
+  <rect x="64" y="154" width="390" height="300" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="2"/>
+  <circle cx="136" cy="230" r="42" fill="#93c5fd"/>
+  <circle cx="136" cy="216" r="15" fill="#1e40af"/><path d="M106 254c6-22 19-32 30-32s24 10 30 32" fill="#1e40af"/>
+  <text x="202" y="218" fill="#111827" font-family="Arial,sans-serif" font-size="23" font-weight="700">Hassan Osman</text>
+  <text x="202" y="249" fill="#4b5563" font-family="Arial,sans-serif" font-size="16">Frontend learner</text>
+  <rect x="202" y="270" width="104" height="30" rx="15" fill="#dbeafe"/><text x="222" y="290" fill="#1e40af" font-family="Arial,sans-serif" font-size="13">Profile card</text>
+  <rect x="202" y="332" width="184" height="42" rx="4" fill="#2563eb"/><text x="244" y="359" fill="#ffffff" font-family="Arial,sans-serif" font-size="15" font-weight="700">More info</text>
+  <rect x="506" y="154" width="390" height="300" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="2"/>
+  <circle cx="578" cy="230" r="42" fill="#bfdbfe"/><circle cx="578" cy="216" r="15" fill="#1e40af"/><path d="M548 254c6-22 19-32 30-32s24 10 30 32" fill="#1e40af"/>
+  <text x="644" y="218" fill="#111827" font-family="Arial,sans-serif" font-size="23" font-weight="700">Cali Biid</text>
+  <text x="644" y="249" fill="#4b5563" font-family="Arial,sans-serif" font-size="16">Student profile</text>
+  <rect x="644" y="270" width="104" height="30" rx="15" fill="#dbeafe"/><text x="664" y="290" fill="#1e40af" font-family="Arial,sans-serif" font-size="13">Profile card</text>
+  <rect x="644" y="332" width="184" height="42" rx="4" fill="#2563eb"/><text x="686" y="359" fill="#ffffff" font-family="Arial,sans-serif" font-size="15" font-weight="700">More info</text>
+</svg>

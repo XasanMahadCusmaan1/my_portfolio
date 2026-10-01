@@ -1,0 +1,159 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/functions" as *;
+
+.site-footer {
+  padding-inline: spacing(5);
+  background: blue-pallete(950);
+  color: gray-pallete(100);
+
+  &__container {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(8rem, 0.6fr) minmax(0, 1fr);
+    gap: spacing(12);
+    width: 100%;
+    max-width: toRem(1200);
+    margin-inline: auto;
+    padding-block: toRem(60) toRem(48);
+  }
+
+  &__brand {
+    max-width: 34ch;
+
+    p {
+      margin-block-start: spacing(4);
+      color: gray-pallete(300);
+    }
+  }
+
+  &__logo {
+    color: var.$white;
+    font-family: var.$font-family;
+    font-size: toRem(25);
+    font-weight: var.$font-bold;
+    text-decoration: none;
+
+    em {
+      color: blue-pallete(300);
+      font-style: normal;
+    }
+  }
+
+  &__nav {
+    display: block;
+
+    h3 {
+      margin-block-end: spacing(5);
+      color: var.$white;
+      font-family: var.$font-family-second;
+      font-size: toRem(15);
+      font-weight: var.$font-bold;
+    }
+
+    ul {
+      display: grid;
+      gap: spacing(4);
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      margin: 0;
+      border: 0;
+    }
+  }
+
+  &__nav a,
+  &__bottom a {
+    color: gray-pallete(300);
+    font-family: var.$font-family-second;
+    font-size: toRem(15);
+    font-weight: var.$font-regular;
+    text-decoration: none;
+    transition: color 180ms ease;
+
+    &:hover {
+      color: var.$white;
+    }
+
+    &:focus-visible {
+      outline: 2px solid blue-pallete(300);
+      outline-offset: 4px;
+    }
+  }
+
+  &__contact {
+    h3 {
+      margin-block-end: spacing(5);
+      color: var.$white;
+      font-family: var.$font-family-second;
+      font-size: toRem(15);
+      font-weight: var.$font-bold;
+    }
+
+    p {
+      max-width: 35ch;
+      margin-block-end: spacing(6);
+      color: gray-pallete(300);
+    }
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: spacing(4);
+    padding: spacing(4) spacing(6);
+    @include mix.btn;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: spacing(5);
+    width: 100%;
+    max-width: toRem(1200);
+    margin-inline: auto;
+    padding-block: spacing(5);
+    border-block-start: 1px solid rgb(255 255 255 / 18%);
+
+    p {
+      color: gray-pallete(400);
+      font-size: toRem(13);
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .site-footer {
+    &__container {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: spacing(10) spacing(7);
+      padding-block: toRem(48) toRem(36);
+    }
+
+    &__brand {
+      grid-column: 1 / -1;
+    }
+
+    &__contact {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .site-footer {
+    &__bottom {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-footer__nav a,
+  .site-footer__bottom a {
+    transition: none;
+  }
+}

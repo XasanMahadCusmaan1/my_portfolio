@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#eff6ff"/>
+  <rect x="58" y="42" width="844" height="456" rx="9" fill="#ffffff" stroke="#bfdbfe" stroke-width="2"/>
+  <rect x="58" y="42" width="844" height="56" rx="9" fill="#172554"/>
+  <circle cx="88" cy="70" r="7" fill="#f87171"/><circle cx="112" cy="70" r="7" fill="#fbbf24"/><circle cx="136" cy="70" r="7" fill="#34d399"/>
+  <text x="174" y="77" fill="#dbeafe" font-family="Arial,sans-serif" font-size="16">Quran API fetch experiment</text>
+  <rect x="88" y="132" width="784" height="316" rx="6" fill="#111827"/>
+  <text x="120" y="180" fill="#93c5fd" font-family="Courier New,monospace" font-size="17">async function requestApi() {</text>
+  <text x="154" y="218" fill="#e5e7eb" font-family="Courier New,monospace" font-size="16">const response = await fetch(apiUrl);</text>
+  <text x="154" y="254" fill="#e5e7eb" font-family="Courier New,monospace" font-size="16">const data = await response.json();</text>
+  <text x="154" y="290" fill="#86efac" font-family="Courier New,monospace" font-size="16">console.log(data.quran);</text>
+  <text x="120" y="326" fill="#93c5fd" font-family="Courier New,monospace" font-size="17">}</text>
+  <rect x="120" y="366" width="690" height="48" rx="4" fill="#1f2937"/><text x="142" y="396" fill="#9ca3af" font-family="Courier New,monospace" font-size="14">Next step: render the fetched data in the page</text>
+  <text x="88" y="477" fill="#1e40af" font-family="Arial,sans-serif" font-size="14" font-weight="700">IN PROGRESS / FETCH + JSON</text>
+</svg>
