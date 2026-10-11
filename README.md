@@ -1,57 +1,79 @@
-# Hassan Osman | Portfolio
+# Hassan Osman — Frontend Developer Portfolio
 
-A responsive personal portfolio showcasing Hassan Osman’s frontend development and design work. The site includes an introduction, technology list, biography, project carousel, and a contact form.
+This repository contains the source for Hassan Osman’s personal portfolio website. It introduces Hassan and his frontend development and design services, presents selected projects and learning exercises, and gives visitors a way to prepare a project inquiry. The website is a static, client-side site built with HTML, Sass/CSS, and vanilla JavaScript; it does not use a server or database.
 
-## Features
+## What the website contains
 
-- Responsive navigation and page layout
-- About, services, testimonials, and technology sections
-- Coding, design, and practice project galleries with keyboard-accessible category tabs and carousels
-- Contact form that prepares a message in Gmail for the visitor to review and send
-- Downloadable CV
+- **Introduction:** A short professional introduction, profile image, and downloadable CV.
+- **Technologies:** A visual list of tools and technologies, including HTML, CSS, JavaScript, React, Node.js, Git, GitHub, and Sass.
+- **About:** Background, development and design services, and testimonials.
+- **Projects:** Three browsable categories:
+  - **Coding:** Personal Task Manager, Quiz App, and Study Tracker.
+  - **Design:** Scroll-Driven Animation and Image Slider.
+  - **Practice:** Calculator Interface, Tabs Showcase, React Profile Cards, Movie Website, Recipe Finder, Quran API Fetch, React To-Do App, and React Router Playground.
+- **Contact:** A form for preparing an inquiry email.
+- **Footer:** Section navigation and a link back to the contact form.
 
-## Built with
+The project galleries use JavaScript-powered carousels. The category selector supports keyboard navigation, and the layout and navigation are designed to work on mobile and desktop screens.
 
-- HTML
-- Sass and CSS
-- Vanilla JavaScript
+## Technologies
+
+- **HTML** for page structure and accessible controls
+- **Sass** for modular styles, compiled to CSS
+- **CSS** for the responsive visual design and animations
+- **Vanilla JavaScript** for project tabs and carousels, mobile navigation behavior, and the contact form
+- **npm and Dart Sass** for compiling the stylesheet
+
+React, TypeScript, and other tools appear in some of the portfolio’s learning exercises; they are not dependencies required to run this portfolio website.
 
 ## Run locally
 
-1. Clone this repository and open its folder.
-2. Install the Sass development dependency:
+You need Node.js and npm to compile the Sass source. From the repository root:
 
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+npm run compile:sass
+```
 
-3. Compile Sass and keep the CSS updated while editing:
+The Sass command watches the source and compiles `sass/main.scss` and its imports to `css/style.css`. Keep it running while editing Sass files.
 
-   ```bash
-   npm run compile:sass
-   ```
+Serve the repository root with a local static web server and open its URL in a browser. For example, if you have Python installed:
 
-4. Open `index.html` in a browser. For local development, you can also serve the project folder with any static file server.
+```bash
+python -m http.server 8000
+```
 
-The Sass command watches `sass/main.scss` and its imported files, and writes the compiled stylesheet to `css/style.css`.
+Then visit `http://localhost:8000`. Serving from the repository root is recommended because some page and stylesheet assets use root-relative paths. No JavaScript build step is required.
 
-## Project structure
+## Contact form behavior
+
+The contact form validates its fields in the browser and opens a pre-filled Gmail compose draft. The visitor must review and send the message; the website does not send or store form submissions. A Gmail account may be required to use the compose page.
+
+## Project links and assets
+
+The project cards include local preview artwork in `assets/images/projects/`. Some card links point to sibling folders or separate projects that are not part of this repository. Those links will only work when the corresponding projects are available at the referenced paths; their presence in the portfolio does not mean their source code is included here.
+
+The CV, images, and icons used by the page are kept in `assets/`.
+
+## Repository structure
 
 ```text
 .
-├── assets/       # CV, images, and icons
-├── css/          # Compiled stylesheet
-├── js/           # Navigation, project galleries, and contact form
-├── sass/         # Sass source files
-├── index.html    # Portfolio page
-└── package.json  # Sass build script and development dependency
+├── assets/
+│   ├── images/
+│   ├── icons/
+│   └── Hassan_Osman_CV.pdf
+├── css/                 # Generated stylesheet (build output)
+├── js/
+│   └── app.js           # Interactive behavior
+├── sass/                # Sass source modules
+├── index.html           # Portfolio page
+├── package.json         # Sass script and development dependency
+└── package-lock.json
 ```
 
-## Notes
-
-- The contact form opens a pre-filled Gmail draft; it does not send messages automatically.
-- Some project cards link to separate projects that may need to be hosted or available locally to open.
+Generated CSS and source-map files under `css/` are excluded from Git. Run the Sass compile command before serving or deploying the site so that `css/style.css` exists.
 
 ## License
 
-This project is published under the ISC license declared in `package.json`.
+The `package.json` metadata declares the ISC license. The repository does not currently include a separate license file.
