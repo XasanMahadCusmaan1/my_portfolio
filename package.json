@@ -4,7 +4,8 @@
   "description": "potfolio website for my self",
   "main": "index.html",
   "scripts": {
-    "compile:sass": "sass sass/main.scss css/style.css -w"
+    "compile:sass": "sass sass/main.scss css/style.css -w",
+    "build": "sass sass/main.scss css/style.css --no-source-map"
   },
   "author": "Hassan Osman",
   "license": "ISC",
