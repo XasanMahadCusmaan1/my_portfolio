@@ -77,3 +77,7 @@ Generated CSS and source-map files under `css/` are excluded from Git. Run the S
 ## License
 
 The `package.json` metadata declares the ISC license. The repository does not currently include a separate license file.
+
+## Learning focus
+
+Modular Sass, static-site builds, responsive navigation, keyboard-accessible tabs, carousel state, and preparing a contact draft without a backend. Use `npm run build` for the non-watching Sass production build. The source was reviewed for this README update; no new browser or build verification was performed.
